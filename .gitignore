@@ -4,8 +4,8 @@
 # /public/js
 # /public/css
 # /public/fonts
-/storage/*.key
-/vendor
+# /storage/*.key
+# /vendor
 # .env
 .env.backup
 .phpunit.result.cache
