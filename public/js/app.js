@@ -58190,55 +58190,55 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/home',
       name: 'home',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./views/Home.vue */ "./resources/js/src/views/Home.vue"));
+        return __webpack_require__.e(/*! import() */ 8).then(__webpack_require__.bind(null, /*! ./views/Home.vue */ "./resources/js/src/views/Home.vue"));
       }
     }, {
       path: '/home/areas',
       name: 'Areas',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ./views/areas.vue */ "./resources/js/src/views/areas.vue"));
+        return __webpack_require__.e(/*! import() */ 12).then(__webpack_require__.bind(null, /*! ./views/areas.vue */ "./resources/js/src/views/areas.vue"));
       }
     }, {
       path: '/home/asignaturas',
       name: 'Asignaturas',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ./views/asignaturas.vue */ "./resources/js/src/views/asignaturas.vue"));
+        return __webpack_require__.e(/*! import() */ 13).then(__webpack_require__.bind(null, /*! ./views/asignaturas.vue */ "./resources/js/src/views/asignaturas.vue"));
       }
     }, {
       path: '/home/instituciones',
       name: 'Instituciones',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 8).then(__webpack_require__.bind(null, /*! ./views/Instituciones.vue */ "./resources/js/src/views/Instituciones.vue"));
+        return __webpack_require__.e(/*! import() */ 9).then(__webpack_require__.bind(null, /*! ./views/Instituciones.vue */ "./resources/js/src/views/Instituciones.vue"));
       }
     }, {
       path: '/home/docentes',
       name: 'Docentes',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 9).then(__webpack_require__.bind(null, /*! ./views/Docentes.vue */ "./resources/js/src/views/Docentes.vue"));
+        return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ./views/Docentes.vue */ "./resources/js/src/views/Docentes.vue"));
       }
     }, {
       path: '/home/estudiantes',
       name: 'Estudiantes',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ./views/Estudiantes.vue */ "./resources/js/src/views/Estudiantes.vue"));
+        return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ./views/Estudiantes.vue */ "./resources/js/src/views/Estudiantes.vue"));
       }
     }, {
       path: '/home/libros',
       name: 'Libros',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 11).then(__webpack_require__.bind(null, /*! ./views/Libros.vue */ "./resources/js/src/views/Libros.vue"));
+        return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ./views/Libros.vue */ "./resources/js/src/views/Libros.vue"));
       }
     }, {
       path: '/home/planificaciones',
       name: 'Planificaciones',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 12).then(__webpack_require__.bind(null, /*! ./views/Planificaciones.vue */ "./resources/js/src/views/Planificaciones.vue"));
+        return __webpack_require__.e(/*! import() */ 11).then(__webpack_require__.bind(null, /*! ./views/Planificaciones.vue */ "./resources/js/src/views/Planificaciones.vue"));
       }
     }, {
       path: '/home/actividades',
       name: 'Actividades',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 13).then(__webpack_require__.bind(null, /*! ./views/Actividades.vue */ "./resources/js/src/views/Actividades.vue"));
+        return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./views/Actividades.vue */ "./resources/js/src/views/Actividades.vue"));
       }
     }]
   }, // =============================================================================
@@ -58704,9 +58704,9 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuesax__WEBPACK_IMPORTED_MODULE_1
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\cdarf\OneDrive\Escritorio\starter-kit\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\cdarf\OneDrive\Escritorio\starter-kit\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\cdarf\OneDrive\Escritorio\starter-kit\resources\assets\css\main.css */"./resources/assets/css/main.css");
+__webpack_require__(/*! C:\Users\cdarf\OneDrive\Escritorio\edisa\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\cdarf\OneDrive\Escritorio\edisa\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\Users\cdarf\OneDrive\Escritorio\edisa\resources\assets\css\main.css */"./resources/assets/css/main.css");
 
 
 /***/ })
