@@ -58704,9 +58704,9 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuesax__WEBPACK_IMPORTED_MODULE_1
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\cdarf\OneDrive\Escritorio\edisa\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\cdarf\OneDrive\Escritorio\edisa\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\cdarf\OneDrive\Escritorio\edisa\resources\assets\css\main.css */"./resources/assets/css/main.css");
+__webpack_require__(/*! C:\xampp\htdocs\edisa\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\xampp\htdocs\edisa\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\edisa\resources\assets\css\main.css */"./resources/assets/css/main.css");
 
 
 /***/ })
