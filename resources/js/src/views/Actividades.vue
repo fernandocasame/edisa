@@ -9,7 +9,7 @@
                 <h5 class="mb-2">{{item.nombre}}</h5>
                 <p class="text-grey">{{item.detalle}}</p>
                 <div class="flex justify-between flex-wrap">
-                    <vs-button class="mt-4 mr-2 shadow-lg" v-bind:href="'/'+item.url" type="gradient" color="#7367F0" gradient-color-secondary="#CE9FFC">Actividad</vs-button>
+                    <vs-button class="mt-4 mr-2 shadow-lg" v-bind:href="'http://69.64.46.74/edisa/public/actividades/'+item.url" type="gradient" color="#7367F0" gradient-color-secondary="#CE9FFC">Actividad</vs-button>
                 </div>
             </vx-card>
         </div>
