@@ -11,8 +11,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vue_friendly_iframe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-friendly-iframe */ "./node_modules/vue-friendly-iframe/dist/vue-friendly-iframe.js");
-/* harmony import */ var vue_friendly_iframe__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_friendly_iframe__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+//
 //
 //
 //
@@ -36,8 +37,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_friendly_iframe__WEBPACK_IMPORTED_MODULE_1___default.a);
-/* harmony default export */ __webpack_exports__["default"] = ({});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1___default.a);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      actividades: []
+    };
+  },
+  mounted: function mounted() {
+    this.getArea();
+  },
+  methods: {
+    getArea: function getArea() {
+      var me = this;
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://localhost:8000/api/infocontenido', {}).then(function (response) {
+        me.actividades = response.data;
+        console.log(me.actividades);
+      }).catch(function (error) {});
+    },
+    evaluar: function evaluar(url) {
+      this.$router.push({
+        path: "/home/virtual/" + url
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -57,64 +81,58 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "demo-basic-card" } }, [
-    _c("div", { staticClass: "vx-row" }, [
-      _c(
-        "div",
-        { staticClass: "vx-col w-full sm:w-1/2 lg:w-1/3 mb-base" },
-        [
-          _c("vx-card", [
-            _c("div", { attrs: { slot: "no-body" }, slot: "no-body" }, [
-              _c("img", {
-                staticClass: "responsive card-img-top",
-                attrs: { src: _vm.card_1.img, alt: "content-img" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("h5", { staticClass: "mb-2" }, [
-              _vm._v(_vm._s(_vm.card_1.title))
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "text-grey" }, [
-              _vm._v(_vm._s(_vm.card_1.subtitle))
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "text-grey" }, [
-              _vm._v(_vm._s(_vm.card_1.subtitle_2))
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "flex justify-between flex-wrap" },
-              [
-                _c(
-                  "vs-button",
-                  {
-                    staticClass: "mt-4 mr-2 shadow-lg",
-                    attrs: {
-                      type: "gradient",
-                      color: "#7367F0",
-                      "gradient-color-secondary": "#CE9FFC"
-                    }
-                  },
-                  [_vm._v("Download")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "vs-button",
-                  {
-                    staticClass: "mt-4",
-                    attrs: { type: "border", color: "#b9b9b9" }
-                  },
-                  [_vm._v("View All")]
-                )
-              ],
-              1
-            )
-          ])
-        ],
-        1
-      )
-    ])
+    _c(
+      "div",
+      { staticClass: "vx-row" },
+      _vm._l(_vm.actividades, function(item, $index) {
+        return _c(
+          "div",
+          {
+            key: $index,
+            staticClass: "vx-col w-full sm:w-1/2 lg:w-1/3 mb-base"
+          },
+          [
+            _c("vx-card", [
+              _c("div", { attrs: { slot: "no-body" }, slot: "no-body" }, [
+                _c("img", {
+                  staticClass: "responsive card-img-top",
+                  attrs: { src: "/rocket.png", alt: "content-img" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("h5", { staticClass: "mb-2" }, [_vm._v(_vm._s(item.nombre))]),
+              _vm._v(" "),
+              _c("p", { staticClass: "text-grey" }, [
+                _vm._v(_vm._s(item.detalle))
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "flex justify-between flex-wrap" },
+                [
+                  _c(
+                    "vs-button",
+                    {
+                      staticClass: "mt-4 mr-2 shadow-lg",
+                      attrs: {
+                        to: "/virtual/" + item.url,
+                        type: "gradient",
+                        color: "#7367F0",
+                        "gradient-color-secondary": "#CE9FFC"
+                      }
+                    },
+                    [_vm._v("Actividad")]
+                  )
+                ],
+                1
+              )
+            ])
+          ],
+          1
+        )
+      }),
+      0
+    )
   ])
 }
 var staticRenderFns = []

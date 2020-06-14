@@ -58226,7 +58226,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/home/tipo_contenido/nuevo',
       name: 'tipocontenidoNuevo',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 19).then(__webpack_require__.bind(null, /*! ./views/tipo_contenido/nuevoTipocontenido.vue */ "./resources/js/src/views/tipo_contenido/nuevoTipocontenido.vue"));
+        return __webpack_require__.e(/*! import() */ 18).then(__webpack_require__.bind(null, /*! ./views/tipo_contenido/nuevoTipocontenido.vue */ "./resources/js/src/views/tipo_contenido/nuevoTipocontenido.vue"));
       }
     }, {
       path: '/home/contenido',
@@ -58274,7 +58274,13 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/home/actividades',
       name: 'Actividades',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 18).then(__webpack_require__.bind(null, /*! ./views/Actividades.vue */ "./resources/js/src/views/Actividades.vue"));
+        return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./views/Actividades.vue */ "./resources/js/src/views/Actividades.vue"));
+      }
+    }, {
+      path: '/virtual/:url',
+      name: 'virutal',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 19).then(__webpack_require__.bind(null, /*! ./views/virtual.vue */ "./resources/js/src/views/virtual.vue"));
       }
     }]
   }, // =============================================================================

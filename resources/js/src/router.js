@@ -144,6 +144,12 @@ const router = new Router({
                     component: () =>
                         import ('./views/Actividades.vue')
                 },
+                {
+                    path: '/virtual/:url',
+                    name: 'virutal',
+                    component: () =>
+                        import ('./views/virtual.vue')
+                },
             ],
         },
         // =============================================================================
