@@ -110,6 +110,7 @@ var render = function() {
                         href:
                           "http://69.64.46.74/edisa/public/actividades/" +
                           item.url,
+                        target: "_blank",
                         type: "gradient",
                         color: "#7367F0",
                         "gradient-color-secondary": "#CE9FFC"
