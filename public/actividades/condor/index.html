@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>El Condor (Mito andino)</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap-->
+    <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Animaciones-->
+    <link href="css/animate.min.css" rel="stylesheet">
+    <!--Css propio del proyecto-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- <link href="https://code.jquery.com/jquery-3.5.1.min.js" rel="stylesheet"> -->
+    <link href="css/custom.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <link href="css/elcondor.css" rel="stylesheet" media="all">
+    <!-- <link href="css/magic.css" rel="stylesheet" media="all"> -->
+</head>
+
+<body>
+    <div id="nota-informativa" class="nota-ayuda animate__animated d-none" onclick="cerrar_ayuda()">
+        <button type="button" class="close" aria-label="Close"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
+        <!--ACA ESCRIBIR TEXTO DE LA AYUDA DE LA ACTIVIDAD-->
+        <b>En la actividad 1</b> arrastra la palabra correspondiente para completar cada oración.<br>
+        <b>En la actividad 2</b> encierra la palabra que da sentido a la oración, haciendo click en cada una.<br>
+        <b>En la actividad 3</b> arrastra los sucesos transcurridos antes o después, dependiendo la acción.<br>
+        <b>En la actividad 4</b> encuentra en la sopa de letras los sinónimos de las palabras listadas, para poder ayudarte haz click en cada palabra que vayas encontrando de acuerdo a su sinónimo.<br>
+    </div>
+    <span class="titulo_2 txtAlumno d-none" id="nombre_alumno">Alumno: </span>
+    <!-- BOTONERA -->
+    <div class="flotante  float-sm-left navbar nav animate__animated ">
+        <a href="javascript:void(0)" class="closebtn btn-default" onclick="closeNav()">×</a>
+        <ul class="list-unstyled ">
+            <li class="nav-item d-none">
+                <button type="button" class="btn btn-outline-info mytooltip hvr-icon-pop" data-toggle="tooltip" data-info="Mostrar ayuda de la actividad" onclick="mostrar_ayuda()"><i class="fas hvr-icon fa-question"></i></button> &nbsp;
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn btn-outline-warning mytooltip hvr-icon-pop" data-toggle="tooltip" data-info="Repetir" onclick="location.reload()"><i class="fas hvr-icon fa-sync-alt"></i></button> &nbsp;
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn btnCalificar btn-success mytooltip hvr-icon-pop" data-toggle="tooltip" id="bt_comprobar" data-info="Calificar" onclick="total()"><i class="fas hvr-icon fa-spell-check"></i></button> &nbsp;
+            </li>
+            <li class="nav-item text-white text-center bg-secondary nota">
+                <p class="bg-info rounded p-1"> <i>Nota</i><br><span id="txtNota">0.0</span></p>
+            </li>
+        </ul>
+    </div>
+    <!-- FIN BOTONERA -->
+    <span>
+        <a href="#" class="btn btn-outline-dark openbtn" onclick="openNav()"> ☰ </a>
+    </span>
+    <section class="container-fluid tituloFabula">
+        <div class="card-header bg-cabecera text-white fixed-top">
+            <div class="container animate__animated animate__fadeInLeft">
+                <h3><span class="tituloNegrita">El </soan><span class="tituloNoNegrita">Condor <i>(Mito andino)</i>.</span></h3>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid bg-light-1 pb-5 pregunta1">
+        <div class="container">
+            <div class="mt-5"><br>
+                <div class="text-question card-header">
+                    <input type="text" size="2" style="text-align:center;" class="nota-abierta" id="pre1a" readonly="">&nbsp;
+                    <span>
+                        <b>Los personajes del mito</b>
+                        <br>Marca con un ✓ los personajes que intervienen en la narración El cóndor.
+                        <small>
+                            <details>Haz click en el recuadro correspodiente.</details>
+                        </small>
+                    </span>
+                </div>
+                <div class="card" style="overflow-x: auto;">
+                    <div class="m-1 p-sm-4">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <table align="center">
+                                        <tr class="act10class" id="act010Txt1">
+                                        </tr>
+                                        <tr class="act10class" id="act010Txt2">
+                                        </tr>
+                                        <tr class="act10class" id="act010Txt3">
+                                        </tr>
+                                        <tr class="act10class" id="act010Txt4">
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <table align="center">
+                                        <tr class="act10class" id="act010Txt5">
+                                        </tr>
+                                        <tr class="act10class" id="act010Txt6">
+                                        </tr>
+                                        <tr class="act10class" id="act010Txt7">
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <span>
+                        <br>Lee las siguientes oraciones. Encierra aquellas que pertenecen al inicio de la historia.
+                        <small>
+                            <details>Haz click en la/las oraciones correspondientes.</details>
+                        </small>
+                    </span>
+                </div>
+                <div class="card" style="overflow-x: auto;">
+                    <div class="m-1 p-sm-4">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <div class="row">
+                                <table class="table table-bordered" align="center" style="text-align: center;">
+                                    <tr class="act11class" id="act011Txt1">
+                                    </tr>
+                                    <tr class="act11class" id="act011Txt2">
+                                    </tr>
+                                    <tr class="act11class" id="act011Txt3">
+                                    </tr>
+                                    <tr class="act11class" id="act011Txt4">
+                                    </tr>
+                                    <tr class="act11class" id="act011Txt5">
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid bg-light-2 pb-5 pregunta2">
+        <div class="container">
+            <div class="mt-1"><br>
+                <div class="text-question card-header">
+                    <input type="text" size="2" style="text-align:center;" class="nota-abierta" id="pre2a" readonly="">&nbsp;
+                    <span>
+                        <b>Significado de las palabras.</b> <br>
+                        Organiza los siguientes recuadros. Une cada término con su la oración que contiene su significado.
+                        <small>
+                            <details>Selecciona el significado correcto de cada oración.</details>
+                        </small>
+                    </span>
+                </div>
+                <div class="row" style="overflow-x: auto">
+                    <div class="col-xl-12 col-md-12 col-sm-12">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <br>
+                                    <table align="center" class="table-hover">
+                                        <tr>
+                                            <td>
+                                                <div class="cajtabla">
+                                                    <p class="fuente2"><b style="color: #ffffff">Oración</b></p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="cajtabla">
+                                                    <p class="fuente2"><b style="color: #ffffff">Significado</b></p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="scaja act12class" id="act012Txt1">
+                                        </tr>
+                                        <tr class="scaja act12class" id="act012Txt2">
+                                        </tr>
+                                        <tr class="scaja act12class" id="act012Txt3">
+                                        </tr>
+                                        <tr class="scaja act12class" id="act012Txt4">
+                                        </tr>
+                                        <tr class="scaja act12class" id="act012Txt5">
+                                        </tr>
+                                    </table>
+                                </div>
+                                <br>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid bg-light-1 pb-5 pregunta3">
+        <div class="container">
+            <div class="mt-1"><br>
+                <div class="text-question card-header">
+                    <input type="text" size="2" style="text-align:center;" class="nota-abierta" id="pre3a" readonly="">&nbsp;
+                    <span>
+                        <b>Relación entre ideas: antecedente y consecuente</b><br>
+                        Identifica el tipo de relación que marcan las ideas resaltadas, según sea lo que ocurre primero (antecedente) o lo que ocurre después (consecuente).
+                        <small>
+                            <details>Selecciona el tipo de relación correspondiente.</details>
+                        </small>
+                    </span>
+                </div>
+                <div class="card" style="overflow-x: auto;">
+                    <div class="m-1 p-sm-4">
+                        <div class="col-xl-12 col-md-12 col-sm-12">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <br>
+                                        <table align="center" class="table-hover">
+                                            <tr>
+                                                <td width="300">
+                                                    <div class="cajtabla">
+                                                        <p class="fuente2"><b style="color: #ffffff">Idea 1</b></p>
+                                                    </div>
+                                                </td>
+                                                <td width="300">
+                                                    <div class="cajtabla">
+                                                        <p class="fuente2"><b style="color: #ffffff">Idea 2</b></p>
+                                                    </div>
+                                                </td>
+                                                <td width="300">
+                                                    <div class="cajtabla">
+                                                        <p class="fuente2"><b style="color: #ffffff">Tipo de relación</b></p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="scaja act13class" id="act013Txt1">
+                                            </tr>
+                                            <tr class="scaja act13class" id="act013Txt2">
+                                            </tr>
+                                            <tr class="scaja act13class" id="act013Txt3">
+                                            </tr>
+                                            <tr class="scaja act13class" id="act013Txt4">
+                                            </tr>
+                                            <tr class="scaja act13class" id="act013Txt5">
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <br>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid bg-light-2 pb-5 pregunta4">
+        <div class="container">
+            <div class="mt-1"><br>
+                <div class="text-question card-header">
+                    <input type="text" size="2" style="text-align:center;" class="nota-abierta" id="pre4a" readonly="">&nbsp;
+                    <span>
+                        <b>Sinónimos</b><br>
+                        <br>Empareja cada una de las siguientes palabras que aparecen en la lectura con otra que tiene el mismo significado.
+                        <small>
+                            <details>Arrastra cada palabra a cada casillero de "Arrastra aqui", según corresponda</details>
+                        </small>
+                    </span>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="overflow-x:auto;" id="pregunta2">
+                        <div class="col-xl-12">
+                            <div class="row justify-content-center">
+                                <div style="display: inline;">
+                                    <div class="desaparece act14class" id="act014Txt1">
+                                    </div>
+                                    <div class="desaparece act14class" id="act014Txt2">
+                                    </div>
+                                    <div class="desaparece act14class" id="act014Txt3">
+                                    </div>
+                                    <div class="desaparece act14class" id="act014Txt4">
+                                    </div>
+                                    <div class="desaparece act14class" id="act014Txt5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <div class="row boxultimo p-3 m-2">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 act15class" id="act015Txt1" align="center">
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 act15class" id="act015Txt2" align="center">
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 act15class" id="act015Txt3" align="center">
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 act15class" id="act015Txt4" align="center">
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 act15class" id="act015Txt5" align="center">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid bg-light-1 pb-5 pregunta3">
+        <div class="container">
+            <div class="mt-1"><br>
+                <div class="text-question card-header">
+                    <input type="text" size="2" style="text-align:center;" class="nota-abierta" id="pre5a" placeholder="0">&nbsp;
+                    <span>
+                        <b>Soy el constructor de nidos.</b><br>
+                        Reúne ramas pequeñas y delgadas, plumas, hojas, trocitos de lana y entreteje para construir un nido como el de los colibríes. Decora a tu gusto. Coloca en tu ventana,
+                        <small>
+                            <details>Haz click en el icono <span class="glyphicon glyphicon-camera"></span> para subir una foto de tu nido, seleccionalo y haz click en "Abrir", tu imagen deberá mostrarse en la recuadro.</details>
+                        </small>
+                    </span>
+                </div>
+                <div class="card" style="overflow-x: auto;">
+                    <div class="m-1 p-sm-4">
+                        <div class="col-xl-12 col-md-12 col-sm-12">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="col-xs-12" style="border: 15px #99a490 inset;">
+                                            <div align="center">
+                                                <input type="file" name="file1" id="file1" class="inputfile" onchange="mostrar1()" />
+                                                <span class="eliminarsubir" style="opacity: 0.5">Clic para subir tu imagen</span><br>
+                                                <label for="file1" style="font-size: 50px; padding: 10px; border-radius: 100%; background-color: #AB6ABD; color: white; cursor: pointer;" data-toggle="tooltip" title="clic para subir imagen" class="glyphicon glyphicon-camera eliminarsubir"></label>
+                                                <br>
+                                                <img id="img1"/ style="max-width: 100%; mix-blend-mode: multiply;"><br><br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid bg-light-1 p-3 pregunta5">
+        <small>EDISA 2020 <br> Derechos Reservados</small>
+    </section>
+    <!-- Modal Guardar PDF-->
+    <div class="modal fade animated pulse" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" onclick="$('#myModal').modal('hide')">&times;</button>
+                    <h4 class="modal-title">Guarda esta actividad en tu computadora</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="modal_form" class="form-horizontal">
+                        <div class="form-group ">
+                            <div class="col-sm-2">
+                                <label id="lbl_nombre" for="txtAlumno">Alumno: </label>
+                            </div>
+                            <div class="col-sm-10">
+                                <!--el input para ingresar el nombre del alumno debe se txt_alumno-->
+                                <input type="text" class="form-control nombre " id="txtAlumno" placeholder="Ingrese tu nombre">
+                                <div class="alert alert-danger display-none" id="txtAlumnoAlert" role="alert">
+                                    <button type="button" class="close" onclick="o$('#myModal').modal('hide')" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <span class="glyphicon glyphicon-info-sign error-color" aria-hidden="true"></span>
+                                    Debes ingresar tu nombre</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="save_open_activity_to_local('txtAlumno')">Guardar</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/utilitario.js"></script>
+    <script src="js/sweetalert2.all.js"></script>
+    <script src="js/sweetalert2@9.js"></script>
+    <script src="js/jquery.slide-transition.js"></script>
+    <script src="js/jQuery_UI_Touch_Punch_0.2.3.js"></script>
+    <script src="js/elcondor.js"></script>
+    <script src="js/anijs-min.js"></script>
+    <script type="text/javascript">
+    $(".drag2").draggable({
+        revert: "invalid",
+        zIndex: 5,
+        containment: "#pregunta2",
+        scroll: false,
+    });
+
+    $(".pintar2").droppable({
+        classes: {
+            //"ui-droppable-active": "ui-state-active", //color azul al arrastrar el elemento
+            "ui-droppable-hover": "ui-state-hover"
+        },
+        drop: function(e, ui) {
+            for (i = 1; i < 5; i++) { //4 elementos
+                var nn = 'c' + i; //obtenemos la clase
+                if ($(ui.draggable).hasClass(nn)) { //comparamos la clase del arrastre
+
+                    if ($(this).hasClass(nn)) { //con la clase del destino q tienen el mismo nombre
+                        resp2.push('ok'); //guardamos ok si esta correcta
+                    } else {
+                        resp2.push('no');
+                    }
+                    console.log(resp2);
+                }
+
+            }
+
+            $(ui.draggable).removeClass("bg_palabra"); //quitamos clase de background
+            $(ui.draggable).addClass("bordefinal"); //agregar clase al finalizar arrastre
+            $(ui.draggable).addClass("hvr-grow"); //agregar clase al finalizar arrastre
+            ui.draggable.attr("style", "");
+            $(this).append(ui.draggable);
+        }
+    });
+
+    function mostrar1() {
+        var archivo = document.getElementById("file1").files[0];
+        var reader = new FileReader();
+        if (file1) {
+            reader.readAsDataURL(archivo);
+            reader.onloadend = function() {
+                document.getElementById("img1").src = reader.result;
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>

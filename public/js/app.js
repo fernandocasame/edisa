@@ -5135,7 +5135,7 @@ exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base
 
 
 // module
-exports.push([module.i, "/**\n * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML\n * Based on https://github.com/chriskempson/tomorrow-theme\n * @author Rose Pritchard\n */\n\ncode[class*=\"language-\"],\npre[class*=\"language-\"] {\n  color: #ccc;\n  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;\n  font-size: 1em;\n  white-space: pre;\n  word-spacing: normal;\n  word-break: normal;\n  word-wrap: normal;\n  line-height: 1.5;\n  -moz-tab-size: 4;\n  -o-tab-size: 4;\n  tab-size: 4;\n  -webkit-hyphens: none;\n  -ms-hyphens: none;\n  hyphens: none;\n}\n\n[dir] code[class*=\"language-\"], [dir] pre[class*=\"language-\"] {\n  background: none;\n}\n\n[dir=ltr] code[class*=\"language-\"], [dir=ltr] pre[class*=\"language-\"] {\n  text-align: left;\n}\n\n[dir=rtl] code[class*=\"language-\"], [dir=rtl] pre[class*=\"language-\"] {\n  text-align: right;\n}\n\n/* Code blocks */\n\npre[class*=\"language-\"] {\n  overflow: auto;\n}\n\n[dir] pre[class*=\"language-\"] {\n  padding: 1em;\n  margin: .5em 0;\n}\n\n[dir] :not(pre) > code[class*=\"language-\"], [dir] pre[class*=\"language-\"] {\n  background: #2d2d2d;\n}\n\n/* Inline code */\n\n:not(pre) > code[class*=\"language-\"] {\n  white-space: normal;\n}\n\n[dir] :not(pre) > code[class*=\"language-\"] {\n  padding: .1em;\n  border-radius: .3em;\n}\n\n.token.comment,\n.token.block-comment,\n.token.prolog,\n.token.doctype,\n.token.cdata {\n  color: #999;\n}\n\n.token.punctuation {\n  color: #ccc;\n}\n\n.token.tag,\n.token.attr-name,\n.token.namespace,\n.token.deleted {\n  color: #e2777a;\n}\n\n.token.function-name {\n  color: #6196cc;\n}\n\n.token.boolean,\n.token.number,\n.token.function {\n  color: #f08d49;\n}\n\n.token.property,\n.token.class-name,\n.token.constant,\n.token.symbol {\n  color: #f8c555;\n}\n\n.token.selector,\n.token.important,\n.token.atrule,\n.token.keyword,\n.token.builtin {\n  color: #cc99cd;\n}\n\n.token.string,\n.token.char,\n.token.attr-value,\n.token.regex,\n.token.variable {\n  color: #7ec699;\n}\n\n.token.operator,\n.token.entity,\n.token.url {\n  color: #67cdcc;\n}\n\n.token.important,\n.token.bold {\n  font-weight: bold;\n}\n\n.token.italic {\n  font-style: italic;\n}\n\n[dir] .token.entity {\n  cursor: help;\n}\n\n.token.inserted {\n  color: green;\n}\n", ""]);
+exports.push([module.i, "/**\r\n * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML\r\n * Based on https://github.com/chriskempson/tomorrow-theme\r\n * @author Rose Pritchard\r\n */\n\ncode[class*=\"language-\"],\r\npre[class*=\"language-\"] {\n  color: #ccc;\n  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;\n  font-size: 1em;\n  white-space: pre;\n  word-spacing: normal;\n  word-break: normal;\n  word-wrap: normal;\n  line-height: 1.5;\n  -moz-tab-size: 4;\n  -o-tab-size: 4;\n  tab-size: 4;\n  -webkit-hyphens: none;\n  -ms-hyphens: none;\n  hyphens: none;\n}\n\n[dir] code[class*=\"language-\"], [dir] pre[class*=\"language-\"] {\n  background: none;\n}\n\n[dir=ltr] code[class*=\"language-\"], [dir=ltr] pre[class*=\"language-\"] {\n  text-align: left;\n}\n\n[dir=rtl] code[class*=\"language-\"], [dir=rtl] pre[class*=\"language-\"] {\n  text-align: right;\n}\n\n/* Code blocks */\n\npre[class*=\"language-\"] {\n  overflow: auto;\n}\n\n[dir] pre[class*=\"language-\"] {\n  padding: 1em;\n  margin: .5em 0;\n}\n\n[dir] :not(pre) > code[class*=\"language-\"], [dir] pre[class*=\"language-\"] {\n  background: #2d2d2d;\n}\n\n/* Inline code */\n\n:not(pre) > code[class*=\"language-\"] {\n  white-space: normal;\n}\n\n[dir] :not(pre) > code[class*=\"language-\"] {\n  padding: .1em;\n  border-radius: .3em;\n}\n\n.token.comment,\r\n.token.block-comment,\r\n.token.prolog,\r\n.token.doctype,\r\n.token.cdata {\n  color: #999;\n}\n\n.token.punctuation {\n  color: #ccc;\n}\n\n.token.tag,\r\n.token.attr-name,\r\n.token.namespace,\r\n.token.deleted {\n  color: #e2777a;\n}\n\n.token.function-name {\n  color: #6196cc;\n}\n\n.token.boolean,\r\n.token.number,\r\n.token.function {\n  color: #f08d49;\n}\n\n.token.property,\r\n.token.class-name,\r\n.token.constant,\r\n.token.symbol {\n  color: #f8c555;\n}\n\n.token.selector,\r\n.token.important,\r\n.token.atrule,\r\n.token.keyword,\r\n.token.builtin {\n  color: #cc99cd;\n}\n\n.token.string,\r\n.token.char,\r\n.token.attr-value,\r\n.token.regex,\r\n.token.variable {\n  color: #7ec699;\n}\n\n.token.operator,\r\n.token.entity,\r\n.token.url {\n  color: #67cdcc;\n}\n\n.token.important,\r\n.token.bold {\n  font-weight: bold;\n}\n\n.token.italic {\n  font-style: italic;\n}\n\n[dir] .token.entity {\n  cursor: help;\n}\n\n.token.inserted {\n  color: green;\n}\r\n", ""]);
 
 // exports
 
@@ -58157,7 +58157,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: [{
     path: '',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! @/layouts/full-page/FullPage.vue */ "./resources/js/src/layouts/full-page/FullPage.vue"));
+      return __webpack_require__.e(/*! import() */ 9).then(__webpack_require__.bind(null, /*! @/layouts/full-page/FullPage.vue */ "./resources/js/src/layouts/full-page/FullPage.vue"));
     },
     children: [// =============================================================================
     // PAGES
@@ -58166,13 +58166,13 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/',
       name: 'page-login',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! @/views/pages/Login.vue */ "./resources/js/src/views/pages/Login.vue"));
+        return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! @/views/pages/Login.vue */ "./resources/js/src/views/pages/Login.vue"));
       }
     }, {
       path: '/pages/error-404',
       name: 'page-error-404',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! @/views/pages/Error404.vue */ "./resources/js/src/views/pages/Error404.vue"));
+        return __webpack_require__.e(/*! import() */ 8).then(__webpack_require__.bind(null, /*! @/views/pages/Error404.vue */ "./resources/js/src/views/pages/Error404.vue"));
       }
     }]
   }, {
@@ -58181,7 +58181,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     // =============================================================================
     path: '/home',
     component: function component() {
-      return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(0)]).then(__webpack_require__.bind(null, /*! ./layouts/main/Main.vue */ "./resources/js/src/layouts/main/Main.vue"));
+      return Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./layouts/main/Main.vue */ "./resources/js/src/layouts/main/Main.vue"));
     },
     children: [// =============================================================================
     // Theme Routes
@@ -58190,55 +58190,91 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/home',
       name: 'home',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 8).then(__webpack_require__.bind(null, /*! ./views/Home.vue */ "./resources/js/src/views/Home.vue"));
+        return __webpack_require__.e(/*! import() */ 12).then(__webpack_require__.bind(null, /*! ./views/Home.vue */ "./resources/js/src/views/Home.vue"));
       }
     }, {
       path: '/home/areas',
       name: 'Areas',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 12).then(__webpack_require__.bind(null, /*! ./views/areas.vue */ "./resources/js/src/views/areas.vue"));
+        return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./views/area/areas.vue */ "./resources/js/src/views/area/areas.vue"));
+      }
+    }, {
+      path: '/home/areas/nueva',
+      name: 'nuevaAreas',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 16).then(__webpack_require__.bind(null, /*! ./views/area/nuevaArea.vue */ "./resources/js/src/views/area/nuevaArea.vue"));
       }
     }, {
       path: '/home/asignaturas',
-      name: 'Asignaturas',
+      name: 'Asignatura',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 13).then(__webpack_require__.bind(null, /*! ./views/asignaturas.vue */ "./resources/js/src/views/asignaturas.vue"));
+        return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ./views/asignatura/asignaturas.vue */ "./resources/js/src/views/asignatura/asignaturas.vue"));
+      }
+    }, {
+      path: '/home/asignaturas/nueva',
+      name: 'nuevaAsignatura',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 17).then(__webpack_require__.bind(null, /*! ./views/asignatura/nuevaAsignatura.vue */ "./resources/js/src/views/asignatura/nuevaAsignatura.vue"));
+      }
+    }, {
+      path: '/home/tipo_contenido',
+      name: 'tipocontenido',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ./views/tipo_contenido/tipocontenido.vue */ "./resources/js/src/views/tipo_contenido/tipocontenido.vue"));
+      }
+    }, {
+      path: '/home/tipo_contenido/nuevo',
+      name: 'tipocontenidoNuevo',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 19).then(__webpack_require__.bind(null, /*! ./views/tipo_contenido/nuevoTipocontenido.vue */ "./resources/js/src/views/tipo_contenido/nuevoTipocontenido.vue"));
+      }
+    }, {
+      path: '/home/contenido',
+      name: 'contenido',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./views/contenido/contenido.vue */ "./resources/js/src/views/contenido/contenido.vue"));
+      }
+    }, {
+      path: '/home/contenido/nuevo',
+      name: 'contenidoNuevo',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./views/contenido/contenido.vue */ "./resources/js/src/views/contenido/contenido.vue"));
       }
     }, {
       path: '/home/instituciones',
       name: 'Instituciones',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 9).then(__webpack_require__.bind(null, /*! ./views/Instituciones.vue */ "./resources/js/src/views/Instituciones.vue"));
+        return __webpack_require__.e(/*! import() */ 13).then(__webpack_require__.bind(null, /*! ./views/Instituciones.vue */ "./resources/js/src/views/Instituciones.vue"));
       }
     }, {
       path: '/home/docentes',
       name: 'Docentes',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ./views/Docentes.vue */ "./resources/js/src/views/Docentes.vue"));
+        return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ./views/Docentes.vue */ "./resources/js/src/views/Docentes.vue"));
       }
     }, {
       path: '/home/estudiantes',
       name: 'Estudiantes',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ./views/Estudiantes.vue */ "./resources/js/src/views/Estudiantes.vue"));
+        return __webpack_require__.e(/*! import() */ 11).then(__webpack_require__.bind(null, /*! ./views/Estudiantes.vue */ "./resources/js/src/views/Estudiantes.vue"));
       }
     }, {
       path: '/home/libros',
       name: 'Libros',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ./views/Libros.vue */ "./resources/js/src/views/Libros.vue"));
+        return __webpack_require__.e(/*! import() */ 14).then(__webpack_require__.bind(null, /*! ./views/Libros.vue */ "./resources/js/src/views/Libros.vue"));
       }
     }, {
       path: '/home/planificaciones',
       name: 'Planificaciones',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 11).then(__webpack_require__.bind(null, /*! ./views/Planificaciones.vue */ "./resources/js/src/views/Planificaciones.vue"));
+        return __webpack_require__.e(/*! import() */ 15).then(__webpack_require__.bind(null, /*! ./views/Planificaciones.vue */ "./resources/js/src/views/Planificaciones.vue"));
       }
     }, {
       path: '/home/actividades',
       name: 'Actividades',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./views/Actividades.vue */ "./resources/js/src/views/Actividades.vue"));
+        return __webpack_require__.e(/*! import() */ 18).then(__webpack_require__.bind(null, /*! ./views/Actividades.vue */ "./resources/js/src/views/Actividades.vue"));
       }
     }]
   }, // =============================================================================
@@ -58704,9 +58740,9 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuesax__WEBPACK_IMPORTED_MODULE_1
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\edisa\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\xampp\htdocs\edisa\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\edisa\resources\assets\css\main.css */"./resources/assets/css/main.css");
+__webpack_require__(/*! C:\Users\Fernando\Desktop\edisa\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\Fernando\Desktop\edisa\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\Users\Fernando\Desktop\edisa\resources\assets\css\main.css */"./resources/assets/css/main.css");
 
 
 /***/ })

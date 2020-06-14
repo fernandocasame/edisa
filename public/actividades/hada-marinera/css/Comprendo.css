@@ -1,0 +1,299 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.fondo {
+
+    background-color: #e3f1ec;
+    border: 2px solid #e3f1ec;
+    border-radius: 35px 0px;
+
+
+}
+
+.fondo2 {
+
+    background-color: #f3edf7;
+    border: 2px solid #f3edf7;
+    border-radius: 35px 0px;
+
+
+}
+
+.fondo26 {
+
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 35px;
+    max-width: 800px
+}
+
+.fondo261 {
+
+    background-color: #fff3d8;
+    border: 2px solid #fff3d8;
+    border-radius: 35px;
+    max-width: 800px
+}
+
+
+
+.fondo262 {
+
+    background-color: #ecf1d1;
+    border: 2px solid #ecf1d1;
+    border-radius: 35px;
+    max-width: 800px
+}
+
+.fondo30 {
+
+    background-color: #e3f1ec;
+    border: 2px solid #e3f1ec;
+    border-radius: 35px 0px;
+    max-height: 900px
+}
+
+
+.fondo301 {
+
+    background-color: #964091;
+    border: 2px solid #964091;
+    border-radius: 35px;
+    width: 150px;
+    height: 50px;
+    padding-top: 7px;
+
+}
+
+
+.fondo302 {
+
+    background-color: #fffcef;
+    border-radius: 30px;
+    width: 700px;
+    height: 100px;
+    padding: 10px;
+
+
+}
+
+
+.fondo303 {
+
+    background-color: #fffcef;
+    border-radius: 30px;
+    width: 250px;
+    height: 150px;
+    padding: 10px;
+
+}
+
+.fondo304 {
+
+    background-color: #fffcef;
+    border-radius: 30px;
+    width: 300px;
+    height: 180px;
+    padding: 10px;
+
+}
+
+.fondo305 {
+
+    background-color: #fffcef;
+    border-radius: 30px;
+    width: 300px;
+    height: 150px;
+    padding: 10px;
+
+}
+
+
+.fondo306 {
+
+    background-color: #fffcef;
+    border-radius: 30px;
+    width: 300px;
+    height: 180px;
+    padding: 10px;
+
+}
+
+
+.fuente {
+
+    font-family: "Myriad Pro";
+    font-size: 20px;
+    padding: 10px;
+    text-align: justify;
+
+}
+
+.fuente2 {
+
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.fuentej {
+
+    font-family: "Myriad Pro";
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+
+
+.fuente39 {
+
+    font-size: 20px;
+    text-align: justify;
+
+}
+
+.fuente391 {
+
+    font-size: 25px;
+    text-align: center;
+    color: #009dc5;
+
+}
+
+.fontnu {
+    color: blue;
+    font-size: 15pt;
+}
+
+.redfont {
+    color: red;
+    font-size: 20px;
+
+}
+
+.brownfont {
+    color: saddlebrown;
+    font-size: 20px;
+}
+
+
+
+.font28 {
+
+    font-size: 20px;
+    color: #b80e80;
+
+}
+
+.font261 {
+
+    font-size: 20px;
+    color: #ef7d00;
+    text-align: center;
+
+
+}
+
+
+.font262 {
+
+
+    font-size: 20px;
+    color: #5c2483;
+    text-align: center;
+
+}
+
+
+.font263 {
+
+    font-size: 20px;
+    color: #009870;
+    text-align: center;
+
+}
+
+
+.fuente30 {
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+
+}
+
+
+.fuentecolorlista {
+
+    color: #005ca9;
+    font-size: 20px;
+}
+
+.colfon22 {
+
+    font-size: 20px;
+    padding-left: 10px;
+    text-align: justify;
+    color: #009870;
+
+
+}
+
+
+.titulex {
+
+    font-size: 25px;
+    color: #5c2483;
+    text-align: center;
+
+
+}
+
+
+textarea.cuadro1 {
+
+    border-radius: 25px 0px 0px 0px;
+    -moz-border-radius: 25px 0px 0px 0px;
+    -webkit-border-radius: 25px 0px 0px 0px;
+    border: 2px solid #b94a95;
+    width: 1.5cm;
+    height: 1.5cm;
+    resize: none;
+
+}
+
+.triangulo-equilatero-bottom-left {
+    width: 0;
+    height: 0;
+    border-right: 14px solid transparent;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #954191;
+    border-bottom: 14px solid #954191;
+}
+
+.unidad {
+    background: #fbb268;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #fbb268 0%, #fbb268 4%, #f6982e 6%, #f6972b 8%, #f7a041 9%, #fbb268 11%, #f9a954 13%, #f6972b 15%, #f6972b 17%, #f8a64d 19%, #f6972b 21%, #f6972b 23%, #faad5e 25%, #fbb268 26%, #fab065 30%, #f6972b 32%, #f6972b 34%, #f8a64e 36%, #fbb268 38%, #fbb268 42%, #f7a03f 43%, #f69b34 47%, #fbb268 49%, #fbb268 51%, #f9ab59 53%, #f6972b 55%, #f6972b 57%, #f9ab58 58%, #fbb268 60%, #f6972b 68%, #f6972b 69%, #fbb268 77%, #f6972b 81%, #f6972c 83%, #fbb268 85%, #fbb268 92%, #f6982d 94%, #f6972b 95%, #f6972b 97%, #f6972b 97%, #f6972b 98%, #f8a54c 98%, #f6972b 98%, #f6972b 98%, #f6972b 98%, #f6972b 98%, #f6972b 98%, #f6972b 98%, #f6972b 98%, #f6972b 99%, #f6972b 99%, #f6972b 99%, #f6972b 99%, #f6972b 99%, #f6972b 99%, #f6972b 99%, #f6972b 100%, #fbb268 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fbb268 0%, #fbb268 4%, #f6982e 6%, #f6972b 8%, #f7a041 9%, #fbb268 11%, #f9a954 13%, #f6972b 15%, #f6972b 17%, #f8a64d 19%, #f6972b 21%, #f6972b 23%, #faad5e 25%, #fbb268 26%, #fab065 30%, #f6972b 32%, #f6972b 34%, #f8a64e 36%, #fbb268 38%, #fbb268 42%, #f7a03f 43%, #f69b34 47%, #fbb268 49%, #fbb268 51%, #f9ab59 53%, #f6972b 55%, #f6972b 57%, #f9ab58 58%, #fbb268 60%, #f6972b 68%, #f6972b 69%, #fbb268 77%, #f6972b 81%, #f6972c 83%, #fbb268 85%, #fbb268 92%, #f6982d 94%, #f6972b 95%, #f6972b 97%, #f6972b 97%, #f6972b 98%, #f8a54c 98%, #f6972b 98%, #f6972b 98%, #f6972b 98%, #f6972b 98%, #f6972b 98%, #f6972b 98%, #f6972b 98%, #f6972b 99%, #f6972b 99%, #f6972b 99%, #f6972b 99%, #f6972b 99%, #f6972b 99%, #f6972b 99%, #f6972b 100%, #fbb268 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fbb268 0%, #fbb268 4%, #f6982e 6%, #f6972b 8%, #f7a041 9%, #fbb268 11%, #f9a954 13%, #f6972b 15%, #f6972b 17%, #f8a64d 19%, #f6972b 21%, #f6972b 23%, #faad5e 25%, #fbb268 26%, #fab065 30%, #f6972b 32%, #f6972b 34%, #f8a64e 36%, #fbb268 38%, #fbb268 42%, #f7a03f 43%, #f69b34 47%, #fbb268 49%, #fbb268 51%, #f9ab59 53%, #f6972b 55%, #f6972b 57%, #f9ab58 58%, #fbb268 60%, #f6972b 68%, #f6972b 69%, #fbb268 77%, #f6972b 81%, #f6972c 83%, #fbb268 85%, #fbb268 92%, #f6982d 94%, #f6972b 95%, #f6972b 97%, #f6972b 97%, #f6972b 98%, #f8a54c 98%, #f6972b 98%, #f6972b 98%, #f6972b 98%, #f6972b 98%, #f6972b 98%, #f6972b 98%, #f6972b 98%, #f6972b 99%, #f6972b 99%, #f6972b 99%, #f6972b 99%, #f6972b 99%, #f6972b 99%, #f6972b 99%, #f6972b 100%, #fbb268 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb268', endColorstr='#fbb268', GradientType=0);
+    /* IE6-9 */
+
+
+    border-radius: 60px
+}
+
+.franciscanos10 {
+    border: 7px solid #000000;
+    background-color: #f8f4ed;
+    box-shadow: inset 1px 1px 8px 8px rgba(185, 188, 189, 0.83);
+    border-radius: 20px
+}

@@ -1,0 +1,99 @@
+.bg-indigo{
+background-color: #e83e8c;
+}
+.literally {
+    position: relative;
+    background-color: #DDDDDD;
+    min-height: 450px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -ms-touch-action: none;
+    user-select: none
+}
+div:empty::before {
+    color: grey;
+    font-size: 20px;
+}
+
+div[data-placeholder]:not([data-placeholder=""]):empty::before {
+    content: attr(data-placeholder);
+}
+
+.caja2 {
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    display: inline-block;
+}
+
+.caja4 {
+    width: 250px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    display: inline-block;
+}
+
+.encierreCaja {
+    /*border: 2px solid #6c757d;*/
+    /*border-radius: 10%;*/
+    background-color: #444;
+    color: white;
+    padding: 4px;
+}
+
+.seleccionCaja {
+    background-color: #1c8a00;
+    color: white;
+}
+
+.subrayar {
+    border-bottom: solid 5px #00a9ab;
+}
+
+.drag1, .drag2, .drag3, .drag4, .drag5 {
+    cursor: move;
+}
+
+.correcto {
+    color: #ffffff;
+    background-color: #8FB435 !important; -webkit-print-color-adjust: exact;
+}
+
+.incorrecto {
+    color: #ffffff;
+    background-color: #E76E80 !important; -webkit-print-color-adjust: exact;
+}
+
+.correctoar {
+    background-color: #8FB435 !important; -webkit-print-color-adjust: exact;
+    color: white;
+}
+
+.incorrectoar {
+    background-color: #dc3545 !important; -webkit-print-color-adjust: exact;
+    color: white;
+}
+
+.backnoabierta {
+    background-color: #8FB435 !important;
+    color: white;
+    -webkit-print-color-adjust: exact;
+}
+
+.qcolor{
+    background-color: #ffffff;
+}
+.desaparece{
+    text-align: center;
+    background-color: #ffffff; border: 1px #20c997 dashed; border-radius: 15px
+}
+.cajaClic{
+    /*padding: 6px;*/
+    border: 1px #f2f2f2 solid;
+    margin: 4px;
+}

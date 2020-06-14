@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>El lobo y la grulla (Fábula)</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap-->
+    <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Animaciones-->
+    <link href="css/animate.min.css" rel="stylesheet">
+    <!--Css propio del proyecto-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- <link href="https://code.jquery.com/jquery-3.5.1.min.js" rel="stylesheet"> -->
+    <link href="css/custom.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/stylesopa.css" rel="stylesheet">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <!-- <link href="css/magic.css" rel="stylesheet" media="all"> -->
+</head>
+<style>
+    div:empty::before {
+    color: grey;
+    font-size: 20px;
+}
+
+div[data-placeholder]:not([data-placeholder=""]):empty::before {
+    content: attr(data-placeholder);
+}
+
+.caja2 {
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    display: inline-block;
+}
+
+.caja4 {
+    width: 250px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    display: inline-block;
+}
+
+.encierreCaja {
+    /*border: 2px solid #6c757d;*/
+    /*border-radius: 10%;*/
+    background-color: #444;
+    color: white;
+    padding: 4px;
+}
+
+.seleccionCaja {
+    background-color: #1c8a00;
+    color: white;
+}
+
+.subrayar {
+    border-bottom: solid 5px #00a9ab;
+}
+
+.drag1, .drag2, .drag3, .drag4, .drag5 {
+    cursor: move;
+}
+
+.correcto {
+    color: #ffffff;
+    background-color: #8FB435 !important; -webkit-print-color-adjust: exact;
+}
+
+.incorrecto {
+    color: #ffffff;
+    background-color: #E76E80 !important; -webkit-print-color-adjust: exact;
+}
+
+.correctoar {
+    background-color: #8FB435 !important; -webkit-print-color-adjust: exact;
+    color: white;
+}
+
+.incorrectoar {
+    background-color: #dc3545 !important; -webkit-print-color-adjust: exact;
+    color: white;
+}
+
+.backnoabierta {
+    background-color: #8FB435 !important;
+    color: white;
+    -webkit-print-color-adjust: exact;
+}
+
+.qcolor{
+    background-color: #ffffff;
+}
+.desaparece{
+    text-align: center;
+    background-color: #ffffff; border: 1px #20c997 dashed; border-radius: 15px
+}
+.cajaClic{
+    /*padding: 6px;*/
+    border: 1px #f2f2f2 solid;
+    margin: 4px;
+}
+</style>
+
+<body>
+    <span class="titulo_2 txtAlumno d-none" id="nombre_alumno">Alumno: </span>
+    <!-- BOTONERA -->
+    <div class="flotante  float-sm-left navbar nav animate__animated ">
+        <a href="javascript:void(0)" class="closebtn btn-default" onclick="closeNav()">×</a>
+        <ul class="list-unstyled ">
+            <li class="nav-item">
+                <button type="button" class="btn btn-outline-warning mytooltip hvr-icon-pop" data-toggle="tooltip" data-info="Repetir" onclick="location.reload()"><i class="fas hvr-icon fa-sync-alt"></i></button> &nbsp;
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn btnCalificar btn-success mytooltip hvr-icon-pop" data-toggle="tooltip" id="bt_comprobar" data-info="Calificar" onclick="totalf()"><i class="fas hvr-icon fa-spell-check"></i></button> &nbsp;
+            </li>
+            <li class="nav-item text-white text-center bg-secondary nota">
+                <p class="bg-info rounded p-1"> <i>Nota</i><br><span id="txtNota">0.0</span></p>
+            </li>
+        </ul>
+    </div>
+    <!-- FIN BOTONERA -->
+    <span>
+        <a href="#" class="btn btn-outline-dark openbtn" onclick="openNav()"> ☰ </a>
+    </span>
+    <section class="container-fluid tituloFabula">
+        <div class="card-header bg-info text-white fixed-top">
+            <div class="container animate__animated animate__fadeInLeft">
+                <h3><span class="tituloNegrita">El lobo </span> <span class="tituloNoNegrita">y la grulla (Fábula)</span></h3>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid bg-light-1 pb-5 pregunta1">
+        <div class="container">
+            <div class="mt-5"><br>
+                <div class="text-question card-header">
+                    <input type="text" size="2" style="text-align:center;" class="nota-abierta" id="pre1a" readonly="">&nbsp;
+                    <span>
+                        <font><b style="color: #03b9ac !important; -webkit-print-color-adjust: exact;"> </b></font><b>Los personajes de la fábula. </b><br>
+                        <b>Completa</b> cada oración con la respuesta que corresponde.
+                        <small>
+                            <details> Arrastra la palabra correspondiente para completar cada oración.</details>
+                        </small>
+                    </span>
+                </div>
+                <div class="text-dark act5class" id="act05Txt1">
+                </div>
+                <div class="text-dark act5class" id="act05Txt2">
+                </div>
+                <div class="text-dark act5class" id="act05Txt3">
+                </div>
+                <div class="text-dark act5class" id="act05Txt4">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid bg-light-2 pb-5 pregunta2 ">
+        <div class="container">
+            <div class="mt-1"><br>
+                <div class="text-question card-header">
+                    <input type="text" size="2" style="text-align:center;" class="nota-abierta" id="pre2a" readonly="">&nbsp;
+                    <span>
+                        <font><b style="color: #03b9ac !important; -webkit-print-color-adjust: exact;"> </b></font>
+                        <b>Significado de las palabras.</b> <br>
+                        <b>Lee</b> el significado de las palabras que aparecen en la lectura y <b>encierra</b> la que completa el sentido de cada una de las siguientes oraciones
+                        <small>
+                            <details> Da clic sobre la palabra que da sentido a la oración.</details>
+                        </small>
+                    </span>
+                </div>
+                <div class="act10class card" id="act010Txt1" style="overflow-x: auto;">
+                </div>
+                <br>
+                <div class="act10class card" id="act010Txt2" style="overflow-x: auto;">
+                </div>
+                <br>
+                <div class="act10class card" id="act010Txt3" style="overflow-x: auto;">
+                </div>
+                <br>
+                <div class="act10class card" id="act010Txt4" style="overflow-x: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid bg-light-1 pb-5 pregunta3">
+        <div class="container">
+            <div class="mt-1"><br>
+                <div class="text-question card-header">
+                    <input type="text" size="2" style="text-align:center;" class="nota-abierta" id="pre3a" readonly="">&nbsp;
+                    <span>
+                        <font><b style="color: #03b9ac !important; -webkit-print-color-adjust: exact;"> </b></font><b>Las secuencias temporales.</b><br>
+                        <b>Seleccione</b> lo que ocurrió antes o después de cada acción, según se indica entre paréntesis.
+                        <small>
+                            <details> Da clic y seleccione la que más se ajuste a cada acción.</details>
+                        </small>
+                    </span>
+                </div>
+                <div class="row p-3 text-center text-white bg-secondary">
+                    <div class="col">
+                        <h3>Antes</h3>
+                    </div>
+                    <div class="col-6">
+                        <h3>Acción</h3>
+                    </div>
+                    <div class="col">
+                        <h3>Después</h3>
+                    </div>
+                </div>
+                <div class="antes-accion-despues"></div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid bg-light-2 pb-5 pregunta4">
+        <div class="container">
+            <div class="mt-1"><br>
+                <div class="text-question card-header">
+                    <input type="text" size="2" style="text-align:center;" class="nota-abierta" id="pre4a" readonly="">&nbsp;
+                    <span>
+                        <font><b style="color: #03b9ac !important; -webkit-print-color-adjust: exact;"> </b></font><b>La sinonimia.</b><br>
+                        <br>En la sopa de letras, <b>encuentra</b> palabras que significan lo mismo que las siguientes:
+                        <small>
+                            <details>Da clic sobre la primera letra, y arrastra hasta formar la palabra.</details>
+                        </small>
+                    </span>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <div>
+                                    <p class="fuente2 enc1a act15class" id="act015Txt1" style="box-shadow: 2px 2px #58C8BC"></p>
+                                    <p class="fuente2 enc1a act15class" id="act015Txt2" style="box-shadow: 2px 2px #58C8BC"></p>
+                                    <p class="fuente2 enc1a act15class" id="act015Txt3" style="box-shadow: 2px 2px #58C8BC"></p>
+                                    <p class="fuente2 enc1a act15class" id="act015Txt4" style="box-shadow: 2px 2px #58C8BC"></p>
+                                    <p class="fuente2 enc1a act15class" id="act015Txt5" style="box-shadow: 2px 2px #58C8BC"></p>
+                                </div>
+                            </div>
+                            <div class="col-12" align="center">
+                                <table align="center">
+                                    <tr>
+                                        <td>
+                                            <div id="puzzle"></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid bg-light-1 p-3 pregunta5">
+        <small>EDISA 2020 <br> Derechos Reservados</small>
+    </section>
+    <!-- Modal Guardar PDF-->
+    <div class="modal fade animated pulse" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" onclick="$('#myModal').modal('hide')">&times;</button>
+                    <h4 class="modal-title">Guarda esta actividad en tu computadora</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="modal_form" class="form-horizontal">
+                        <div class="form-group ">
+                            <div class="col-sm-2">
+                                <label id="lbl_nombre" for="txtAlumno">Alumno: </label>
+                            </div>
+                            <div class="col-sm-10">
+                                <!--el input para ingresar el nombre del alumno debe se txt_alumno-->
+                                <input type="text" class="form-control nombre " id="txtAlumno" placeholder="Ingrese tu nombre">
+                                <div class="alert alert-danger display-none" id="txtAlumnoAlert" role="alert">
+                                    <button type="button" class="close" onclick="o$('#myModal').modal('hide')" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <span class="glyphicon glyphicon-info-sign error-color" aria-hidden="true"></span>
+                                    Debes ingresar tu nombre</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="save_open_activity_to_local('txtAlumno')">Guardar</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/wordfind.js"></script>
+    <script type="text/javascript" src="js/wordfindgame.js"></script>
+    <script src="js/utilitario.js"></script>
+    <script src="js/sweetalert2.all.js"></script>
+    <script src="js/sweetalert2@9.js"></script>
+    <script src="js/jquery.slide-transition.js"></script>
+    <script src="js/actividad1.js"></script>
+    <script src="js/anijs-min.js"></script>
+    <script type="text/javascript">
+    var words = ['ATRAPAR', 'AYUDAR', 'CONFIAR', 'ARRIESGAR', 'PROTEGER'];
+    var gamePuzzle = wordfindgame.create(words, '#puzzle', '#words');
+    $('#solve').click(function() { wordfindgame.solve(gamePuzzle, words); });
+    var puzzle = wordfind.newPuzzle(words, { height: 20, width: 20, fillBlanks: false });
+    wordfind.print(puzzle);
+
+    var resul = [],
+        tmp, cor = 0,
+        inc = 0,
+        cont = 0,
+        calificacions = 3.5,
+        itemsTs = 5,
+        calificacion = 10,
+        itemsT = 10,
+        cont = 1,
+        sopa = 0,
+        ejer = 1;
+
+    var totalC = 0,
+        totalFinal = 0,
+        total = 0;
+
+
+    function pregunta4() {
+        cont++;
+
+
+        totalC = (sopa * (calificacions / itemsTs)).toFixed(2); //suma de calificacion cerrada
+
+        if (totalC < 0) {
+            totalC = 0;
+            $('#pre4a').val(parseFloat(totalC).toFixed(2));
+        } else {
+            $('#pre4a').val(parseFloat(totalC).toFixed(2));
+        }
+
+    }
+
+
+
+
+    $(".drag1").draggable({
+        revert: "invalid",
+        zIndex: 5,
+        containment: "#pregunta1",
+        scroll: false,
+    });
+
+    $(".pintar").droppable({
+        classes: {
+            //"ui-droppable-active": "ui-state-active", //color azul al arrastrar el elemento
+            "ui-droppable-hover": "ui-state-hover"
+        },
+        drop: function(e, ui) {
+            for (i = 1; i < 8; i++) { //4 elementos
+                var nn = 'c' + i; //obtenemos la clase
+                if ($(ui.draggable).hasClass(nn)) { //comparamos la clase del arrastre
+
+                    if ($(this).hasClass(nn)) { //con la clase del destino q tienen el mismo nombre
+                        resp2.push('ok'); //guardamos ok si esta correcta
+                    } else {
+                        resp2.push('no');
+                    }
+                    console.log(resp2);
+                }
+
+            }
+
+            $(ui.draggable).removeClass("bg_palabra"); //quitamos clase de background
+            ui.draggable.attr("style", "");
+            $(this).append(ui.draggable);
+        }
+    });
+
+    $(".drag2").draggable({
+        revert: "invalid",
+        zIndex: 5,
+        containment: "#pregunta2",
+        scroll: false,
+    });
+
+    $(".pintar2").droppable({
+        classes: {
+            //"ui-droppable-active": "ui-state-active", //color azul al arrastrar el elemento
+            "ui-droppable-hover": "ui-state-hover"
+        },
+        drop: function(e, ui) {
+            for (i = 1; i < 8; i++) { //4 elementos
+                var nn = 'c' + i; //obtenemos la clase
+                if ($(ui.draggable).hasClass(nn)) { //comparamos la clase del arrastre
+
+                    if ($(this).hasClass(nn)) { //con la clase del destino q tienen el mismo nombre
+                        resp2.push('ok'); //guardamos ok si esta correcta
+                    } else {
+                        resp2.push('no');
+                    }
+                    console.log(resp2);
+                }
+
+            }
+
+            $(ui.draggable).removeClass("bg_palabra"); //quitamos clase de background
+            ui.draggable.attr("style", "");
+            $(this).append(ui.draggable);
+        }
+    });
+
+    $(".drag3").draggable({
+        revert: "invalid",
+        zIndex: 5,
+        containment: "#pregunta3",
+        scroll: false,
+    });
+
+    $(".pintar3").droppable({
+        classes: {
+            //"ui-droppable-active": "ui-state-active", //color azul al arrastrar el elemento
+            "ui-droppable-hover": "ui-state-hover"
+        },
+        drop: function(e, ui) {
+            for (i = 1; i < 8; i++) { //4 elementos
+                var nn = 'c' + i; //obtenemos la clase
+                if ($(ui.draggable).hasClass(nn)) { //comparamos la clase del arrastre
+
+                    if ($(this).hasClass(nn)) { //con la clase del destino q tienen el mismo nombre
+                        resp2.push('ok'); //guardamos ok si esta correcta
+                    } else {
+                        resp2.push('no');
+                    }
+                    console.log(resp2);
+                }
+
+            }
+
+            $(ui.draggable).removeClass("bg_palabra"); //quitamos clase de background
+            ui.draggable.attr("style", "");
+            $(this).append(ui.draggable);
+        }
+    });
+
+    $(".drag4").draggable({
+        revert: "invalid",
+        zIndex: 5,
+        containment: "#pregunta4",
+        scroll: false,
+    });
+
+    $(".pintar4").droppable({
+        classes: {
+            //"ui-droppable-active": "ui-state-active", //color azul al arrastrar el elemento
+            "ui-droppable-hover": "ui-state-hover"
+        },
+        drop: function(e, ui) {
+            for (i = 1; i < 8; i++) { //4 elementos
+                var nn = 'c' + i; //obtenemos la clase
+                if ($(ui.draggable).hasClass(nn)) { //comparamos la clase del arrastre
+
+                    if ($(this).hasClass(nn)) { //con la clase del destino q tienen el mismo nombre
+                        resp2.push('ok'); //guardamos ok si esta correcta
+                    } else {
+                        resp2.push('no');
+                    }
+                    console.log(resp2);
+                }
+
+            }
+
+            $(ui.draggable).removeClass("bg_palabra"); //quitamos clase de background
+            ui.draggable.attr("style", "");
+            $(this).append(ui.draggable);
+        }
+    });
+    f_pregunta3();
+
+    function f_pregunta3() {
+        var divsSelect = ['<div class="row bg-white p-3 text-center border hovered card-body"><div class="col"> <select class="form-control accion1 combo-accion"> <option value="">Seleccione...</option> <i class="combo-accion"></i> </select> </div> <div class="col-6"><b>Un lobo comía un hueso</b></div> <div class="col"><b></b></div> </div>', '<div class="row bg-white p-3 text-center border hovered card-body"> <div class="col"><b></b></div> <div class="col-6"><b>Encontró en su camino a una grulla.</b></div> <div class="col"> <select class="form-control accion2 combo-accion"> <option value="">Seleccione...</option> <i class="combo-accion"></i> </select> </div> </div>', '<div class="row bg-white p-3 text-center border hovered card-body"> <div class="col"> <select class="form-control accion3 combo-accion"> <option value="">Seleccione...</option> <i class="combo-accion"></i> </select> </div> <div class="col-6"><b>El lobo pidió a la grulla que lo salvara</b></div> <div class="col"><b></b></div> </div>', '<div class="row bg-white p-3 text-center border hovered card-body"> <div class="col"><b></b></div> <div class="col-6"><b>La grulla introdujo su cabeza en la boca del lobo.</b></div> <div class="col"> <select class="form-control accion4 combo-accion"> <option value="">Seleccione...</option> <i class="combo-accion"></i> </select> </div> </div>', '<div class="row bg-white p-3 text-center border hovered card-body"> <div class="col"> <select class="form-control accion5 combo-accion"> <option value="">Seleccione...</option> <i class="combo-accion"></i> </select> </div> <div class="col-6"><b>El lobo le dijo: ¡Oye amiga! Agradéceme que no te como a ti también</b></div> <div class="col"><b></b></div> </div>'];
+        var opts = ['<option value="res1">El lobo había matado y devorado otro animal.</option>', '<option value="res2">El lobo ofreció a la grulla un pago por su ayuda.</option>', '<option value="res3">El lobo corría por todas partes en busca de auxilio.</option>', '<option value="res4">La grulla sacó el hueso atravesado</option>', '<option value="res5">La grulla pidió que el lobo le pagara.</option>'];
+        opts.sort(f_randomico);
+        divsSelect.sort(f_randomico);
+        $(".antes-accion-despues").append(divsSelect);
+        $(".combo-accion").append(opts);
+    }
+
+    function totalf() {
+
+        pregunta1();
+        pregunta2();
+        pregunta3();
+        pregunta4();
+        var pre1a = document.getElementById('pre1a').value;
+        var pre2a = document.getElementById('pre2a').value;
+        var pre3a = document.getElementById('pre3a').value;
+        var pre4a = document.getElementById('pre4a').value;
+
+        cor = (parseFloat(pre1a) + parseFloat(pre2a) + parseFloat(pre3a) + parseFloat(pre4a)).toFixed(2);
+
+        Calculo_nota();
+        $('#bt_comprobar').attr("disabled", true);
+        $('input').attr("disabled", true);
+        $('.nota-abierta').addClass('backnoabierta');
+        $('.enc1a').off('click');
+        $('.desaparece').filter(function() {
+            return $.trim($(this).text()) === ''
+        }).hide();
+
+    }
+    </script>
+</body>
+
+</html>

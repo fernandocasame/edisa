@@ -1,0 +1,242 @@
+@font-face {
+    font-family: "Myriad_Regular";
+    src: url("../fonts/MYRIADPRO-REGULAR.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Myriad_Bold";
+    src: url("../fonts/MYRIADPRO-BOLD.woff") format("woff");
+}
+
+@font-face {
+    font-family: "gochi-hand";
+    src: url("../fonts/GochiHand-Regular.woff") format("woff");
+}
+/* roboto-regular - latin */
+/*MOdo de uso consultar aqui https://google-webfonts-helper.herokuapp.com/fonts/roboto?subsets=latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('../fonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-v20-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+
+body {
+    font-family: "Roboto";
+    font-size: 1.05em;
+}
+
+@media (max-width: 767px) {
+
+    .nota-ayuda {
+        width: 96% !important;
+        top: 55px !important;
+    }
+
+}
+.ui-state-active{
+background-color:teal!important;
+color: white!important;
+}
+.fuente {
+
+    font-size: 20px;
+    padding: 10px;
+    text-align: justify;
+
+}
+.fuente2 {
+
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+
+}
+.bg-light-1{
+    background-color:#f6f6f6!important;
+    color: #444;
+    border-top: 1px solid #f3f3f3;
+}
+.bg-light-2{
+    background-color:#fff!important;
+    color: #444;
+}
+.nota-abierta {
+    width: 55px;
+    border: solid;
+    border-width: 1px;
+    border-color: #007acc;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.txtNota {
+    color: white;
+    font-size: 22px;
+
+}
+
+.flotante {
+    z-index: 99992;
+    background-color: #444;
+    width: 70px;
+    position: fixed;
+    border-radius: 0 30px 30px 0;
+}
+
+.openbtn {
+    position: fixed;
+    z-index: 9999;
+    background-color: #f2f2f2
+}
+
+.closebtn {
+    color: white;
+    font-size: 22px;
+    margin-left: 30px;
+    padding:5px 8px;
+}
+
+.closebtn:hover {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.notificacion {
+    border: none;
+    padding: 5px;
+    margin: 8px;
+    font-size: 1.5rem;
+    position: relative;
+    box-sizing: border-box;
+    transition: all 500ms ease;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    border-radius: 4px;
+}
+
+.nota-ayuda {
+    padding: 9px;
+    width: 50%;
+    text-align: justify !important;
+    background-color: #fffae3;
+    position: fixed;
+    left: 80px;
+    top: 55px;
+    box-shadow: 0 0 7px #555;
+    z-index: 2000;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.bounceindos {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-name: bounceindos;
+    animation-name: bounceindos;
+}
+
+.alertaabierta {
+    animation-name: bounceindos;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.alertanotafinal {
+    animation-name: tada;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: initial;
+    animation-fill-mode: forwards;
+}
+.tituloNegrita{
+    font-family: "Roboto";
+    font-weight:900;
+}
+.tituloNoNegrita{
+    font-family: "Roboto";
+    font-weight:100;
+    font-style: italic;
+}
+.card1{
+    background-color: #e4eaed;
+}
+.card2{
+    background-color: #e4eaed;
+}
+
+.text-question {
+    font-size: 1.1rem;
+    font-family: "Roboto";
+    font-weight: 500;
+    /*font-style: italic;*/
+}
+
+
+.mytooltip::before {
+    display: none;
+    content: attr(data-info);
+    color: white;
+    font-size: 13px;
+    padding: 2px 6px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    /*min-width: 500px;*/
+    z-index: 999;
+}
+
+.mytooltip:hover::before {
+    display: block;
+}
+
+@media (max-width: 767px) {
+
+
+    .mytooltip::before {
+        display: none;
+        content: attr(data-info);
+        color: white;
+        font-size: 13px;
+        padding: 2px 6px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 5px;
+        position: absolute;
+        top: 10px;
+        left: 50px;
+        /*min-width: 500px;*/
+        z-index: 999;
+    }
+}
+
+.mytooltip {
+    position: relative;
+}
+
+.bkgcolor {
+    background-color: #1E99D5 !important
+}

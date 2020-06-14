@@ -8,11 +8,24 @@
 ==========================================================================================*/
 
 
-export default [{
+export default [
+    {
         url: "/home",
         name: "Panel",
         slug: "home",
         icon: "HomeIcon",
+    },
+    {
+        url: "/home/instituciones",
+        name: "Instituciones",
+        slug: "page2",
+        icon: "SunriseIcon",
+    },
+    {
+        url: "/home/docentes",
+        name: "Docentes",
+        slug: "page2",
+        icon: "UsersIcon",
     },
     {
         url: "/home/areas",
@@ -27,16 +40,16 @@ export default [{
         icon: "LayoutIcon",
     },
     {
-        url: "/home/instituciones",
-        name: "Instituciones",
+        url: "/home/tipo_contenido",
+        name: "Tipo de Contenido",
         slug: "page2",
-        icon: "SunriseIcon",
+        icon: "FileIcon",
     },
     {
-        url: "/home/docentes",
-        name: "Docentes",
+        url: "/home/contenido",
+        name: "Contenido",
         slug: "page2",
-        icon: "UsersIcon",
+        icon: "FolderIcon",
     },
     {
         url: "/home/estudiantes",

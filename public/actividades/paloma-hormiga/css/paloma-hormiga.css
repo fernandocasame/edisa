@@ -1,0 +1,26 @@
+.bg-cabecera {
+    background-color: teal;
+}
+
+.encierreCaja {
+    background-color: #444;
+    color: white;
+    padding: 5px;
+}
+
+.seleccionCaja {
+    background-color: #1c8a00;
+    color: white;
+}
+
+.si,.no {
+    cursor: pointer;
+}
+.correcto{
+	color: #ffffff;
+    background-color: #8FB435 !important; -webkit-print-color-adjust: exact;
+}
+.incorrecto{
+	color: #ffffff;
+    background-color: #E76E80 !important; -webkit-print-color-adjust: exact;
+}

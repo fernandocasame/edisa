@@ -19,7 +19,8 @@ const router = new Router({
     scrollBehavior() {
         return { x: 0, y: 0 }
     },
-    routes: [{
+    routes: [
+        {
             path: '',
             component: () =>
                 import ('@/layouts/full-page/FullPage.vue'),
@@ -63,13 +64,49 @@ const router = new Router({
                     path: '/home/areas',
                     name: 'Areas',
                     component: () =>
-                        import ('./views/areas.vue')
+                        import ('./views/area/areas.vue')
+                },
+                {
+                    path: '/home/areas/nueva',
+                    name: 'nuevaAreas',
+                    component: () =>
+                        import ('./views/area/nuevaArea.vue')
                 },
                 {
                     path: '/home/asignaturas',
-                    name: 'Asignaturas',
+                    name: 'Asignatura',
                     component: () =>
-                        import ('./views/asignaturas.vue')
+                        import ('./views/asignatura/asignaturas.vue')
+                },
+                {
+                    path: '/home/asignaturas/nueva',
+                    name: 'nuevaAsignatura',
+                    component: () =>
+                        import ('./views/asignatura/nuevaAsignatura.vue')
+                },
+                {
+                    path: '/home/tipo_contenido',
+                    name: 'tipocontenido',
+                    component: () =>
+                        import ('./views/tipo_contenido/tipocontenido.vue')
+                },
+                {
+                    path: '/home/tipo_contenido/nuevo',
+                    name: 'tipocontenidoNuevo',
+                    component: () =>
+                        import ('./views/tipo_contenido/nuevoTipocontenido.vue')
+                },
+                {
+                    path: '/home/contenido',
+                    name: 'contenido',
+                    component: () =>
+                        import ('./views/contenido/contenido.vue')
+                },
+                {
+                    path: '/home/contenido/nuevo',
+                    name: 'contenidoNuevo',
+                    component: () =>
+                        import ('./views/contenido/contenido.vue')
                 },
                 {
                     path: '/home/instituciones',
