@@ -50,7 +50,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
   methods: {
     getArea: function getArea() {
       var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://localhost:8000/api/infocontenido', {}).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://69.64.46.74:8000/api/infocontenido', {}).then(function (response) {
         me.actividades = response.data;
         console.log(me.actividades);
       }).catch(function (error) {});

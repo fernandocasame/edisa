@@ -52,7 +52,7 @@ export default {
     methods: {
         getArea() {
             let me = this;
-            axios.get('http://localhost:8000/api/area', {
+            axios.get('http://69.64.46.74:8000/api/area', {
 
                 })
                 .then(function (response) {
