@@ -15,7 +15,7 @@ class TipoContenidoController extends Controller
      */
     public function index()
     {
-        $tipo = DB::SELECT("SELECT * FROM tipo_contenido");
+        $tipo = DB::SELECT("SELECT * FROM tipo_contenido WHERE estado = '1' ORDER BY fecha_create DESC");
         return $tipo;
     }
 
@@ -37,7 +37,14 @@ class TipoContenidoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if(!empty($request->idtipo)){
+            $contenido = TipoContenido::find($request->idtipo)->update($request->all());
+            return $contenido;
+        }else{
+            $contenido = new TipoContenido($request->all());
+            $contenido->save();
+            return $contenido;
+        }
     }
 
     /**
@@ -48,7 +55,7 @@ class TipoContenidoController extends Controller
      */
     public function show(TipoContenido $tipoContenido)
     {
-        //
+        return $tipoContenido;
     }
 
     /**
@@ -82,6 +89,7 @@ class TipoContenidoController extends Controller
      */
     public function destroy(TipoContenido $tipoContenido)
     {
-        //
+        $tipoContenido = TipoContenido::find($tipoContenido->idtipo);
+        return $tipoContenido;
     }
 }

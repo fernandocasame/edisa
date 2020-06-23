@@ -9,7 +9,7 @@ class Area extends Model
     protected $table = "area";
     protected $primaryKey = 'idarea';
     protected $fillable = [
-        'nombre'
+        'nombre','detalle','fecha_create','estado'
     ];
 	public $timestamps = false;
 }

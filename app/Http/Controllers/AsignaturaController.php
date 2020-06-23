@@ -15,7 +15,7 @@ class AsignaturaController extends Controller
      */
     public function index()
     {
-        $asignatura = DB::SELECT("SELECT * FROM asignatura ");
+        $asignatura = DB::SELECT("SELECT * FROM asignatura WHERE estado = '1' ORDER BY fecha_create DESC");
         return $asignatura;
     }
 
@@ -37,7 +37,14 @@ class AsignaturaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if(!empty($request->idasignatura)){
+            $asignatura = Asignatura::find($request->idasignatura)->update($request->all());
+            return $asignatura;
+        }else{
+            $asignatura = new Asignatura($request->all());
+            $asignatura->save();
+            return $asignatura;
+        }
     }
 
     /**
@@ -48,7 +55,7 @@ class AsignaturaController extends Controller
      */
     public function show(Asignatura $asignatura)
     {
-        //
+        return $asignatura;
     }
 
     /**
@@ -82,6 +89,7 @@ class AsignaturaController extends Controller
      */
     public function destroy(Asignatura $asignatura)
     {
-        //
+        $asignatura = Asignatura::find($asignatura->idasignatura)->update(['estado' => '0']);
+        return $asignatura;
     }
 }

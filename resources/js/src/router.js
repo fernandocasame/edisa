@@ -73,6 +73,12 @@ const router = new Router({
                         import ('./views/area/nuevaArea.vue')
                 },
                 {
+                    path: '/home/areas/editar/:id',
+                    name: 'editarAreas',
+                    component: () =>
+                        import ('./views/area/nuevaArea.vue')
+                },
+                {
                     path: '/home/asignaturas',
                     name: 'Asignatura',
                     component: () =>
@@ -85,6 +91,12 @@ const router = new Router({
                         import ('./views/asignatura/nuevaAsignatura.vue')
                 },
                 {
+                    path: '/home/asignaturas/editar/:id',
+                    name: 'editarAsignatura',
+                    component: () =>
+                        import ('./views/asignatura/nuevaAsignatura.vue')
+                },
+                {
                     path: '/home/tipo_contenido',
                     name: 'tipocontenido',
                     component: () =>
@@ -93,6 +105,12 @@ const router = new Router({
                 {
                     path: '/home/tipo_contenido/nuevo',
                     name: 'tipocontenidoNuevo',
+                    component: () =>
+                        import ('./views/tipo_contenido/nuevoTipocontenido.vue')
+                },
+                {
+                    path: '/home/tipo_contenido/editar/:id',
+                    name: 'tipocontenidoEditar',
                     component: () =>
                         import ('./views/tipo_contenido/nuevoTipocontenido.vue')
                 },

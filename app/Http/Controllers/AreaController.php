@@ -16,7 +16,7 @@ class AreaController extends Controller
      */
     public function index()
     {
-        $area = DB::SELECT("SELECT * FROM area");
+        $area = DB::SELECT("SELECT * FROM area WHERE estado = '1' ORDER BY fecha_create DESC");
         return $area;
     }
 
@@ -38,7 +38,14 @@ class AreaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if(!empty($request->idarea)){
+            $area = Area::find($request->idarea)->update($request->all());
+            return $area;
+        }else{
+            $area = new Area($request->all());
+            $area->save();
+            return $area;
+        }
     }
 
     /**
@@ -49,7 +56,7 @@ class AreaController extends Controller
      */
     public function show(Area $area)
     {
-        //
+        return $area;
     }
 
     /**
@@ -72,7 +79,7 @@ class AreaController extends Controller
      */
     public function update(Request $request, Area $area)
     {
-        //
+       
     }
 
     /**
@@ -83,6 +90,7 @@ class AreaController extends Controller
      */
     public function destroy(Area $area)
     {
-        //
+        $area = Area::find($area->idarea)->update(['estado' => '0']);
+        return $area;
     }
 }

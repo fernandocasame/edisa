@@ -25,8 +25,8 @@
 
                 <vs-td :data="tr.idarea">
                     <div class="flex">
-                        <vs-button type="border" size="small" icon-pack="feather" icon="icon-edit" class="mr-2" color="success"></vs-button>
-                        <vs-button type="border" size="small" icon-pack="feather" icon="icon-trash" class="mr-2" color="danger"></vs-button>
+                        <vs-button type="border" size="small" icon-pack="feather" icon="icon-edit" class="mr-2" color="success" @click="getEditar(tr.idasignatura)"></vs-button>
+                        <vs-button type="border" size="small" icon-pack="feather" icon="icon-trash" class="mr-2" color="danger" @click="getEliminar(tr.idasignatura)"></vs-button>
                     </div>
                 </vs-td>
 
@@ -52,7 +52,7 @@ export default {
     methods: {
         getArea() {
             let me = this;
-            axios.get('http://69.64.46.74:8000/api/asignatura', {
+            axios.get('http://localhost:8000/api/asignatura', {
 
                 })
                 .then(function (response) {
@@ -60,8 +60,19 @@ export default {
                     console.log(me.asignatura);
                 })
                 .catch(function (error) {})
+        },
+        getEditar(idasignatura) {
+            this.$router.push('/home/asignaturas/editar/' + idasignatura);
+            console.log(idasignatura);
+        },
+        getEliminar(idasignatura) {
+            let me = this;
+            axios.delete("http://localhost:8000/api/asignatura/" + idasignatura)
+                .then(function (response) {
+                    me.getArea();
+                })
+                .catch(function (error) {})
         }
-
     },
 }
 </script>

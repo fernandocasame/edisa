@@ -1,6 +1,8 @@
 <template>
 <vx-card title="Areas">
-    <vs-button type="border" color="success" class="mr-4" to="/home/areas/nueva">Nueva Area</vs-button>
+    <vs-cold>
+        <vs-button type="border" color="success" class="mr-2" to="/home/areas/nueva">Nueva Area</vs-button>
+    </vs-cold>
     <vs-table :data="area">
         <template slot="thead">
             <vs-th>Nombre</vs-th>
@@ -25,8 +27,8 @@
 
                 <vs-td :data="tr.idarea">
                     <div class="flex">
-                        <vs-button type="border" size="small" icon-pack="feather" icon="icon-edit" class="mr-2" color="success"></vs-button>
-                        <vs-button type="border" size="small" icon-pack="feather" icon="icon-trash" class="mr-2" color="danger"></vs-button>
+                        <vs-button type="border" size="small" icon-pack="feather" icon="icon-edit" class="mr-2" color="success" @click="getEditar(tr.idarea)"></vs-button>
+                        <vs-button type="border" size="small" icon-pack="feather" icon="icon-trash" class="mr-2" color="danger" @click="getEliminar(tr.idarea)"></vs-button>
                     </div>
                 </vs-td>
 
@@ -52,7 +54,7 @@ export default {
     methods: {
         getArea() {
             let me = this;
-            axios.get('http://69.64.46.74:8000/api/area', {
+            axios.get('http://localhost:8000/api/area', {
 
                 })
                 .then(function (response) {
@@ -60,8 +62,19 @@ export default {
                     console.log(me.area);
                 })
                 .catch(function (error) {})
+        },
+        getEditar(idarea) {
+            this.$router.push('/home/areas/editar/' + idarea);
+            console.log(idarea);
+        },
+        getEliminar(idarea) {
+            let me = this;
+            axios.delete("http://localhost:8000/api/area/" + idarea)
+                .then(function (response) {
+                    me.getArea();
+                })
+                .catch(function (error) {})
         }
-
     },
 }
 </script>
