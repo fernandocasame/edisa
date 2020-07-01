@@ -21,6 +21,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['middleware' => 'cors'],function(){
     Route::apiResource('area','AreaController');
     Route::apiResource('asignatura','AsignaturaController');
-    Route::apiResource('tipo','TipoContenidoController');
+    Route::apiResource('tcontenido','TcontenidoController');
     Route::apiResource('infocontenido','ContenidoController');
 });

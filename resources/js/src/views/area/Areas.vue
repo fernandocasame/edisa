@@ -1,8 +1,6 @@
 <template>
 <vx-card title="Areas">
-    <vs-cold>
-        <vs-button type="border" color="success" class="mr-2" to="/home/areas/nueva">Nueva Area</vs-button>
-    </vs-cold>
+    <vs-button type="border" color="success" class="mr-2" to="/home/areas/nueva">Agregar Nuevo</vs-button>
     <vs-table :data="area">
         <template slot="thead">
             <vs-th>Nombre</vs-th>
@@ -45,7 +43,7 @@ Vue.use(axios)
 export default {
     data() {
         return {
-            area: []
+            area: [],
         }
     },
     mounted() {

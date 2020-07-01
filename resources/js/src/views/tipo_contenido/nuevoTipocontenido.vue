@@ -2,7 +2,7 @@
 <vx-card :title="titulo">
     <div class="vx-col  w-full mb-base">
         <div class="vx-row mb-6">
-            <input type="text" v-model="tipocontenido.idtipo_contenido" hidden>
+            <input type="text" v-model="tipocontenido.idtipo" hidden>
             <div class="vx-col sm:w-1/3 w-full">
                 <span>Nombre</span>
             </div>
@@ -51,10 +51,10 @@ export default {
         }
     },
     methods: {
-        getTipoContenido(idtipo_contenido) {
+        getTipoContenido(idtipo) {
             let me = this;
-            console.log(idtipo_contenido);
-            axios.get("http://localhost:8000/api/tipo/" + idtipo_contenido)
+            console.log(idtipo);
+            axios.get("http://localhost:8000/api/tcontenido/" + idtipo)
                 .then(function (response) {
                     console.log(response.data);
                     me.tipocontenido = response.data;
@@ -64,7 +64,7 @@ export default {
         guardar(data) {
             let me = this;
             console.log(data);
-            axios.post("http://localhost:8000/api/tipo", data)
+            axios.post("http://localhost:8000/api/tcontenido", data)
                 .then(function (response) {
                     me.$router.push('/home/tipo_contenido');
                 })

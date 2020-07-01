@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TipoContenido extends Model
+class Tcontenido extends Model
 {
-    protected $table = "tipo_contenido";
+    protected $table = "tipocontenido";
     protected $primaryKey = 'idtipo';
     protected $fillable = [
         'nombre','detalle','estado'
     ];
-	public $timestamps = false;
+    public $timestamps = false;
 }
