@@ -19,8 +19,7 @@ const router = new Router({
     scrollBehavior() {
         return { x: 0, y: 0 }
     },
-    routes: [
-        {
+    routes: [{
             path: '',
             component: () =>
                 import ('@/layouts/full-page/FullPage.vue'),
@@ -130,19 +129,43 @@ const router = new Router({
                     path: '/home/instituciones',
                     name: 'Instituciones',
                     component: () =>
-                        import ('./views/Instituciones.vue')
+                        import ('./views/institucion/Instituciones.vue')
+                },
+                {
+                    path: '/home/institucion/nueva',
+                    name: 'nuevaInstituciones',
+                    component: () =>
+                        import ('./views/institucion/nueva.vue')
+                },
+                {
+                    path: '/home/institucion/editar/:id',
+                    name: 'editarInstituciones',
+                    component: () =>
+                        import ('./views/institucion/nueva.vue')
                 },
                 {
                     path: '/home/docentes',
                     name: 'Docentes',
                     component: () =>
-                        import ('./views/Docentes.vue')
+                        import ('./views/docente/Docentes.vue')
+                },
+                {
+                    path: '/home/docentes/nuevo',
+                    name: 'nuevaDocente',
+                    component: () =>
+                        import ('./views/docente/nuevo.vue')
+                },
+                {
+                    path: '/home/docentes/editar/:id',
+                    name: 'editarDocente',
+                    component: () =>
+                        import ('./views/docente/nuevo.vue')
                 },
                 {
                     path: '/home/estudiantes',
                     name: 'Estudiantes',
                     component: () =>
-                        import ('./views/Estudiantes.vue')
+                        import ('./views/estudiante/Estudiantes.vue')
                 },
                 {
                     path: '/home/libros',
@@ -161,6 +184,24 @@ const router = new Router({
                     name: 'Actividades',
                     component: () =>
                         import ('./views/Actividades.vue')
+                },
+                {
+                    path: '/home/grupos',
+                    name: 'Grupos',
+                    component: () =>
+                        import ('./views/grupo/Grupos.vue')
+                },
+                {
+                    path: '/home/grupos/nuevo',
+                    name: 'nuevaGrupos',
+                    component: () =>
+                        import ('./views/grupo/nuevo.vue')
+                },
+                {
+                    path: '/home/grupos/editar/:id',
+                    name: 'editarGrupos',
+                    component: () =>
+                        import ('./views/grupo/nuevo.vue')
                 },
                 {
                     path: '/virtual/:url',

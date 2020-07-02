@@ -140,6 +140,12 @@ export default {
                     icon: "SunriseIcon",
                 },
                 {
+                    url: "/home/grupos",
+                    name: "Grupo de Usuarios",
+                    slug: "page2",
+                    icon: "UsersIcon",
+                },
+                {
                     url: "/home/docentes",
                     name: "Docentes",
                     slug: "page2",
