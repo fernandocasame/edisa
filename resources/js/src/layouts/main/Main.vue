@@ -176,12 +176,6 @@ export default {
                     icon: "FileIcon",
                 },
                 {
-                    url: "/home/contenido",
-                    name: "Contenido",
-                    slug: "page2",
-                    icon: "FolderIcon",
-                },
-                {
                     url: "/home/libros",
                     name: "Libros",
                     slug: "page2",
@@ -262,10 +256,10 @@ export default {
         }
     },
     mounted() {
-        console.log(localStorage.token);
         if (!localStorage.token) {
             this.$router.push('/');
         } else {
+            console.log(localStorage.token);
             this.$router.push('/home');
         }
     },
