@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use App\Usuario;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use DB;
-
 class UsuarioController extends Controller
 {
     /**
@@ -16,7 +17,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $usuario = DB::SELECT("SELECT * FROM usuario WHERE estado = '1' ORDER BY fecha_create DESC");
+        $usuario = DB::SELECT("SELECT * FROM usuario WHERE estado = '1' AND grupo_idgrupo='2' ORDER BY fecha_create DESC");
         return $usuario;
     }
 
@@ -30,6 +31,10 @@ class UsuarioController extends Controller
         //
     }
 
+    public function password(){
+        return str_random(8);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -38,7 +43,14 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if(!empty($request->idusuario)){
+            $usuario = Usuario::find($request->idusuario)->update($request->all());
+            return $usuario;
+        }else{
+            $usuario = new Usuario($request->all());
+            $usuario->save();
+            return $usuario;
+        }
     }
 
     /**
@@ -49,7 +61,7 @@ class UsuarioController extends Controller
      */
     public function show(Usuario $usuario)
     {
-        //
+        return $usuario;
     }
 
     /**
@@ -83,6 +95,7 @@ class UsuarioController extends Controller
      */
     public function destroy(Usuario $usuario)
     {
-        //
+        $usuario = Usuario::find($usuario->idusuario)->update(['estado' => '0']);
+        return $usuario;
     }
 }

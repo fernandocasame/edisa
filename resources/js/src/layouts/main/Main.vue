@@ -261,6 +261,14 @@ export default {
             return this.$store.state.windowWidth
         }
     },
+    mounted() {
+        console.log(localStorage.token);
+        if (!localStorage.token) {
+            this.$router.push('/');
+        } else {
+
+        }
+    },
     methods: {
         changeRouteTitle(title) {
             this.routeTitle = title

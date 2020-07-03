@@ -150,13 +150,13 @@ const router = new Router({
                         import ('./views/docente/Docentes.vue')
                 },
                 {
-                    path: '/home/docentes/nuevo',
+                    path: '/home/docente/nuevo',
                     name: 'nuevaDocente',
                     component: () =>
                         import ('./views/docente/nuevo.vue')
                 },
                 {
-                    path: '/home/docentes/editar/:id',
+                    path: '/home/docente/editar/:id',
                     name: 'editarDocente',
                     component: () =>
                         import ('./views/docente/nuevo.vue')
@@ -166,6 +166,18 @@ const router = new Router({
                     name: 'Estudiantes',
                     component: () =>
                         import ('./views/estudiante/Estudiantes.vue')
+                },
+                {
+                    path: '/home/estudiante/nuevo',
+                    name: 'nuevaEstudiante',
+                    component: () =>
+                        import ('./views/estudiante/nuevo.vue')
+                },
+                {
+                    path: '/home/estudiante/editar/:id',
+                    name: 'editarEstudiante',
+                    component: () =>
+                        import ('./views/estudiante/nuevo.vue')
                 },
                 {
                     path: '/home/libros',

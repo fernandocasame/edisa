@@ -51,7 +51,7 @@
                   <div class="flex flex-wrap justify-between my-5">
                       <router-link to="">olvido su contraseña?</router-link>
                   </div>
-                  <vs-button class="float-center" to="/home" >Iniciar sesión</vs-button>
+                  <vs-button class="float-center" @click="login()" >Iniciar sesión</vs-button>
 
                   <vs-divider></vs-divider>
 
@@ -89,6 +89,12 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import axios from 'axios'
+import "vue-select/dist/vue-select.css";
+import vSelect from "vue-select";
+Vue.use(axios)
+Vue.component("v-select", vSelect);
 export default{
   data() {
     return {
@@ -96,7 +102,32 @@ export default{
       password: "",
       checkbox_remember_me: false,
     }
-  }
+  },
+  mounted() {
+    
+  },
+  methods: {
+    login() {
+            let me = this;
+            axios.post('http://localhost:8000/api/login', {
+                    email: me.email,
+                    password: me.password
+                })
+                .then(function (response) {
+                    console.log(response.data);
+                    localStorage.token = response.data.token;
+                    localStorage.setItem('usuario', JSON.stringify(response.data.datos));
+                    me.$router.push('/home');
+                })
+                .catch(function (error) {
+                    if (error.response.status == 401) {
+                        me.errors = error.response.data;
+                        me.estado = false;
+                        console.log(me.errors.message);
+                    }
+                })
+        }
+  },
 }
 </script>
 

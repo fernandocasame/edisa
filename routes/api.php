@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
+Route::post('/login', 'AuthController@login');
 Route::group(['middleware' => 'cors'],function(){
     Route::apiResource('area','AreaController');
     Route::apiResource('asignatura','AsignaturaController');
@@ -26,4 +26,9 @@ Route::group(['middleware' => 'cors'],function(){
     Route::apiResource('institucion','InstitucionController');
     Route::apiResource('usuario','UsuarioController');
     Route::apiResource('grupo','GrupoController');
+    Route::apiResource('estudiante','EstudianteController');
+    Route::get('password','UsuarioController@password');
+});
+Route::group(['middleware' => 'auth.jwt'], function () {
+    Route::post('/logout', 'AuthController@logout');
 });
