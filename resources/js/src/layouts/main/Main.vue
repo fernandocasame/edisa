@@ -266,7 +266,7 @@ export default {
         if (!localStorage.token) {
             this.$router.push('/');
         } else {
-
+            this.$router.push('/home');
         }
     },
     methods: {

@@ -2757,7 +2757,9 @@ __webpack_require__.r(__webpack_exports__);
 
     if (!localStorage.token) {
       this.$router.push('/');
-    } else {}
+    } else {
+      this.$router.push('/home');
+    }
   },
   methods: {
     changeRouteTitle: function changeRouteTitle(title) {
