@@ -1,6 +1,6 @@
 <template>
 <vx-card title="Tipo Contenido">
-    <vs-button type="border" color="success" class="mr-4" to="/home/tipo_contenido/nuevo">Agregar Nuevo</vs-button>
+    <vs-button type="border" color="success" class="mr-4" to="/tipo_contenido/nuevo">Agregar Nuevo</vs-button>
     <vs-table :data="tipocontenido">
         <template slot="thead">
             <vs-th>Nombre</vs-th>
@@ -62,7 +62,7 @@ export default {
                 .catch(function (error) {})
         },
         getEditar(idtipo) {
-            this.$router.push('/home/tipo_contenido/editar/' + idtipo);
+            this.$router.push('/tipo_contenido/editar/' + idtipo);
             console.log(idtipo);
         },
         getEliminar(idtipo) {

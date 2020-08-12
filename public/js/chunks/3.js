@@ -150,7 +150,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component("v-select", vue_select__WEB
       var me = this;
       console.log(data);
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://localhost:8000/api/institucion", data).then(function (response) {
-        me.$router.push('/home/instituciones');
+        me.$router.push('/instituciones');
       }).catch(function (error) {});
     }
   }
@@ -465,11 +465,7 @@ var render = function() {
               "vs-button",
               {
                 staticClass: "mb-2",
-                attrs: {
-                  color: "danger",
-                  type: "border",
-                  to: "/home/instituciones"
-                }
+                attrs: { color: "danger", type: "border", to: "/instituciones" }
               },
               [_vm._v("Cancelar")]
             )

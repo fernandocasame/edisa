@@ -65,7 +65,7 @@
 
             <div class="vx-col sm:w-1/2 w-full ml-auto">
                 <vs-button color="success" type="border" @click="guardar(institucion)" class="mb-2">Enviar</vs-button>
-                <vs-button color="danger" type="border" class="mb-2" to="/home/instituciones">Cancelar</vs-button>
+                <vs-button color="danger" type="border" class="mb-2" to="/instituciones">Cancelar</vs-button>
             </div>
         </form>
     </div>
@@ -137,7 +137,7 @@ export default {
             console.log(data);
             axios.post("http://localhost:8000/api/institucion", data)
                 .then(function (response) {
-                    me.$router.push('/home/instituciones');
+                    me.$router.push('/instituciones');
                 })
                 .catch(function (error) {})
         }

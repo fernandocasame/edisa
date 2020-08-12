@@ -29,7 +29,7 @@
         <div class="vx-row">
             <div class="vx-col sm:w-2/3 w-full ml-auto">
                 <vs-button color="success" type="border" @click="guardar(asignatura)" class="mb-2">Enviar</vs-button>
-                <vs-button color="danger" type="border" class="mb-2" to="/home/asignaturas">Cancelar</vs-button>
+                <vs-button color="danger" type="border" class="mb-2" to="/asignaturas">Cancelar</vs-button>
             </div>
         </div>
     </div>
@@ -86,7 +86,7 @@ export default {
             console.log(data);
             axios.post("http://localhost:8000/api/asignatura", data)
                 .then(function (response) {
-                    me.$router.push('/home/asignaturas');
+                    me.$router.push('/asignaturas');
                 })
                 .catch(function (error) {})
         }

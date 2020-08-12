@@ -1,6 +1,6 @@
 <template>
 <vx-card title="Areas">
-    <vs-button type="border" color="success" class="mr-2" to="/home/areas/nueva">Agregar Nuevo</vs-button>
+    <vs-button type="border" color="success" class="mr-2" to="/areas/nueva">Agregar Nuevo</vs-button>
     <vs-table :data="area">
         <template slot="thead">
             <vs-th>Nombre</vs-th>
@@ -62,7 +62,7 @@ export default {
                 .catch(function (error) {})
         },
         getEditar(idarea) {
-            this.$router.push('/home/areas/editar/' + idarea);
+            this.$router.push('/areas/editar/' + idarea);
             console.log(idarea);
         },
         getEliminar(idarea) {

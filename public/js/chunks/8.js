@@ -2633,57 +2633,52 @@ __webpack_require__.r(__webpack_exports__);
       navbarColor: _themeConfig_js__WEBPACK_IMPORTED_MODULE_5__["default"].navbarColor || '#fff',
       navbarType: _themeConfig_js__WEBPACK_IMPORTED_MODULE_5__["default"].navbarType || 'floating',
       navMenuItems: [{
-        url: "/home",
+        url: "",
         name: "Panel",
         slug: "home",
         icon: "HomeIcon"
       }, {
-        url: "/home/instituciones",
+        url: "/instituciones",
         name: "Instituciones",
         slug: "page2",
         icon: "SunriseIcon"
       }, {
-        url: "/home/grupos",
+        url: "/grupos",
         name: "Grupo de Usuarios",
         slug: "page2",
         icon: "UsersIcon"
       }, {
-        url: "/home/docentes",
+        url: "/docentes",
         name: "Docentes",
         slug: "page2",
         icon: "UsersIcon"
       }, {
-        url: "/home/estudiantes",
+        url: "/estudiantes",
         name: "Estudinates",
         slug: "page2",
         icon: "UserIcon"
       }, {
-        url: "/home/areas",
+        url: "/areas",
         name: "Áreas",
         slug: "page2",
         icon: "LayersIcon"
       }, {
-        url: "/home/asignaturas",
+        url: "/asignaturas",
         name: "Asignaturas",
         slug: "page2",
         icon: "LayoutIcon"
       }, {
-        url: "/home/tipo_contenido",
-        name: "Tipo de Contenido",
-        slug: "page2",
-        icon: "FileIcon"
-      }, {
-        url: "/home/libros",
+        url: "/libros",
         name: "Libros",
         slug: "page2",
         icon: "BookIcon"
       }, {
-        url: "/home/planificaciones",
+        url: "/planificaciones",
         name: "Planificaciones",
         slug: "page2",
         icon: "FileTextIcon"
       }, {
-        url: "/home/actividades",
+        url: "/actividades",
         name: "Actividades",
         slug: "page2",
         icon: "FolderIcon"
@@ -2752,7 +2747,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$router.push('/');
     } else {
       console.log(localStorage.token);
-      this.$router.push('/home');
+      this.$router.push('');
     }
   },
   methods: {

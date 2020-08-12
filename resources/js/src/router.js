@@ -39,6 +39,12 @@ const router = new Router({
                     component: () =>
                         import ('@/views/pages/Error404.vue')
                 },
+                {
+                    path: '/libro/digital',
+                    name: 'digital',
+                    component: () =>
+                        import ('./views/libro/digital.vue')
+                },
             ]
         },
 
@@ -60,157 +66,169 @@ const router = new Router({
                         import ('./views/Home.vue')
                 },
                 {
-                    path: '/home/areas',
+                    path: '/areas',
                     name: 'Areas',
                     component: () =>
                         import ('./views/area/areas.vue')
                 },
                 {
-                    path: '/home/areas/nueva',
+                    path: '/areas/nueva',
                     name: 'nuevaAreas',
                     component: () =>
                         import ('./views/area/nuevaArea.vue')
                 },
                 {
-                    path: '/home/areas/editar/:id',
+                    path: '/areas/editar/:id',
                     name: 'editarAreas',
                     component: () =>
                         import ('./views/area/nuevaArea.vue')
                 },
                 {
-                    path: '/home/asignaturas',
+                    path: '/asignaturas',
                     name: 'Asignatura',
                     component: () =>
                         import ('./views/asignatura/asignaturas.vue')
                 },
                 {
-                    path: '/home/asignaturas/nueva',
+                    path: '/asignaturas/nueva',
                     name: 'nuevaAsignatura',
                     component: () =>
                         import ('./views/asignatura/nuevaAsignatura.vue')
                 },
                 {
-                    path: '/home/asignaturas/editar/:id',
+                    path: '/asignaturas/editar/:id',
                     name: 'editarAsignatura',
                     component: () =>
                         import ('./views/asignatura/nuevaAsignatura.vue')
                 },
                 {
-                    path: '/home/tipo_contenido',
+                    path: '/tipo_contenido',
                     name: 'tipocontenido',
                     component: () =>
                         import ('./views/tipo_contenido/tipocontenido.vue')
                 },
                 {
-                    path: '/home/tipo_contenido/nuevo',
+                    path: '/tipo_contenido/nuevo',
                     name: 'tipocontenidoNuevo',
                     component: () =>
                         import ('./views/tipo_contenido/nuevoTipocontenido.vue')
                 },
                 {
-                    path: '/home/tipo_contenido/editar/:id',
+                    path: '/tipo_contenido/editar/:id',
                     name: 'tipocontenidoEditar',
                     component: () =>
                         import ('./views/tipo_contenido/nuevoTipocontenido.vue')
                 },
                 {
-                    path: '/home/contenido',
+                    path: '/contenido',
                     name: 'contenido',
                     component: () =>
                         import ('./views/contenido/contenido.vue')
                 },
                 {
-                    path: '/home/contenido/nuevo',
+                    path: '/contenido/nuevo',
                     name: 'contenidoNuevo',
                     component: () =>
                         import ('./views/contenido/contenido.vue')
                 },
                 {
-                    path: '/home/instituciones',
+                    path: '/instituciones',
                     name: 'Instituciones',
                     component: () =>
                         import ('./views/institucion/Instituciones.vue')
                 },
                 {
-                    path: '/home/institucion/nueva',
+                    path: '/institucion/nueva',
                     name: 'nuevaInstituciones',
                     component: () =>
                         import ('./views/institucion/nueva.vue')
                 },
                 {
-                    path: '/home/institucion/editar/:id',
+                    path: '/institucion/editar/:id',
                     name: 'editarInstituciones',
                     component: () =>
                         import ('./views/institucion/nueva.vue')
                 },
                 {
-                    path: '/home/docentes',
+                    path: '/docentes',
                     name: 'Docentes',
                     component: () =>
                         import ('./views/docente/Docentes.vue')
                 },
                 {
-                    path: '/home/docente/nuevo',
+                    path: '/docente/nuevo',
                     name: 'nuevaDocente',
                     component: () =>
                         import ('./views/docente/nuevo.vue')
                 },
                 {
-                    path: '/home/docente/editar/:id',
+                    path: '/docente/editar/:id',
                     name: 'editarDocente',
                     component: () =>
                         import ('./views/docente/nuevo.vue')
                 },
                 {
-                    path: '/home/estudiantes',
+                    path: '/estudiantes',
                     name: 'Estudiantes',
                     component: () =>
                         import ('./views/estudiante/Estudiantes.vue')
                 },
                 {
-                    path: '/home/estudiante/nuevo',
+                    path: '/estudiante/nuevo',
                     name: 'nuevaEstudiante',
                     component: () =>
                         import ('./views/estudiante/nuevo.vue')
                 },
                 {
-                    path: '/home/estudiante/editar/:id',
+                    path: '/estudiante/editar/:id',
                     name: 'editarEstudiante',
                     component: () =>
                         import ('./views/estudiante/nuevo.vue')
                 },
                 {
-                    path: '/home/libros',
+                    path: '/libros',
                     name: 'Libros',
                     component: () =>
-                        import ('./views/Libros.vue')
+                        import ('./views/libro/Libros.vue')
                 },
                 {
-                    path: '/home/planificaciones',
+                    path: '/nuevo/libro',
+                    name: 'NuevoLibro',
+                    component: () =>
+                        import ('./views/libro/nuevo.vue')
+                },
+                {
+                    path: '/editar/libro/:id',
+                    name: 'EditarLibro',
+                    component: () =>
+                        import ('./views/libro/nuevo.vue')
+                },
+                {
+                    path: '/planificaciones',
                     name: 'Planificaciones',
                     component: () =>
                         import ('./views/Planificaciones.vue')
                 },
                 {
-                    path: '/home/actividades',
+                    path: '/actividades',
                     name: 'Actividades',
                     component: () =>
                         import ('./views/Actividades.vue')
                 },
                 {
-                    path: '/home/grupos',
+                    path: '/grupos',
                     name: 'Grupos',
                     component: () =>
                         import ('./views/grupo/Grupos.vue')
                 },
                 {
-                    path: '/home/grupos/nuevo',
+                    path: '/grupos/nuevo',
                     name: 'nuevaGrupos',
                     component: () =>
                         import ('./views/grupo/nuevo.vue')
                 },
                 {
-                    path: '/home/grupos/editar/:id',
+                    path: '/grupos/editar/:id',
                     name: 'editarGrupos',
                     component: () =>
                         import ('./views/grupo/nuevo.vue')

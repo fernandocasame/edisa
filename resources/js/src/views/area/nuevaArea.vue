@@ -22,7 +22,7 @@
             </div>
             <div class="vx-col sm:w-1/2 w-full ml-auto">
                 <vs-button color="success" type="border" @click="guardar(area)" class="mb-2">Enviar</vs-button>
-                <vs-button color="danger" type="border" class="mb-2" to="/home/areas">Cancelar</vs-button>
+                <vs-button color="danger" type="border" class="mb-2" to="/areas">Cancelar</vs-button>
             </div>
         </form>
     </div>
@@ -64,7 +64,7 @@ export default {
             console.log(data);
             axios.post("http://localhost:8000/api/area", data)
                 .then(function (response) {
-                    me.$router.push('/home/areas');
+                    me.$router.push('/areas');
                 })
                 .catch(function (error) {})
         }

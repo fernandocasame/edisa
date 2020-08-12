@@ -121,7 +121,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("v-select", vue_select__WEB
       this.$router.push('/');
     } else {
       console.log(localStorage.token);
-      this.$router.push('/home');
+      this.$router.push('');
     }
   },
   methods: {
@@ -134,7 +134,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("v-select", vue_select__WEB
         console.log(response.data);
         localStorage.token = response.data.token;
         localStorage.setItem('usuario', _babel_runtime_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(response.data.datos));
-        me.$router.push('/home');
+        me.$router.push('');
       }).catch(function (error) {
         if (error.response.status == 401) {
           me.errors = error.response.data;

@@ -75,7 +75,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
       var me = this;
       console.log(data);
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://localhost:8000/api/area", data).then(function (response) {
-        me.$router.push('/home/areas');
+        me.$router.push('/areas');
       }).catch(function (error) {});
     }
   }
@@ -219,7 +219,7 @@ var render = function() {
               "vs-button",
               {
                 staticClass: "mb-2",
-                attrs: { color: "danger", type: "border", to: "/home/areas" }
+                attrs: { color: "danger", type: "border", to: "/areas" }
               },
               [_vm._v("Cancelar")]
             )

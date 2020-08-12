@@ -58157,7 +58157,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: [{
     path: '',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 23).then(__webpack_require__.bind(null, /*! @/layouts/full-page/FullPage.vue */ "./resources/js/src/layouts/full-page/FullPage.vue"));
+      return __webpack_require__.e(/*! import() */ 24).then(__webpack_require__.bind(null, /*! @/layouts/full-page/FullPage.vue */ "./resources/js/src/layouts/full-page/FullPage.vue"));
     },
     children: [// =============================================================================
     // PAGES
@@ -58173,6 +58173,12 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       name: 'page-error-404',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 22).then(__webpack_require__.bind(null, /*! @/views/pages/Error404.vue */ "./resources/js/src/views/pages/Error404.vue"));
+      }
+    }, {
+      path: '/libro/digital',
+      name: 'digital',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 27).then(__webpack_require__.bind(null, /*! ./views/libro/digital.vue */ "./resources/js/src/views/libro/digital.vue"));
       }
     }]
   }, {
@@ -58190,160 +58196,172 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/home',
       name: 'home',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 24).then(__webpack_require__.bind(null, /*! ./views/Home.vue */ "./resources/js/src/views/Home.vue"));
+        return __webpack_require__.e(/*! import() */ 25).then(__webpack_require__.bind(null, /*! ./views/Home.vue */ "./resources/js/src/views/Home.vue"));
       }
     }, {
-      path: '/home/areas',
+      path: '/areas',
       name: 'Areas',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 14).then(__webpack_require__.bind(null, /*! ./views/area/areas.vue */ "./resources/js/src/views/area/areas.vue"));
       }
     }, {
-      path: '/home/areas/nueva',
+      path: '/areas/nueva',
       name: 'nuevaAreas',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./views/area/nuevaArea.vue */ "./resources/js/src/views/area/nuevaArea.vue"));
       }
     }, {
-      path: '/home/areas/editar/:id',
+      path: '/areas/editar/:id',
       name: 'editarAreas',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./views/area/nuevaArea.vue */ "./resources/js/src/views/area/nuevaArea.vue"));
       }
     }, {
-      path: '/home/asignaturas',
+      path: '/asignaturas',
       name: 'Asignatura',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 15).then(__webpack_require__.bind(null, /*! ./views/asignatura/asignaturas.vue */ "./resources/js/src/views/asignatura/asignaturas.vue"));
       }
     }, {
-      path: '/home/asignaturas/nueva',
+      path: '/asignaturas/nueva',
       name: 'nuevaAsignatura',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./views/asignatura/nuevaAsignatura.vue */ "./resources/js/src/views/asignatura/nuevaAsignatura.vue"));
       }
     }, {
-      path: '/home/asignaturas/editar/:id',
+      path: '/asignaturas/editar/:id',
       name: 'editarAsignatura',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./views/asignatura/nuevaAsignatura.vue */ "./resources/js/src/views/asignatura/nuevaAsignatura.vue"));
       }
     }, {
-      path: '/home/tipo_contenido',
+      path: '/tipo_contenido',
       name: 'tipocontenido',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 20).then(__webpack_require__.bind(null, /*! ./views/tipo_contenido/tipocontenido.vue */ "./resources/js/src/views/tipo_contenido/tipocontenido.vue"));
       }
     }, {
-      path: '/home/tipo_contenido/nuevo',
+      path: '/tipo_contenido/nuevo',
       name: 'tipocontenidoNuevo',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./views/tipo_contenido/nuevoTipocontenido.vue */ "./resources/js/src/views/tipo_contenido/nuevoTipocontenido.vue"));
       }
     }, {
-      path: '/home/tipo_contenido/editar/:id',
+      path: '/tipo_contenido/editar/:id',
       name: 'tipocontenidoEditar',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./views/tipo_contenido/nuevoTipocontenido.vue */ "./resources/js/src/views/tipo_contenido/nuevoTipocontenido.vue"));
       }
     }, {
-      path: '/home/contenido',
+      path: '/contenido',
       name: 'contenido',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ./views/contenido/contenido.vue */ "./resources/js/src/views/contenido/contenido.vue"));
       }
     }, {
-      path: '/home/contenido/nuevo',
+      path: '/contenido/nuevo',
       name: 'contenidoNuevo',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ./views/contenido/contenido.vue */ "./resources/js/src/views/contenido/contenido.vue"));
       }
     }, {
-      path: '/home/instituciones',
+      path: '/instituciones',
       name: 'Instituciones',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 19).then(__webpack_require__.bind(null, /*! ./views/institucion/Instituciones.vue */ "./resources/js/src/views/institucion/Instituciones.vue"));
       }
     }, {
-      path: '/home/institucion/nueva',
+      path: '/institucion/nueva',
       name: 'nuevaInstituciones',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ./views/institucion/nueva.vue */ "./resources/js/src/views/institucion/nueva.vue"));
       }
     }, {
-      path: '/home/institucion/editar/:id',
+      path: '/institucion/editar/:id',
       name: 'editarInstituciones',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ./views/institucion/nueva.vue */ "./resources/js/src/views/institucion/nueva.vue"));
       }
     }, {
-      path: '/home/docentes',
+      path: '/docentes',
       name: 'Docentes',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 16).then(__webpack_require__.bind(null, /*! ./views/docente/Docentes.vue */ "./resources/js/src/views/docente/Docentes.vue"));
       }
     }, {
-      path: '/home/docente/nuevo',
+      path: '/docente/nuevo',
       name: 'nuevaDocente',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./views/docente/nuevo.vue */ "./resources/js/src/views/docente/nuevo.vue"));
       }
     }, {
-      path: '/home/docente/editar/:id',
+      path: '/docente/editar/:id',
       name: 'editarDocente',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./views/docente/nuevo.vue */ "./resources/js/src/views/docente/nuevo.vue"));
       }
     }, {
-      path: '/home/estudiantes',
+      path: '/estudiantes',
       name: 'Estudiantes',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 17).then(__webpack_require__.bind(null, /*! ./views/estudiante/Estudiantes.vue */ "./resources/js/src/views/estudiante/Estudiantes.vue"));
       }
     }, {
-      path: '/home/estudiante/nuevo',
+      path: '/estudiante/nuevo',
       name: 'nuevaEstudiante',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./views/estudiante/nuevo.vue */ "./resources/js/src/views/estudiante/nuevo.vue"));
       }
     }, {
-      path: '/home/estudiante/editar/:id',
+      path: '/estudiante/editar/:id',
       name: 'editarEstudiante',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./views/estudiante/nuevo.vue */ "./resources/js/src/views/estudiante/nuevo.vue"));
       }
     }, {
-      path: '/home/libros',
+      path: '/libros',
       name: 'Libros',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 12).then(__webpack_require__.bind(null, /*! ./views/Libros.vue */ "./resources/js/src/views/Libros.vue"));
+        return __webpack_require__.e(/*! import() */ 26).then(__webpack_require__.bind(null, /*! ./views/libro/Libros.vue */ "./resources/js/src/views/libro/Libros.vue"));
       }
     }, {
-      path: '/home/planificaciones',
+      path: '/nuevo/libro',
+      name: 'NuevoLibro',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 12).then(__webpack_require__.bind(null, /*! ./views/libro/nuevo.vue */ "./resources/js/src/views/libro/nuevo.vue"));
+      }
+    }, {
+      path: '/editar/libro/:id',
+      name: 'EditarLibro',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 12).then(__webpack_require__.bind(null, /*! ./views/libro/nuevo.vue */ "./resources/js/src/views/libro/nuevo.vue"));
+      }
+    }, {
+      path: '/planificaciones',
       name: 'Planificaciones',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 25).then(__webpack_require__.bind(null, /*! ./views/Planificaciones.vue */ "./resources/js/src/views/Planificaciones.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(23), __webpack_require__.e(13)]).then(__webpack_require__.bind(null, /*! ./views/Planificaciones.vue */ "./resources/js/src/views/Planificaciones.vue"));
       }
     }, {
-      path: '/home/actividades',
+      path: '/actividades',
       name: 'Actividades',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 11).then(__webpack_require__.bind(null, /*! ./views/Actividades.vue */ "./resources/js/src/views/Actividades.vue"));
       }
     }, {
-      path: '/home/grupos',
+      path: '/grupos',
       name: 'Grupos',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 18).then(__webpack_require__.bind(null, /*! ./views/grupo/Grupos.vue */ "./resources/js/src/views/grupo/Grupos.vue"));
       }
     }, {
-      path: '/home/grupos/nuevo',
+      path: '/grupos/nuevo',
       name: 'nuevaGrupos',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ./views/grupo/nuevo.vue */ "./resources/js/src/views/grupo/nuevo.vue"));
       }
     }, {
-      path: '/home/grupos/editar/:id',
+      path: '/grupos/editar/:id',
       name: 'editarGrupos',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ./views/grupo/nuevo.vue */ "./resources/js/src/views/grupo/nuevo.vue"));

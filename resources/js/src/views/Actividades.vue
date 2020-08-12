@@ -47,7 +47,7 @@ export default {
 		},
 		evaluar(url){
               this.$router.push({
-                path: "/home/virtual/" + url,
+                path: "/virtual/" + url,
             });
         }
 

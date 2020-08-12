@@ -81,7 +81,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("v-select", vue_select__WEB
       var me = this;
       console.log(data);
       axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("http://localhost:8000/api/tcontenido", data).then(function (response) {
-        me.$router.push('/home/tipo_contenido');
+        me.$router.push('/tipo_contenido');
       }).catch(function (error) {});
     }
   }
@@ -226,7 +226,7 @@ var render = function() {
                 attrs: {
                   color: "danger",
                   type: "border",
-                  to: "/home/tipo_contenido"
+                  to: "/tipo_contenido"
                 }
               },
               [_vm._v("Cancelar")]

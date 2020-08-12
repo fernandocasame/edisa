@@ -98,7 +98,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("v-select", vue_select__WEB
       var me = this;
       console.log(data);
       axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("http://localhost:8000/api/asignatura", data).then(function (response) {
-        me.$router.push('/home/asignaturas');
+        me.$router.push('/asignaturas');
       }).catch(function (error) {});
     }
   }
@@ -270,11 +270,7 @@ var render = function() {
               "vs-button",
               {
                 staticClass: "mb-2",
-                attrs: {
-                  color: "danger",
-                  type: "border",
-                  to: "/home/asignaturas"
-                }
+                attrs: { color: "danger", type: "border", to: "/asignaturas" }
               },
               [_vm._v("Cancelar")]
             )

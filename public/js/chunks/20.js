@@ -72,7 +72,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
       }).catch(function (error) {});
     },
     getEditar: function getEditar(idtipo) {
-      this.$router.push('/home/tipo_contenido/editar/' + idtipo);
+      this.$router.push('/tipo_contenido/editar/' + idtipo);
       console.log(idtipo);
     },
     getEliminar: function getEliminar(idtipo) {
@@ -112,7 +112,7 @@ var render = function() {
           attrs: {
             type: "border",
             color: "success",
-            to: "/home/tipo_contenido/nuevo"
+            to: "/tipo_contenido/nuevo"
           }
         },
         [_vm._v("Agregar Nuevo")]

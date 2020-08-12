@@ -4,6 +4,36 @@
 </vx-card> -->
 <div id="demo-basic-card">
     <div class="vx-row">
+        <v-app id="inspire">
+            <div class="text-center">
+                <v-dialog v-model="dialog" width="500">
+                    <template v-slot:activator="{ on, attrs }">
+                        <v-btn color="red lighten-2" dark v-bind="attrs" v-on="on">
+                            Click Me
+                        </v-btn>
+                    </template>
+
+                    <v-card>
+                        <v-card-title class="headline grey lighten-2" primary-title>
+                            Privacy Policy
+                        </v-card-title>
+
+                        <v-card-text>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </v-card-text>
+
+                        <v-divider></v-divider>
+
+                        <v-card-actions>
+                            <v-spacer></v-spacer>
+                            <v-btn color="primary" text @click="dialog = false">
+                                I accept
+                            </v-btn>
+                        </v-card-actions>
+                    </v-card>
+                </v-dialog>
+            </div>
+        </v-app>
         <div v-for="(item,$index) in actividades" v-bind:key="$index" class="vx-col w-full sm:w-1/2 lg:w-1/3 mb-base">
             <vx-card>
                 <div slot="no-body">
@@ -23,6 +53,11 @@
 <script>
 import Vue from 'vue'
 import axios from 'axios'
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+
+Vue.use(Vuetify)
+
 Vue.use(axios)
 export default {
     data() {
@@ -53,7 +88,7 @@ export default {
         },
         evaluar(url) {
             this.$router.push({
-                path: "/home/virtual/" + url,
+                path: "/virtual/" + url,
             });
         }
 

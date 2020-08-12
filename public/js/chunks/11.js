@@ -57,7 +57,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
     },
     evaluar: function evaluar(url) {
       this.$router.push({
-        path: "/home/virtual/" + url
+        path: "/virtual/" + url
       });
     }
   }

@@ -72,7 +72,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
       }).catch(function (error) {});
     },
     getEditar: function getEditar(idgrupo) {
-      this.$router.push('/home/grupos/editar/' + idgrupo);
+      this.$router.push('/grupos/editar/' + idgrupo);
       console.log(idgrupo);
     },
     getEliminar: function getEliminar(idgrupo) {
@@ -109,7 +109,7 @@ var render = function() {
         "vs-button",
         {
           staticClass: "mr-2",
-          attrs: { type: "border", color: "success", to: "/home/grupos/nuevo" }
+          attrs: { type: "border", color: "success", to: "/grupos/nuevo" }
         },
         [_vm._v("Agregar Nuevo")]
       ),

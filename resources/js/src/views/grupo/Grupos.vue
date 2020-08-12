@@ -1,6 +1,6 @@
 <template>
 <vx-card title="Grupos de Usuarios">
-    <vs-button type="border" color="success" class="mr-2" to="/home/grupos/nuevo">Agregar Nuevo</vs-button>
+    <vs-button type="border" color="success" class="mr-2" to="/grupos/nuevo">Agregar Nuevo</vs-button>
     <vs-table :data="grupo">
         <template slot="thead">
             <vs-th>Nombre</vs-th>
@@ -62,7 +62,7 @@ export default {
                 .catch(function (error) {})
         },
         getEditar(idgrupo) {
-            this.$router.push('/home/grupos/editar/' + idgrupo);
+            this.$router.push('/grupos/editar/' + idgrupo);
             console.log(idgrupo);
         },
         getEliminar(idgrupo) {

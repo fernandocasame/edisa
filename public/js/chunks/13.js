@@ -13,8 +13,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var modal_fullscreen_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! modal-fullscreen-vue */ "./node_modules/modal-fullscreen-vue/dist/modal-fullscreen-vue.common.js");
-/* harmony import */ var modal_fullscreen_vue__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(modal_fullscreen_vue__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vuetify__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuetify */ "./node_modules/vuetify/dist/vuetify.js");
+/* harmony import */ var vuetify__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vuetify__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vuetify_dist_vuetify_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuetify/dist/vuetify.min.css */ "./node_modules/vuetify/dist/vuetify.min.css");
+/* harmony import */ var vuetify_dist_vuetify_min_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vuetify_dist_vuetify_min_css__WEBPACK_IMPORTED_MODULE_3__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -56,9 +72,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(modal_fullscreen_vue__WEBPACK_IMPORTED_MODULE_2___default.a); // or custom use name
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use('my-custom-name', modal_fullscreen_vue__WEBPACK_IMPORTED_MODULE_2___default.a);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuetify__WEBPACK_IMPORTED_MODULE_2___default.a);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1___default.a);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -85,7 +100,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
     },
     evaluar: function evaluar(url) {
       this.$router.push({
-        path: "/home/virtual/" + url
+        path: "/virtual/" + url
       });
     }
   }
@@ -113,57 +128,111 @@ var render = function() {
       "div",
       { staticClass: "vx-row" },
       [
-        _c(
-          "button",
-          {
-            on: {
-              click: function($event) {
-                _vm.show = true
-              }
-            }
-          },
-          [_vm._v("Show")]
-        ),
-        _vm._v(" "),
-        _c(
-          "ModalFullScreen",
-          { attrs: { show: _vm.show }, on: { show: _vm.handleShow } },
-          [
-            _c("template", { slot: "header" }, [
-              _vm._v("\r\n                header\r\n            ")
-            ]),
-            _vm._v(" "),
-            _c(
-              "template",
-              { slot: "body" },
-              _vm._l(1000, function(n) {
-                return _c("div", { key: n }, [
-                  _vm._v(
-                    "\r\n                    Body " +
-                      _vm._s(n) +
-                      "\r\n                "
-                  )
-                ])
-              }),
-              0
-            ),
-            _vm._v(" "),
-            _c("template", { slot: "footer" }, [
+        _c("v-app", { attrs: { id: "inspire" } }, [
+          _c(
+            "div",
+            { staticClass: "text-center" },
+            [
               _c(
-                "button",
+                "v-dialog",
                 {
-                  on: {
-                    click: function($event) {
-                      _vm.show = false
+                  attrs: { width: "500" },
+                  scopedSlots: _vm._u([
+                    {
+                      key: "activator",
+                      fn: function(ref) {
+                        var on = ref.on
+                        var attrs = ref.attrs
+                        return [
+                          _c(
+                            "v-btn",
+                            _vm._g(
+                              _vm._b(
+                                { attrs: { color: "red lighten-2", dark: "" } },
+                                "v-btn",
+                                attrs,
+                                false
+                              ),
+                              on
+                            ),
+                            [
+                              _vm._v(
+                                "\r\n                            Click Me\r\n                        "
+                              )
+                            ]
+                          )
+                        ]
+                      }
                     }
+                  ]),
+                  model: {
+                    value: _vm.dialog,
+                    callback: function($$v) {
+                      _vm.dialog = $$v
+                    },
+                    expression: "dialog"
                   }
                 },
-                [_vm._v("Close")]
+                [
+                  _vm._v(" "),
+                  _c(
+                    "v-card",
+                    [
+                      _c(
+                        "v-card-title",
+                        {
+                          staticClass: "headline grey lighten-2",
+                          attrs: { "primary-title": "" }
+                        },
+                        [
+                          _vm._v(
+                            "\r\n                            Privacy Policy\r\n                        "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("v-card-text", [
+                        _vm._v(
+                          "\r\n                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n                        "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("v-divider"),
+                      _vm._v(" "),
+                      _c(
+                        "v-card-actions",
+                        [
+                          _c("v-spacer"),
+                          _vm._v(" "),
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: { color: "primary", text: "" },
+                              on: {
+                                click: function($event) {
+                                  _vm.dialog = false
+                                }
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\r\n                                I accept\r\n                            "
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
               )
-            ])
-          ],
-          2
-        ),
+            ],
+            1
+          )
+        ]),
         _vm._v(" "),
         _vm._l(_vm.actividades, function(item, $index) {
           return _c(

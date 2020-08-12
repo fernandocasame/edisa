@@ -21,7 +21,7 @@
         <div class="vx-row">
             <div class="vx-col sm:w-2/3 w-full ml-auto">
                 <vs-button color="success" type="border" @click="guardar(tipocontenido)" class="mb-2">Enviar</vs-button>
-                <vs-button color="danger" type="border" class="mb-2" to="/home/tipo_contenido">Cancelar</vs-button>
+                <vs-button color="danger" type="border" class="mb-2" to="/tipo_contenido">Cancelar</vs-button>
             </div>
         </div>
     </div>
@@ -66,7 +66,7 @@ export default {
             console.log(data);
             axios.post("http://localhost:8000/api/tcontenido", data)
                 .then(function (response) {
-                    me.$router.push('/home/tipo_contenido');
+                    me.$router.push('/tipo_contenido');
                 })
                 .catch(function (error) {})
         }

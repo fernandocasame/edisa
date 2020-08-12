@@ -78,7 +78,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
       }).catch(function (error) {});
     },
     getEditar: function getEditar(institucion) {
-      this.$router.push('/home/institucion/editar/' + institucion);
+      this.$router.push('/institucion/editar/' + institucion);
       console.log(institucion);
     },
     getEliminar: function getEliminar(institucion) {
@@ -115,11 +115,7 @@ var render = function() {
         "vs-button",
         {
           staticClass: "mr-2",
-          attrs: {
-            type: "border",
-            color: "success",
-            to: "/home/institucion/nueva"
-          }
+          attrs: { type: "border", color: "success", to: "/institucion/nueva" }
         },
         [_vm._v("Agregar Nueva")]
       ),

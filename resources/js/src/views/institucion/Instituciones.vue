@@ -1,6 +1,6 @@
 <template>
 <vx-card title="Instituciones">
-    <vs-button type="border" color="success" class="mr-2" to="/home/institucion/nueva">Agregar Nueva</vs-button>
+    <vs-button type="border" color="success" class="mr-2" to="/institucion/nueva">Agregar Nueva</vs-button>
     <vs-table :data="institucion">
         <template slot="thead">
             <vs-th>Nombre</vs-th>
@@ -68,7 +68,7 @@ export default {
                 .catch(function (error) {})
         },
         getEditar(institucion) {
-            this.$router.push('/home/institucion/editar/' + institucion);
+            this.$router.push('/institucion/editar/' + institucion);
             console.log(institucion);
         },
         getEliminar(institucion) {

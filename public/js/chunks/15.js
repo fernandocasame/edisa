@@ -72,7 +72,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
       }).catch(function (error) {});
     },
     getEditar: function getEditar(idasignatura) {
-      this.$router.push('/home/asignaturas/editar/' + idasignatura);
+      this.$router.push('/asignaturas/editar/' + idasignatura);
       console.log(idasignatura);
     },
     getEliminar: function getEliminar(idasignatura) {
@@ -109,11 +109,7 @@ var render = function() {
         "vs-button",
         {
           staticClass: "mr-4",
-          attrs: {
-            type: "border",
-            color: "success",
-            to: "/home/asignaturas/nueva"
-          }
+          attrs: { type: "border", color: "success", to: "/asignaturas/nueva" }
         },
         [_vm._v("Agregar Nuevo")]
       ),

@@ -27,6 +27,10 @@ Route::group(['middleware' => 'cors'],function(){
     Route::apiResource('usuario','UsuarioController');
     Route::apiResource('grupo','GrupoController');
     Route::apiResource('estudiante','EstudianteController');
+    Route::apiResource('libro','LibroController');
+    Route::apiResource('actividad','ActividadController');
+    Route::apiResource('planificacion','PlanificacionController');
+    Route::apiResource('curso','CursoController');
     Route::get('password','UsuarioController@password');
 });
 Route::group(['middleware' => 'auth.jwt'], function () {

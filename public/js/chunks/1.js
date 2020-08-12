@@ -152,7 +152,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component("v-select", vue_select__WEB
       me.docente.grupo_idgrupo = '2';
       console.log(data);
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://localhost:8000/api/usuario", data).then(function (response) {
-        me.$router.push('/home/docentes');
+        me.$router.push('/docentes');
       }).catch(function (error) {});
     }
   }
@@ -514,7 +514,7 @@ var render = function() {
               "vs-button",
               {
                 staticClass: "mb-2",
-                attrs: { color: "danger", type: "border", to: "/home/docentes" }
+                attrs: { color: "danger", type: "border", to: "/docentes" }
               },
               [_vm._v("Cancelar")]
             )

@@ -1,6 +1,6 @@
 <template>
 <vx-card title="Asignatura">
-    <vs-button type="border" color="success" class="mr-4" to="/home/asignaturas/nueva">Agregar Nuevo</vs-button>
+    <vs-button type="border" color="success" class="mr-4" to="/asignaturas/nueva">Agregar Nuevo</vs-button>
     <vs-table :data="asignatura">
         <template slot="thead">
             <vs-th>Nombre</vs-th>
@@ -62,7 +62,7 @@ export default {
                 .catch(function (error) {})
         },
         getEditar(idasignatura) {
-            this.$router.push('/home/asignaturas/editar/' + idasignatura);
+            this.$router.push('/asignaturas/editar/' + idasignatura);
             console.log(idasignatura);
         },
         getEliminar(idasignatura) {
