@@ -1,7 +1,7 @@
 <template>
 <vx-card title="Grupos de Usuarios">
     <vs-button type="border" color="success" class="mr-2" to="/grupos/nuevo">Agregar Nuevo</vs-button>
-    <vs-table :data="grupo">
+    <vs-table :data="grupo" class="mt-4">
         <template slot="thead">
             <vs-th>Nombre</vs-th>
             <vs-th>Detalle</vs-th>

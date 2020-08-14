@@ -1,7 +1,7 @@
 <template>
 <vx-card title="Instituciones">
     <vs-button type="border" color="success" class="mr-2" to="/institucion/nueva">Agregar Nueva</vs-button>
-    <vs-table :data="institucion">
+    <vs-table :data="institucion" class="mt-4">
         <template slot="thead">
             <vs-th>Nombre</vs-th>
             <vs-th>Detalle</vs-th>

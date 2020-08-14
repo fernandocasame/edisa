@@ -14,10 +14,13 @@
                 <p class="text-grey">{{item.detalle}}</p>
                 <div class="flex flex-wrap mt-4">
                     <div class="w-1/4 ml-auto">
-                        <vs-button radius color="primary" type="filled" @click="verlibro(item.url)" icon-pack="feather" icon="icon-eye"></vs-button>
+                        <vs-button radius color="success" type="filled" @click="addactividad(item.idlibro)" icon-pack="feather" icon="icon-plus"></vs-button>
                     </div>
                     <div class="w-1/4 ml-auto">
-                        <vs-button radius color="success" type="filled" @click="editarLibro(item.idlibro)" icon-pack="feather" icon="icon-edit"></vs-button>
+                        <vs-button radius color="primary" type="filled" @click="verlibro(item.url,item.idlibro)" icon-pack="feather" icon="icon-eye"></vs-button>
+                    </div>
+                    <div class="w-1/4 ml-auto">
+                        <vs-button radius color="warning" type="filled" @click="editarLibro(item.idlibro)" icon-pack="feather" icon="icon-edit"></vs-button>
                     </div>
                     <div class="w-1/4 ml-auto">
                         <vs-button radius color="danger" type="filled" @click="eliminarLibro(item.idlibro)" icon-pack="feather" icon="icon-trash"></vs-button>
@@ -54,8 +57,9 @@ export default {
                 })
                 .catch(function (error) {})
         },
-        verlibro(url) {
+        verlibro(url,idlibro) {
             localStorage.url = url;
+            localStorage.idlibro = idlibro;
             this.$router.push('/libro/digital');
         },
         editarLibro(idlibro) {
@@ -69,6 +73,10 @@ export default {
                     me.getLibro();
                 })
                 .catch(function (error) {})
+        },
+        addactividad(idlibro){
+            localStorage.idlibro = idlibro;
+            this.$router.push('/actividades');
         }
 
     },

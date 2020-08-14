@@ -32,6 +32,7 @@ Route::group(['middleware' => 'cors'],function(){
     Route::apiResource('planificacion','PlanificacionController');
     Route::apiResource('curso','CursoController');
     Route::get('password','UsuarioController@password');
+    Route::get('codigo','CursoController@codigo');
 });
 Route::group(['middleware' => 'auth.jwt'], function () {
     Route::post('/logout', 'AuthController@logout');

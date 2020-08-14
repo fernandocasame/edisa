@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d0501b88d18c8532afbd2c409e2d3d0",
+    "content-hash": "8b573015a92c6e820485b976851e333a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -109,6 +109,62 @@
                 }
             ],
             "time": "2020-04-15T15:59:35+00:00"
+        },
+        {
+            "name": "dirape/token",
+            "version": "V2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mustafakhaleddev/laravel-token.git",
+                "reference": "653590e561641e94f04c40e3034c6cd3436cda7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mustafakhaleddev/laravel-token/zipball/653590e561641e94f04c40e3034c6cd3436cda7d",
+                "reference": "653590e561641e94f04c40e3034c6cd3436cda7d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=4.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dirape\\Token\\TokenServiceProvider"
+                    ],
+                    "aliases": {
+                        "Token": "Dirape\\Token\\Facades\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dirape\\Token\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MustafaKhaled",
+                    "email": "MustafaKhaled.dev@gmail.com"
+                }
+            ],
+            "description": "Unique Token Generator For Laravel",
+            "keywords": [
+                "PHP token",
+                "generate",
+                "laravel",
+                "laravel token",
+                "token",
+                "token generator",
+                "unique token"
+            ],
+            "time": "2020-04-13T14:56:42+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

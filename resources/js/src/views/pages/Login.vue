@@ -100,7 +100,7 @@ export default {
             this.$router.push('/');
         } else {
             console.log(localStorage.token);
-            this.$router.push('');
+            this.$router.push('/home');
         }
     },
     methods: {
@@ -114,7 +114,7 @@ export default {
                     console.log(response.data);
                     localStorage.token = response.data.token;
                     localStorage.setItem('usuario', JSON.stringify(response.data.datos));
-                    me.$router.push('');
+                    me.$router.push('/home');
                 })
                 .catch(function (error) {
                     if (error.response.status == 401) {

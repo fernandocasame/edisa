@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Actividad;
 use Illuminate\Http\Request;
-
+use DB;
 class ActividadController extends Controller
 {
     /**
@@ -12,10 +12,12 @@ class ActividadController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $actividad = Actividad::all();
-        return $actividad;
+        if(!empty($request->id)){
+            $actividades = DB::SELECT("SELECT * FROM actividad WHERE libro_idlibro = ? AND estado='1'",[$request->id]);
+        }
+        return $actividades;
     }
 
     /**
@@ -54,7 +56,7 @@ class ActividadController extends Controller
      */
     public function show(Actividad $actividad)
     {
-        //
+        return $actividad;
     }
 
     /**
@@ -88,6 +90,7 @@ class ActividadController extends Controller
      */
     public function destroy(Actividad $actividad)
     {
-        //
+        $actividad = Actividad::find($actividad->idactividad)->update(['estado' => '0']);
+        return $actividad;
     }
 }

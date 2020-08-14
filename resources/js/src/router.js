@@ -45,6 +45,12 @@ const router = new Router({
                     component: () =>
                         import ('./views/libro/digital.vue')
                 },
+                {
+                    path: '/actividad/digital',
+                    name: 'digital',
+                    component: () =>
+                        import ('./views/actividad/digital.vue')
+                },
             ]
         },
 
@@ -213,7 +219,25 @@ const router = new Router({
                     path: '/actividades',
                     name: 'Actividades',
                     component: () =>
-                        import ('./views/Actividades.vue')
+                        import ('./views/actividad/Actividades.vue')
+                },
+                {
+                    path: '/compartir',
+                    name: 'ActividadesCompartidas',
+                    component: () =>
+                        import ('./views/actividad/compartir.vue')
+                },
+                {
+                    path: '/actividad/nueva',
+                    name: 'ActividadNuevo',
+                    component: () =>
+                        import ('./views/actividad/nuevo.vue')
+                },
+                {
+                    path: '/actividad/editar/:id',
+                    name: 'ActividadEditar',
+                    component: () =>
+                        import ('./views/actividad/nuevo.vue')
                 },
                 {
                     path: '/grupos',
@@ -232,6 +256,24 @@ const router = new Router({
                     name: 'editarGrupos',
                     component: () =>
                         import ('./views/grupo/nuevo.vue')
+                },
+                {
+                    path: '/cursos',
+                    name: 'Curso',
+                    component: () =>
+                        import ('./views/curso/cursos.vue')
+                },
+                {
+                    path: '/nuevo/curso',
+                    name: 'nuevaoCurso',
+                    component: () =>
+                        import ('./views/curso/nuevo.vue')
+                },
+                {
+                    path: '/editar/curso/:id',
+                    name: 'editarCurso',
+                    component: () =>
+                        import ('./views/curso/nuevo.vue')
                 },
                 {
                     path: '/virtual/:url',

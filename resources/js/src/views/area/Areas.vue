@@ -1,7 +1,7 @@
 <template>
 <vx-card title="Areas">
     <vs-button type="border" color="success" class="mr-2" to="/areas/nueva">Agregar Nuevo</vs-button>
-    <vs-table :data="area">
+    <vs-table :data="area" class="mt-4">
         <template slot="thead">
             <vs-th>Nombre</vs-th>
             <vs-th>Detalle</vs-th>
