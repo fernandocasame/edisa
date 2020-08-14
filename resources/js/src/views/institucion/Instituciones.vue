@@ -58,7 +58,7 @@ export default {
     methods: {
         getInstitucion() {
             let me = this;
-            axios.get('http://localhost:8000/api/institucion', {
+            axios.get('https://sistemaeducativo.edisa.ec/api/institucion', {
 
                 })
                 .then(function (response) {
@@ -73,7 +73,7 @@ export default {
         },
         getEliminar(institucion) {
             let me = this;
-            axios.delete("http://localhost:8000/api/institucion/" + institucion)
+            axios.delete("https://sistemaeducativo.edisa.ec/api/institucion/" + institucion)
                 .then(function (response) {
                     me.getInstitucion();
                 })

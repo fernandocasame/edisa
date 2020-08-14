@@ -81,14 +81,14 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("v-select", vue_select__WEB
   methods: {
     getAsignatura: function getAsignatura(idactividad) {
       var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("http://localhost:8000/api/actividad/" + idactividad).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("https://sistemaeducativo.edisa.ec/api/actividad/" + idactividad).then(function (response) {
         me.actividad = response.data;
       }).catch(function (error) {});
     },
     guardar: function guardar(data) {
       var me = this;
       me.actividad.libro_idlibro = localStorage.getItem('idlibro');
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("http://localhost:8000/api/actividad", data).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("https://sistemaeducativo.edisa.ec/api/actividad", data).then(function (response) {
         me.$router.push('/actividades');
       }).catch(function (error) {});
     }

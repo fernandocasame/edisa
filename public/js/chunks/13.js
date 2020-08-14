@@ -127,7 +127,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("v-select", vue_select__WEB
   methods: {
     login: function login() {
       var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('http://localhost:8000/api/login', {
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('https://sistemaeducativo.edisa.ec/api/login', {
         email: me.email,
         password: me.password
       }).then(function (response) {

@@ -108,7 +108,7 @@ export default {
     methods: {
         getPassword() {
             let me = this;
-            axios.get('http://localhost:8000/api/password')
+            axios.get('https://sistemaeducativo.edisa.ec/api/password')
                 .then(function (response) {
                     console.log(response.data);
                     me.docente.password = response.data;
@@ -117,7 +117,7 @@ export default {
         },
         getInstitucion() {
             let me = this;
-            axios.get('http://localhost:8000/api/institucion', {
+            axios.get('https://sistemaeducativo.edisa.ec/api/institucion', {
 
                 })
                 .then(function (response) {
@@ -129,7 +129,7 @@ export default {
         getDocente(idusuario) {
             let me = this;
             console.log(idusuario);
-            axios.get("http://localhost:8000/api/usuario/" + idusuario)
+            axios.get("https://sistemaeducativo.edisa.ec/api/usuario/" + idusuario)
                 .then(function (response) {
                     console.log(response.data);
                     me.docente = response.data;
@@ -140,7 +140,7 @@ export default {
             let me = this;
             me.docente.grupo_idgrupo = '2'
             console.log(data);
-            axios.post("http://localhost:8000/api/usuario", data)
+            axios.post("https://sistemaeducativo.edisa.ec/api/usuario", data)
                 .then(function (response) {
                     me.$router.push('/docentes');
                 })

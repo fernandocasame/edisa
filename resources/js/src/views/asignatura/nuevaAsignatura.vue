@@ -63,7 +63,7 @@ export default {
     methods: {
         getArea() {
             let me = this;
-            axios.get('http://localhost:8000/api/area', {
+            axios.get('https://sistemaeducativo.edisa.ec/api/area', {
 
                 })
                 .then(function (response) {
@@ -74,7 +74,7 @@ export default {
         getAsignatura(idasignatura) {
             let me = this;
             console.log(idasignatura);
-            axios.get("http://localhost:8000/api/asignatura/" + idasignatura)
+            axios.get("https://sistemaeducativo.edisa.ec/api/asignatura/" + idasignatura)
                 .then(function (response) {
                     console.log(response.data);
                     me.asignatura = response.data;
@@ -84,7 +84,7 @@ export default {
         guardar(data) {
             let me = this;
             console.log(data);
-            axios.post("http://localhost:8000/api/asignatura", data)
+            axios.post("https://sistemaeducativo.edisa.ec/api/asignatura", data)
                 .then(function (response) {
                     me.$router.push('/asignaturas');
                 })

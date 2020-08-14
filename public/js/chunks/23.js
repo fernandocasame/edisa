@@ -100,7 +100,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
     getActividades: function getActividades() {
       var me = this;
       me.idlibro = localStorage.getItem('idlibro');
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://localhost:8000/api/actividad?id=' + me.idlibro).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://sistemaeducativo.edisa.ec/api/actividad?id=' + me.idlibro).then(function (response) {
         me.actividades = response.data;
         console.log(me.actividades);
       }).catch(function (error) {});
@@ -115,7 +115,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
       me.popupActive = false;
       me.popupActive2 = true;
       me.actividade = item;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://localhost:8000/api/codigo').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://sistemaeducativo.edisa.ec/api/codigo').then(function (response) {
         me.codigo = response.data;
         me.actividade.codigo = me.codigo.codigo;
       }).catch(function (error) {});

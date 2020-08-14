@@ -51,7 +51,7 @@ export default {
     methods: {
         getLibro() {
             let me = this;
-            axios.get('http://localhost:8000/api/curso?idusuario='+me.usuario[0].idusuario, {
+            axios.get('https://sistemaeducativo.edisa.ec/api/curso?idusuario='+me.usuario[0].idusuario, {
 
                 })
                 .then(function (response) {
@@ -70,7 +70,7 @@ export default {
         },
         eliminarLibro(idcurso) {
             let me = this;
-            axios.delete("http://localhost:8000/api/curso/" + idcurso)
+            axios.delete("https://sistemaeducativo.edisa.ec/api/curso/" + idcurso)
                 .then(function (response) {
                     me.getLibro();
                 })

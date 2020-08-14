@@ -52,7 +52,7 @@ export default {
         getArea(idarea) {
             let me = this;
             console.log(idarea);
-            axios.get("http://localhost:8000/api/area/" + idarea)
+            axios.get("https://sistemaeducativo.edisa.ec/api/area/" + idarea)
                 .then(function (response) {
                     console.log(response.data);
                     me.area = response.data;
@@ -62,7 +62,7 @@ export default {
         guardar(data) {
             let me = this;
             console.log(data);
-            axios.post("http://localhost:8000/api/area", data)
+            axios.post("https://sistemaeducativo.edisa.ec/api/area", data)
                 .then(function (response) {
                     me.$router.push('/areas');
                 })

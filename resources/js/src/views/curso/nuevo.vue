@@ -68,7 +68,7 @@ export default {
     methods: {
         codigo() {
             let me = this;
-            axios.get('http://localhost:8000/api/codigo')
+            axios.get('https://sistemaeducativo.edisa.ec/api/codigo')
                 .then(function (response) {
                     me.codigo = response.data;
                     me.curso.codigo = me.codigo.codigo;
@@ -79,7 +79,7 @@ export default {
         getCurso(idcurso) {
             let me = this;
             console.log(idcurso);
-            axios.get("http://localhost:8000/api/curso/" + idcurso)
+            axios.get("https://sistemaeducativo.edisa.ec/api/curso/" + idcurso)
                 .then(function (response) {
                     console.log(response.data);
                     me.curso = response.data;
@@ -89,7 +89,7 @@ export default {
         guardar(data) {
             let me = this;
             console.log(data);
-            axios.post("http://localhost:8000/api/curso", data)
+            axios.post("https://sistemaeducativo.edisa.ec/api/curso", data)
                 .then(function (response) {
                     me.$router.push('/cursos');
                 })

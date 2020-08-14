@@ -54,7 +54,7 @@ export default {
         getActividades() {
             let me = this;
             me.idlibro = localStorage.getItem('idlibro')
-            axios.get('http://localhost:8000/api/actividad?id='+me.idlibro)
+            axios.get('https://sistemaeducativo.edisa.ec/api/actividad?id='+me.idlibro)
                 .then(function (response) {
                     me.actividades = response.data;
                 })
@@ -65,7 +65,7 @@ export default {
         },
         getEliminar(idactividad) {
             let me = this;
-            axios.delete("http://localhost:8000/api/actividad/" + idactividad)
+            axios.delete("https://sistemaeducativo.edisa.ec/api/actividad/" + idactividad)
                 .then(function (response) {
                     me.getActividades();
                 })

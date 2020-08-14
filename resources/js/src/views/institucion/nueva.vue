@@ -125,7 +125,7 @@ export default {
         getInstitucion(idinstitucion) {
             let me = this;
             console.log(idinstitucion);
-            axios.get("http://localhost:8000/api/institucion/" + idinstitucion)
+            axios.get("https://sistemaeducativo.edisa.ec/api/institucion/" + idinstitucion)
                 .then(function (response) {
                     console.log(response.data);
                     me.institucion = response.data;
@@ -135,7 +135,7 @@ export default {
         guardar(data) {
             let me = this;
             console.log(data);
-            axios.post("http://localhost:8000/api/institucion", data)
+            axios.post("https://sistemaeducativo.edisa.ec/api/institucion", data)
                 .then(function (response) {
                     me.$router.push('/instituciones');
                 })

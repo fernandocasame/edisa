@@ -52,7 +52,7 @@ export default {
     methods: {
         getArea() {
             let me = this;
-            axios.get('http://localhost:8000/api/asignatura', {
+            axios.get('https://sistemaeducativo.edisa.ec/api/asignatura', {
 
                 })
                 .then(function (response) {
@@ -67,7 +67,7 @@ export default {
         },
         getEliminar(idasignatura) {
             let me = this;
-            axios.delete("http://localhost:8000/api/asignatura/" + idasignatura)
+            axios.delete("https://sistemaeducativo.edisa.ec/api/asignatura/" + idasignatura)
                 .then(function (response) {
                     me.getArea();
                 })

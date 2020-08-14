@@ -66,7 +66,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
   methods: {
     getArea: function getArea() {
       var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://localhost:8000/api/area', {}).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://sistemaeducativo.edisa.ec/api/area', {}).then(function (response) {
         me.area = response.data;
         console.log(me.area);
       }).catch(function (error) {});
@@ -77,7 +77,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
     },
     getEliminar: function getEliminar(idarea) {
       var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.delete("http://localhost:8000/api/area/" + idarea).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.delete("https://sistemaeducativo.edisa.ec/api/area/" + idarea).then(function (response) {
         me.getArea();
       }).catch(function (error) {});
     }

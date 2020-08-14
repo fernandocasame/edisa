@@ -65,7 +65,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
   methods: {
     getLibro: function getLibro() {
       var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://localhost:8000/api/curso?idusuario=' + me.usuario[0].idusuario, {}).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://sistemaeducativo.edisa.ec/api/curso?idusuario=' + me.usuario[0].idusuario, {}).then(function (response) {
         me.cursos = response.data;
         console.log(me.cursos);
       }).catch(function (error) {});
@@ -80,7 +80,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
     },
     eliminarLibro: function eliminarLibro(idcurso) {
       var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.delete("http://localhost:8000/api/curso/" + idcurso).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.delete("https://sistemaeducativo.edisa.ec/api/curso/" + idcurso).then(function (response) {
         me.getLibro();
       }).catch(function (error) {});
     },

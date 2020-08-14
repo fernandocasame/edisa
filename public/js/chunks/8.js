@@ -66,7 +66,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
     getGrupo: function getGrupo(idarea) {
       var me = this;
       console.log(idarea);
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("http://localhost:8000/api/grupo/" + idarea).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("https://sistemaeducativo.edisa.ec/api/grupo/" + idarea).then(function (response) {
         console.log(response.data);
         me.grupo = response.data;
       }).catch(function (error) {});
@@ -74,7 +74,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
     guardar: function guardar(data) {
       var me = this;
       console.log(data);
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://localhost:8000/api/grupo", data).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("https://sistemaeducativo.edisa.ec/api/grupo", data).then(function (response) {
         me.$router.push('/grupos');
       }).catch(function (error) {});
     }

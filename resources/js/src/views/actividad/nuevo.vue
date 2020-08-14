@@ -63,7 +63,7 @@ export default {
     methods: {
         getAsignatura(idactividad) {
             let me = this;
-            axios.get("http://localhost:8000/api/actividad/" + idactividad)
+            axios.get("https://sistemaeducativo.edisa.ec/api/actividad/" + idactividad)
                 .then(function (response) {
                     me.actividad = response.data;
                 })
@@ -72,7 +72,7 @@ export default {
         guardar(data) {
             let me = this;
             me.actividad.libro_idlibro = localStorage.getItem('idlibro')
-            axios.post("http://localhost:8000/api/actividad", data)
+            axios.post("https://sistemaeducativo.edisa.ec/api/actividad", data)
                 .then(function (response) {
                     me.$router.push('/actividades');
                 })

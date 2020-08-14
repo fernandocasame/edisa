@@ -20,7 +20,7 @@ export default {
     methods: {
         getArea() {
             let me = this;
-            axios.get('http://localhost:8000/api/infocontenido', {
+            axios.get('https://sistemaeducativo.edisa.ec/api/infocontenido', {
 
                 })
                 .then(function (response) {

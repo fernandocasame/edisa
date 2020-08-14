@@ -90,14 +90,14 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("v-select", vue_select__WEB
   methods: {
     getasignatura: function getasignatura() {
       var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('http://localhost:8000/api/asignatura', {}).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('https://sistemaeducativo.edisa.ec/api/asignatura', {}).then(function (response) {
         me.asignaturas = response.data;
       }).catch(function (error) {});
     },
     getAsignatura: function getAsignatura(idlibro) {
       var me = this;
       console.log(idlibro);
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("http://localhost:8000/api/libro/" + idlibro).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("https://sistemaeducativo.edisa.ec/api/libro/" + idlibro).then(function (response) {
         console.log(response.data);
         me.libro = response.data;
       }).catch(function (error) {});
@@ -105,7 +105,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("v-select", vue_select__WEB
     guardar: function guardar(data) {
       var me = this;
       console.log(data);
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("http://localhost:8000/api/libro", data).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("https://sistemaeducativo.edisa.ec/api/libro", data).then(function (response) {
         me.$router.push('/libros');
       }).catch(function (error) {});
     }

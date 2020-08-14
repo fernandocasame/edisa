@@ -52,7 +52,7 @@ export default {
     methods: {
         getContenido() {
             let me = this;
-            axios.get('http://localhost:8000/api/tcontenido', {
+            axios.get('https://sistemaeducativo.edisa.ec/api/tcontenido', {
 
                 })
                 .then(function (response) {
@@ -67,7 +67,7 @@ export default {
         },
         getEliminar(idtipo) {
             let me = this;
-            axios.delete('http://localhost:8000/api/tcontenido/'+idtipo)
+            axios.delete('https://sistemaeducativo.edisa.ec/api/tcontenido/'+idtipo)
                 .then(function (response) {
                     me.getContenido();
                 })

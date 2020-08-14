@@ -71,7 +71,7 @@ export default {
     methods: {
         getasignatura() {
             let me = this;
-            axios.get('http://localhost:8000/api/asignatura', {
+            axios.get('https://sistemaeducativo.edisa.ec/api/asignatura', {
 
                 })
                 .then(function (response) {
@@ -82,7 +82,7 @@ export default {
         getAsignatura(idlibro) {
             let me = this;
             console.log(idlibro);
-            axios.get("http://localhost:8000/api/libro/" + idlibro)
+            axios.get("https://sistemaeducativo.edisa.ec/api/libro/" + idlibro)
                 .then(function (response) {
                     console.log(response.data);
                     me.libro = response.data;
@@ -92,7 +92,7 @@ export default {
         guardar(data) {
             let me = this;
             console.log(data);
-            axios.post("http://localhost:8000/api/libro", data)
+            axios.post("https://sistemaeducativo.edisa.ec/api/libro", data)
                 .then(function (response) {
                     me.$router.push('/libros');
                 })

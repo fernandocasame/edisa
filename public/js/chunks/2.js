@@ -127,14 +127,14 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component("v-select", vue_select__WEB
   methods: {
     getPassword: function getPassword() {
       var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://localhost:8000/api/password').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://sistemaeducativo.edisa.ec/api/password').then(function (response) {
         console.log(response.data);
         me.docente.password = response.data;
       }).catch(function (error) {});
     },
     getInstitucion: function getInstitucion() {
       var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://localhost:8000/api/institucion', {}).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://sistemaeducativo.edisa.ec/api/institucion', {}).then(function (response) {
         me.institucion = response.data;
         console.log(me.institucion);
       }).catch(function (error) {});
@@ -142,7 +142,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component("v-select", vue_select__WEB
     getDocente: function getDocente(idusuario) {
       var me = this;
       console.log(idusuario);
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("http://localhost:8000/api/usuario/" + idusuario).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("https://sistemaeducativo.edisa.ec/api/usuario/" + idusuario).then(function (response) {
         console.log(response.data);
         me.docente = response.data;
       }).catch(function (error) {});
@@ -151,7 +151,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component("v-select", vue_select__WEB
       var me = this;
       me.docente.grupo_idgrupo = '2';
       console.log(data);
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://localhost:8000/api/usuario", data).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("https://sistemaeducativo.edisa.ec/api/usuario", data).then(function (response) {
         me.$router.push('/docentes');
       }).catch(function (error) {});
     }

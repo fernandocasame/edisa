@@ -106,7 +106,7 @@ export default {
     methods: {
         login() {
             let me = this;
-            axios.post('http://localhost:8000/api/login', {
+            axios.post('https://sistemaeducativo.edisa.ec/api/login', {
                     email: me.email,
                     password: me.password
                 })

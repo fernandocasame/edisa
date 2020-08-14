@@ -71,7 +71,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
   methods: {
     getDocentes: function getDocentes() {
       var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://localhost:8000/api/usuario', {}).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://sistemaeducativo.edisa.ec/api/usuario', {}).then(function (response) {
         me.docentes = response.data;
         console.log(me.docentes);
       }).catch(function (error) {});
@@ -82,7 +82,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
     },
     getEliminar: function getEliminar(docentes) {
       var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.delete("http://localhost:8000/api/usuario/" + docentes).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.delete("https://sistemaeducativo.edisa.ec/api/usuario/" + docentes).then(function (response) {
         me.getDocentes();
       }).catch(function (error) {});
     }

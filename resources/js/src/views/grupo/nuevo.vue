@@ -52,7 +52,7 @@ export default {
         getGrupo(idarea) {
             let me = this;
             console.log(idarea);
-            axios.get("http://localhost:8000/api/grupo/" + idarea)
+            axios.get("https://sistemaeducativo.edisa.ec/api/grupo/" + idarea)
                 .then(function (response) {
                     console.log(response.data);
                     me.grupo = response.data;
@@ -62,7 +62,7 @@ export default {
         guardar(data) {
             let me = this;
             console.log(data);
-            axios.post("http://localhost:8000/api/grupo", data)
+            axios.post("https://sistemaeducativo.edisa.ec/api/grupo", data)
                 .then(function (response) {
                     me.$router.push('/grupos');
                 })

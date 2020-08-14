@@ -86,7 +86,7 @@ export default {
         getActividades() {
             let me = this;
             me.idlibro = localStorage.getItem('idlibro')
-            axios.get('http://localhost:8000/api/actividad?id=' + me.idlibro)
+            axios.get('https://sistemaeducativo.edisa.ec/api/actividad?id=' + me.idlibro)
                 .then(function (response) {
                     me.actividades = response.data;
                     console.log(me.actividades);
@@ -103,7 +103,7 @@ export default {
             me.popupActive = false;
             me.popupActive2 = true;
             me.actividade = item;
-            axios.get('http://localhost:8000/api/codigo')
+            axios.get('https://sistemaeducativo.edisa.ec/api/codigo')
                 .then(function (response) {
                     me.codigo = response.data;
                     me.actividade.codigo = me.codigo.codigo;

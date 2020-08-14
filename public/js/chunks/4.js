@@ -141,7 +141,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component("v-select", vue_select__WEB
     getInstitucion: function getInstitucion(idinstitucion) {
       var me = this;
       console.log(idinstitucion);
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("http://localhost:8000/api/institucion/" + idinstitucion).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("https://sistemaeducativo.edisa.ec/api/institucion/" + idinstitucion).then(function (response) {
         console.log(response.data);
         me.institucion = response.data;
       }).catch(function (error) {});
@@ -149,7 +149,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component("v-select", vue_select__WEB
     guardar: function guardar(data) {
       var me = this;
       console.log(data);
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://localhost:8000/api/institucion", data).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("https://sistemaeducativo.edisa.ec/api/institucion", data).then(function (response) {
         me.$router.push('/instituciones');
       }).catch(function (error) {});
     }

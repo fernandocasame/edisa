@@ -52,7 +52,7 @@ export default {
     methods: {
         getGrupos() {
             let me = this;
-            axios.get('http://localhost:8000/api/grupo', {
+            axios.get('https://sistemaeducativo.edisa.ec/api/grupo', {
 
                 })
                 .then(function (response) {
@@ -67,7 +67,7 @@ export default {
         },
         getEliminar(idgrupo) {
             let me = this;
-            axios.delete("http://localhost:8000/api/grupo/" + idgrupo)
+            axios.delete("https://sistemaeducativo.edisa.ec/api/grupo/" + idgrupo)
                 .then(function (response) {
                     me.getGrupos();
                 })

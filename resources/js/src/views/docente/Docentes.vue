@@ -57,7 +57,7 @@ export default {
     methods: {
         getDocentes() {
             let me = this;
-            axios.get('http://localhost:8000/api/usuario', {
+            axios.get('https://sistemaeducativo.edisa.ec/api/usuario', {
 
                 })
                 .then(function (response) {
@@ -72,7 +72,7 @@ export default {
         },
         getEliminar(docentes) {
             let me = this;
-            axios.delete("http://localhost:8000/api/usuario/" + docentes)
+            axios.delete("https://sistemaeducativo.edisa.ec/api/usuario/" + docentes)
                 .then(function (response) {
                     me.getDocentes();
                 })

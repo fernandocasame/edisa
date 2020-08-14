@@ -86,7 +86,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("v-select", vue_select__WEB
   methods: {
     codigo: function codigo() {
       var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('http://localhost:8000/api/codigo').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.get('https://sistemaeducativo.edisa.ec/api/codigo').then(function (response) {
         me.codigo = response.data;
         me.curso.codigo = me.codigo.codigo;
         console.log(me.curso);
@@ -95,7 +95,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("v-select", vue_select__WEB
     getCurso: function getCurso(idcurso) {
       var me = this;
       console.log(idcurso);
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("http://localhost:8000/api/curso/" + idcurso).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("https://sistemaeducativo.edisa.ec/api/curso/" + idcurso).then(function (response) {
         console.log(response.data);
         me.curso = response.data;
       }).catch(function (error) {});
@@ -103,7 +103,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("v-select", vue_select__WEB
     guardar: function guardar(data) {
       var me = this;
       console.log(data);
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("http://localhost:8000/api/curso", data).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("https://sistemaeducativo.edisa.ec/api/curso", data).then(function (response) {
         me.$router.push('/cursos');
       }).catch(function (error) {});
     }

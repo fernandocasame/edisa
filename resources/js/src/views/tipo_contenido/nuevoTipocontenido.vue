@@ -54,7 +54,7 @@ export default {
         getTipoContenido(idtipo) {
             let me = this;
             console.log(idtipo);
-            axios.get("http://localhost:8000/api/tcontenido/" + idtipo)
+            axios.get("https://sistemaeducativo.edisa.ec/api/tcontenido/" + idtipo)
                 .then(function (response) {
                     console.log(response.data);
                     me.tipocontenido = response.data;
@@ -64,7 +64,7 @@ export default {
         guardar(data) {
             let me = this;
             console.log(data);
-            axios.post("http://localhost:8000/api/tcontenido", data)
+            axios.post("https://sistemaeducativo.edisa.ec/api/tcontenido", data)
                 .then(function (response) {
                     me.$router.push('/tipo_contenido');
                 })
