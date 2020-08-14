@@ -28,7 +28,7 @@ const router = new Router({
                 // PAGES
                 // =============================================================================
                 {
-                    path: '/',
+                    path: '/login',
                     name: 'page-login',
                     component: () =>
                         import ('@/views/pages/Login.vue')
