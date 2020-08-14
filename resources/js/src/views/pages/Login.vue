@@ -97,7 +97,7 @@ export default {
     },
     mounted() {
         if (!localStorage.token) {
-            this.$router.push('/');
+            this.$router.push('');
         } else {
             console.log(localStorage.token);
             this.$router.push('/home');

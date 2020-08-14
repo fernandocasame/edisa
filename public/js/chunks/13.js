@@ -118,7 +118,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("v-select", vue_select__WEB
   },
   mounted: function mounted() {
     if (!localStorage.token) {
-      this.$router.push('/');
+      this.$router.push('');
     } else {
       console.log(localStorage.token);
       this.$router.push('/home');
