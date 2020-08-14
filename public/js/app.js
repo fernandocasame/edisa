@@ -58163,7 +58163,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     // PAGES
     // =============================================================================
     {
-      path: '/login',
+      path: '/',
       name: 'page-login',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 13).then(__webpack_require__.bind(null, /*! @/views/pages/Login.vue */ "./resources/js/src/views/pages/Login.vue"));
