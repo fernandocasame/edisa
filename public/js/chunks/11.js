@@ -2662,7 +2662,7 @@ __webpack_require__.r(__webpack_exports__);
         icon: "UsersIcon"
       }, {
         url: "/estudiantes",
-        name: "Estudinates",
+        name: "Estudiantes",
         slug: "page2",
         icon: "UserIcon"
       }, {

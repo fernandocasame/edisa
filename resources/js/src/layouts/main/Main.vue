@@ -153,7 +153,7 @@ export default {
                 },
                 {
                     url: "/estudiantes",
-                    name: "Estudinates",
+                    name: "Estudiantes",
                     slug: "page2",
                     icon: "UserIcon",
                 },
