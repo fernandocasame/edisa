@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\ActividadCurso;
+use App\Archivo;
 use Illuminate\Http\Request;
-
-class ActividadCursoController extends Controller
+use DB;
+use Dirape\Token\Token;
+class ArchivoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,16 +36,22 @@ class ActividadCursoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $idusuario = $request->idusuario;
+        $file = $request->file('archivo');
+        $ruta = public_path('./archivos');
+        $codigo = uniqid();
+        $file->move($ruta,$codigo);
+        $request->session()->flash('notificacion','Archivo Subido');
+        DB::INSERT("INSERT INTO `archivo`(`nombre`, `url`, `usuario_idusuario`) VALUES (?,?,?,?)",[$file->getClientOriginalName(),$codigo,$idusuario]);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\ActividadCurso  $actividadCurso
+     * @param  \App\Archivo  $archivo
      * @return \Illuminate\Http\Response
      */
-    public function show(ActividadCurso $actividadCurso)
+    public function show(Archivo $archivo)
     {
         //
     }
@@ -52,10 +59,10 @@ class ActividadCursoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\ActividadCurso  $actividadCurso
+     * @param  \App\Archivo  $archivo
      * @return \Illuminate\Http\Response
      */
-    public function edit(ActividadCurso $actividadCurso)
+    public function edit(Archivo $archivo)
     {
         //
     }
@@ -64,10 +71,10 @@ class ActividadCursoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ActividadCurso  $actividadCurso
+     * @param  \App\Archivo  $archivo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ActividadCurso $actividadCurso)
+    public function update(Request $request, Archivo $archivo)
     {
         //
     }
@@ -75,10 +82,10 @@ class ActividadCursoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\ActividadCurso  $actividadCurso
+     * @param  \App\Archivo  $archivo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ActividadCurso $actividadCurso)
+    public function destroy(Archivo $archivo)
     {
         //
     }

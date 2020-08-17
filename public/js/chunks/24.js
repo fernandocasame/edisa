@@ -189,6 +189,7 @@ var render = function() {
             { attrs: { slot: "title" }, slot: "title" },
             [
               _c("vs-navbar-title", [
+                _vm._v("\r\n                      "),
                 _c("span", { staticStyle: { color: "white" } }, [
                   _vm._v("Edisa")
                 ])

@@ -126,7 +126,13 @@ var render = function() {
                 _c("div", { attrs: { slot: "no-body" }, slot: "no-body" }, [
                   _c("img", {
                     staticClass: "responsive card-img-top",
-                    attrs: { src: "/rocket.png", alt: "content-img" }
+                    attrs: {
+                      src:
+                        "https://sistemaeducativo.edisa.ec/carpeta_libros/" +
+                        item.url +
+                        "/portada.jpg",
+                      alt: "content-img"
+                    }
                   })
                 ]),
                 _vm._v(" "),

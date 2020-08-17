@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\ActividadEntrega;
+use App\Respuesta;
 use Illuminate\Http\Request;
 
-class ActividadEntregaController extends Controller
+class RespuestaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class ActividadEntregaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\ActividadEntrega  $actividadEntrega
+     * @param  \App\Respuesta  $respuesta
      * @return \Illuminate\Http\Response
      */
-    public function show(ActividadEntrega $actividadEntrega)
+    public function show(Respuesta $respuesta)
     {
         //
     }
@@ -52,10 +52,10 @@ class ActividadEntregaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\ActividadEntrega  $actividadEntrega
+     * @param  \App\Respuesta  $respuesta
      * @return \Illuminate\Http\Response
      */
-    public function edit(ActividadEntrega $actividadEntrega)
+    public function edit(Respuesta $respuesta)
     {
         //
     }
@@ -64,10 +64,10 @@ class ActividadEntregaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ActividadEntrega  $actividadEntrega
+     * @param  \App\Respuesta  $respuesta
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ActividadEntrega $actividadEntrega)
+    public function update(Request $request, Respuesta $respuesta)
     {
         //
     }
@@ -75,10 +75,10 @@ class ActividadEntregaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\ActividadEntrega  $actividadEntrega
+     * @param  \App\Respuesta  $respuesta
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ActividadEntrega $actividadEntrega)
+    public function destroy(Respuesta $respuesta)
     {
         //
     }

@@ -16,13 +16,13 @@
                 <h5 class="mb-2 h2">{{item.codigo}}</h5>
                 <div class="flex flex-wrap mt-4">
                     <div class="w-1/4 ml-auto">
-                        <vs-button radius color="primary" type="filled" @click="verlibro(item.idcurso)" icon-pack="feather" icon="icon-eye"></vs-button>
+                        <vs-button radius color="primary" type="filled" @click="verCurso(item.idcurso)" icon-pack="feather" icon="icon-eye"></vs-button>
                     </div>
                     <div class="w-1/4 ml-auto">
-                        <vs-button radius color="warning" type="filled" @click="editarLibro(item.idcurso)" icon-pack="feather" icon="icon-edit"></vs-button>
+                        <vs-button radius color="warning" type="filled" @click="editarCurso(item.idcurso)" icon-pack="feather" icon="icon-edit"></vs-button>
                     </div>
                     <div class="w-1/4 ml-auto">
-                        <vs-button radius color="danger" type="filled" @click="eliminarLibro(item.idcurso)" icon-pack="feather" icon="icon-trash"></vs-button>
+                        <vs-button radius color="danger" type="filled" @click="eliminarCurso(item.idcurso)" icon-pack="feather" icon="icon-trash"></vs-button>
                     </div>
                 </div>
             </vx-card>
@@ -43,13 +43,13 @@ export default {
         }
     },
     mounted() {
-        this.getLibro();
+        this.getCurso();
     },
     created() {
         this.usuario = JSON.parse(localStorage.getItem('usuario'));
     },
     methods: {
-        getLibro() {
+        getCurso() {
             let me = this;
             axios.get('https://sistemaeducativo.edisa.ec/api/curso?idusuario='+me.usuario[0].idusuario, {
 
@@ -60,19 +60,19 @@ export default {
                 })
                 .catch(function (error) {})
         },
-        verlibro(idcurso) {
+        verCurso(idcurso) {
             localStorage.idcurso = idcurso;
             this.$router.push('/curso/digital');
         },
-        editarLibro(idcurso) {
+        editarCurso(idcurso) {
             this.$router.push('/editar/curso/' + idcurso);
             console.log(idcurso);
         },
-        eliminarLibro(idcurso) {
+        eliminarCurso(idcurso) {
             let me = this;
             axios.delete("https://sistemaeducativo.edisa.ec/api/curso/" + idcurso)
                 .then(function (response) {
-                    me.getLibro();
+                    me.getCurso();
                 })
                 .catch(function (error) {})
         },

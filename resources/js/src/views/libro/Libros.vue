@@ -8,7 +8,7 @@
         <div class="vx-col w-1/2 md:w-1/3 xl:w-1/4 mt-3" v-for="(item,$index) in actividades" v-bind:key="$index">
             <vx-card class="text-center">
                 <div slot="no-body">
-                    <img :src="'/rocket.png'" alt="content-img" class="responsive card-img-top">
+                    <img :src="'https://sistemaeducativo.edisa.ec/carpeta_libros/'+item.url+'/portada.jpg'" alt="content-img" class="responsive card-img-top">
                 </div>
                 <h5 class="mb-2">{{item.nombre}}</h5>
                 <p class="text-grey">{{item.detalle}}</p>

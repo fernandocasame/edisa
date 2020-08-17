@@ -222,12 +222,6 @@ const router = new Router({
                         import ('./views/actividad/Actividades.vue')
                 },
                 {
-                    path: '/compartir',
-                    name: 'ActividadesCompartidas',
-                    component: () =>
-                        import ('./views/actividad/compartir.vue')
-                },
-                {
                     path: '/actividad/nueva',
                     name: 'ActividadNuevo',
                     component: () =>
@@ -274,6 +268,12 @@ const router = new Router({
                     name: 'editarCurso',
                     component: () =>
                         import ('./views/curso/nuevo.vue')
+                },
+                {
+                    path: '/curso/digital',
+                    name: 'DigitalCurso',
+                    component: () =>
+                        import ('./views/curso/digital.vue')
                 },
                 {
                     path: '/virtual/:url',

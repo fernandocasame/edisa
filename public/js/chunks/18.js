@@ -57,31 +57,31 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
     };
   },
   mounted: function mounted() {
-    this.getLibro();
+    this.getCurso();
   },
   created: function created() {
     this.usuario = JSON.parse(localStorage.getItem('usuario'));
   },
   methods: {
-    getLibro: function getLibro() {
+    getCurso: function getCurso() {
       var me = this;
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://sistemaeducativo.edisa.ec/api/curso?idusuario=' + me.usuario[0].idusuario, {}).then(function (response) {
         me.cursos = response.data;
         console.log(me.cursos);
       }).catch(function (error) {});
     },
-    verlibro: function verlibro(idcurso) {
+    verCurso: function verCurso(idcurso) {
       localStorage.idcurso = idcurso;
       this.$router.push('/curso/digital');
     },
-    editarLibro: function editarLibro(idcurso) {
+    editarCurso: function editarCurso(idcurso) {
       this.$router.push('/editar/curso/' + idcurso);
       console.log(idcurso);
     },
-    eliminarLibro: function eliminarLibro(idcurso) {
+    eliminarCurso: function eliminarCurso(idcurso) {
       var me = this;
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.delete("https://sistemaeducativo.edisa.ec/api/curso/" + idcurso).then(function (response) {
-        me.getLibro();
+        me.getCurso();
       }).catch(function (error) {});
     },
     addactividad: function addactividad(idcurso) {
@@ -161,7 +161,7 @@ var render = function() {
                         },
                         on: {
                           click: function($event) {
-                            return _vm.verlibro(item.idcurso)
+                            return _vm.verCurso(item.idcurso)
                           }
                         }
                       })
@@ -183,7 +183,7 @@ var render = function() {
                         },
                         on: {
                           click: function($event) {
-                            return _vm.editarLibro(item.idcurso)
+                            return _vm.editarCurso(item.idcurso)
                           }
                         }
                       })
@@ -205,7 +205,7 @@ var render = function() {
                         },
                         on: {
                           click: function($event) {
-                            return _vm.eliminarLibro(item.idcurso)
+                            return _vm.eliminarCurso(item.idcurso)
                           }
                         }
                       })

@@ -58355,12 +58355,6 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
         return __webpack_require__.e(/*! import() */ 14).then(__webpack_require__.bind(null, /*! ./views/actividad/Actividades.vue */ "./resources/js/src/views/actividad/Actividades.vue"));
       }
     }, {
-      path: '/compartir',
-      name: 'ActividadesCompartidas',
-      component: function component() {
-        return __webpack_require__.e(/*! import() */ 31).then(__webpack_require__.bind(null, /*! ./views/actividad/compartir.vue */ "./resources/js/src/views/actividad/compartir.vue"));
-      }
-    }, {
       path: '/actividad/nueva',
       name: 'ActividadNuevo',
       component: function component() {
@@ -58407,6 +58401,12 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       name: 'editarCurso',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./views/curso/nuevo.vue */ "./resources/js/src/views/curso/nuevo.vue"));
+      }
+    }, {
+      path: '/curso/digital',
+      name: 'DigitalCurso',
+      component: function component() {
+        return Promise.all(/*! import() */[__webpack_require__.e(31), __webpack_require__.e(32)]).then(__webpack_require__.bind(null, /*! ./views/curso/digital.vue */ "./resources/js/src/views/curso/digital.vue"));
       }
     }, {
       path: '/virtual/:url',

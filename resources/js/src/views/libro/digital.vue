@@ -5,7 +5,7 @@
 
         <div slot="title">
             <vs-navbar-title>
-                <span style="color:white">Edisa</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:white">Edisa</span>
             </vs-navbar-title>
         </div>
         <vs-navbar-item index="1">
