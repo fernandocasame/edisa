@@ -271,7 +271,7 @@ var render = function() {
               "vs-button",
               {
                 staticClass: "mb-2",
-                attrs: { color: "danger", type: "border", to: "/libros" }
+                attrs: { color: "danger", type: "border", to: "/cursos" }
               },
               [_vm._v("Cancelar")]
             )

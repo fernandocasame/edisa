@@ -2690,11 +2690,6 @@ __webpack_require__.r(__webpack_exports__);
         name: "Curso",
         slug: "page2",
         icon: "BookOpenIcon"
-      }, {
-        url: "/compartir",
-        name: "Actividades Compartidas",
-        slug: "page2",
-        icon: "CopyIcon"
       }],
       routerTransition: _themeConfig_js__WEBPACK_IMPORTED_MODULE_5__["default"].routerTransition || 'none',
       routeTitle: this.$route.meta.pageTitle

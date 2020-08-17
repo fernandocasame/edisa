@@ -187,12 +187,6 @@ export default {
                     slug: "page2",
                     icon: "BookOpenIcon",
                 },
-                {
-                    url: "/compartir",
-                    name: "Actividades Compartidas",
-                    slug: "page2",
-                    icon: "CopyIcon",
-                },
             ],
             routerTransition: themeConfig.routerTransition || 'none',
             routeTitle: this.$route.meta.pageTitle
