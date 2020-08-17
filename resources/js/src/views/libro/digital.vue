@@ -1,6 +1,6 @@
 <template>
 <div>
-    <iframe id="t0_iframe" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" style="color:white; display: block; width: 100%; height: 100%; margin-left: auto; margin-right: auto; padding: 0px; top: 0px; position: absolute; left: 0px;" v-bind:src="'http://localhost/cactividades/'+url"></iframe>
+    <iframe id="t0_iframe" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" style="color:white; display: block; width: 100%; height: 100%; margin-left: auto; margin-right: auto; padding: 0px; top: 0px; position: absolute; left: 0px;" v-bind:src="'https://sistemaeducativo.edisa.ec/carpeta_libros/'+url"></iframe>
     <vs-navbar v-model="activeItem" class="p-2">
 
         <div slot="title">
@@ -12,7 +12,7 @@
             <a href="#" @click="popupActive=true" style="color:white">Actividades</a>
         </vs-navbar-item>
         <vs-navbar-item index="2">
-            <a href="../libros" to="/libros" style="color:white">Libros</a>
+            <a href="../libros" to="/libros" style="color:white">Salir</a>
         </vs-navbar-item>
     </vs-navbar>
     <vs-popup classContent="popup-example" title="Compartir Activdad" :active.sync="popupActive2">
