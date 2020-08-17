@@ -15,7 +15,7 @@ class ArchivoController extends Controller
      */
     public function index(Request $request)
     {
-        $archivos = DB::SELECT("SELECT * FROM archivo WHERE usuario_idusuario = ? estado = '1'",[$request->idusuario]);
+        $archivos = DB::SELECT("SELECT * FROM archivo WHERE usuario_idusuario = ? AND estado = '1'",[$request->idusuario]);
         return $archivos;
     }
 
