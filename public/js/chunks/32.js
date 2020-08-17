@@ -213,7 +213,7 @@ vue__WEBPACK_IMPORTED_MODULE_5___default.a.use(axios__WEBPACK_IMPORTED_MODULE_6_
                 me.$vs.loading({
                   color: '#046AE7'
                 });
-                url = "http://localhost:8001/api/getContenido?idcurso=908&idasignatura=" + me.idasignatura;
+                url = "https://sistemaeducativo.edisa.ec/api/archivo?idusuario=" + me.usuario[0].idusuario;
                 axios__WEBPACK_IMPORTED_MODULE_6___default.a.get(url).then(function (response) {
                   var respuesta = response.data;
                   me.listaContenido = response.data;

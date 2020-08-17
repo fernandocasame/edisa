@@ -119,7 +119,7 @@ export default {
             me.$vs.loading({
                 color: '#046AE7'
             })
-            var url = "http://localhost:8001/api/getContenido?idcurso=908&idasignatura=" + me.idasignatura;
+            var url = "https://sistemaeducativo.edisa.ec/api/archivo?idusuario=" + me.usuario[0].idusuario;
             axios.get(url).then(function (response) {
                     var respuesta = response.data;
                     me.listaContenido = response.data;
