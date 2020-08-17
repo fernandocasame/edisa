@@ -15,7 +15,7 @@ class ArchivoController extends Controller
      */
     public function index(Request $request)
     {
-        $archivos = DB::SELECT('SELECT * FROM archivo WHERE usuario_idusuario = ?',[$request->idusuario]);
+        $archivos = DB::SELECT('SELECT * FROM archivo WHERE usuario_idusuario = ? AND estado = 1',[$request->idusuario]);
         return $archivos;
     }
 
@@ -88,6 +88,7 @@ class ArchivoController extends Controller
      */
     public function destroy(Archivo $archivo)
     {
-        //
+        $archivo = Archivo::find($archivo->idarchivo)->update(['estado' => '0']);
+        return $archivo;
     }
 }

@@ -5,18 +5,18 @@
             <vue-dropzone class="vx-card" ref="dropzone" id="drop1" @vdropzone-complete="guardar" :options="dropzoneOptions"></vue-dropzone>
         </vx-card>
         <div class="vx-row">
-            <div class="vx-col w-full mt-4 mt-3" v-for="(item,$index) in listaContenido" :key="$index">
+            <div class="vx-col w-full mt-4 sm:w-1/4 md:w-1/4 lg:w-2/4 xl:w-4/4  mt-3" v-for="(item,$index) in listaContenido" :key="$index">
                 <vx-card class="text-center">
                     <vs-alert color="#fff" active="true" class="responsive card-img-top">
-                        <a v-bind:href="'./'+item.url" target="_blank">
+                        <a v-bind:href="'https://sistemaeducativo.edisa.ec/archivos/'+item.url" target="_blank">
                             <p>
                                 {{item.nombre}}
                             </p>
                         </a>
                     </vs-alert>
                     <vs-avatar color="primary" icon-pack="feather" icon="icon-file" />
-                    <p class="mt-2">{{item.updated_at}}</p>
-                    <vs-button type="line" v-if="item.curso_idcurso != null" @click="quitarContenido(item.idcontenido)" line-origin="right" color="danger">Eliminar</vs-button>
+                    <p class="mt-2">{{item.fecha_create}}</p>
+                    <vs-button type="line" @click="quitarContenido(item.idarchivo)" line-origin="right" color="danger">Eliminar</vs-button>
                 </vx-card>
             </div>
         </div>
@@ -103,7 +103,7 @@ export default {
                 color: '#046AE7'
             })
             axios
-                .get("http://localhost:8001/api/eliminarContenido?id=" + id)
+                .delete("https://sistemaeducativo.edisa.ec/api/archivo/" + id)
                 .then(function (response) {
                     me.getContenido();
                     me.$vs.loading.close()
@@ -127,21 +127,6 @@ export default {
                 })
                 .catch(function (error) {
                     me.$vs.loading.close()
-                });
-        },
-        async getContenidoTodo() {
-            let me = this;
-            me.$vs.loading({
-                color: '#046AE7'
-            })
-            var url = "http://localhost:8001/api/getContenidoTodo?idcurso=908&idusuario=5763&todo=1";
-            axios.get(url).then(function (response) {
-                    var respuesta = response.data;
-                    me.listaContenido = response.data;
-                    me.$vs.loading.close()
-                })
-                .catch(function (error) {
-                    console.log(error);
                 });
         },
     },

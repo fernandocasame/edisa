@@ -179,7 +179,7 @@ vue__WEBPACK_IMPORTED_MODULE_5___default.a.use(axios__WEBPACK_IMPORTED_MODULE_6_
                 me.$vs.loading({
                   color: '#046AE7'
                 });
-                axios__WEBPACK_IMPORTED_MODULE_6___default.a.get("http://localhost:8001/api/eliminarContenido?id=" + id).then(function (response) {
+                axios__WEBPACK_IMPORTED_MODULE_6___default.a.delete("https://sistemaeducativo.edisa.ec/api/archivo/" + id).then(function (response) {
                   me.getContenido();
                   me.$vs.loading.close();
                 }).catch(function (error) {
@@ -232,40 +232,6 @@ vue__WEBPACK_IMPORTED_MODULE_5___default.a.use(axios__WEBPACK_IMPORTED_MODULE_6_
 
       return function getContenido() {
         return _getContenido.apply(this, arguments);
-      };
-    }(),
-    getContenidoTodo: function () {
-      var _getContenidoTodo = _asyncToGenerator(
-      /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee5() {
-        var me, url;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee5$(_context5) {
-          while (1) {
-            switch (_context5.prev = _context5.next) {
-              case 0:
-                me = this;
-                me.$vs.loading({
-                  color: '#046AE7'
-                });
-                url = "http://localhost:8001/api/getContenidoTodo?idcurso=908&idusuario=5763&todo=1";
-                axios__WEBPACK_IMPORTED_MODULE_6___default.a.get(url).then(function (response) {
-                  var respuesta = response.data;
-                  me.listaContenido = response.data;
-                  me.$vs.loading.close();
-                }).catch(function (error) {
-                  console.log(error);
-                });
-
-              case 4:
-              case "end":
-                return _context5.stop();
-            }
-          }
-        }, _callee5, this);
-      }));
-
-      return function getContenidoTodo() {
-        return _getContenidoTodo.apply(this, arguments);
       };
     }()
   }
@@ -505,7 +471,11 @@ var render = function() {
           _vm._l(_vm.listaContenido, function(item, $index) {
             return _c(
               "div",
-              { key: $index, staticClass: "vx-col w-full mt-4 mt-3" },
+              {
+                key: $index,
+                staticClass:
+                  "vx-col w-full mt-4 sm:w-1/4 md:w-1/4 lg:w-2/4 xl:w-4/4  mt-3"
+              },
               [
                 _c(
                   "vx-card",
@@ -521,7 +491,12 @@ var render = function() {
                         _c(
                           "a",
                           {
-                            attrs: { href: "./" + item.url, target: "_blank" }
+                            attrs: {
+                              href:
+                                "https://sistemaeducativo.edisa.ec/archivos/" +
+                                item.url,
+                              target: "_blank"
+                            }
                           },
                           [
                             _c("p", [
@@ -545,27 +520,25 @@ var render = function() {
                     }),
                     _vm._v(" "),
                     _c("p", { staticClass: "mt-2" }, [
-                      _vm._v(_vm._s(item.updated_at))
+                      _vm._v(_vm._s(item.fecha_create))
                     ]),
                     _vm._v(" "),
-                    item.curso_idcurso != null
-                      ? _c(
-                          "vs-button",
-                          {
-                            attrs: {
-                              type: "line",
-                              "line-origin": "right",
-                              color: "danger"
-                            },
-                            on: {
-                              click: function($event) {
-                                return _vm.quitarContenido(item.idcontenido)
-                              }
-                            }
-                          },
-                          [_vm._v("Eliminar")]
-                        )
-                      : _vm._e()
+                    _c(
+                      "vs-button",
+                      {
+                        attrs: {
+                          type: "line",
+                          "line-origin": "right",
+                          color: "danger"
+                        },
+                        on: {
+                          click: function($event) {
+                            return _vm.quitarContenido(item.idarchivo)
+                          }
+                        }
+                      },
+                      [_vm._v("Eliminar")]
+                    )
                   ],
                   1
                 )
