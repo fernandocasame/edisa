@@ -38,11 +38,11 @@ class ArchivoController extends Controller
     {
         $idusuario = $request->idusuario;
         $file = $request->file('archivo');
+        $extension = $request->file('archivo')->extension();
         $ruta = public_path('./archivos');
-        $codigo = uniqid();
+        $codigo = uniqid().$extension;
         $file->move($ruta,$codigo);
-        $request->session()->flash('notificacion','Archivo Subido');
-        DB::INSERT("INSERT INTO `archivo`(`nombre`, `url`, `usuario_idusuario`) VALUES (?,?,?,?)",[$file->getClientOriginalName(),$codigo,$idusuario]);
+        DB::INSERT("INSERT INTO `archivo`(`nombre`, `url`, `usuario_idusuario`) VALUES (?,?,?)",[$file->getClientOriginalName(),$codigo,$idusuario]);
     }
 
     /**

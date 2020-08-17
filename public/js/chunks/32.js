@@ -142,9 +142,8 @@ vue__WEBPACK_IMPORTED_MODULE_5___default.a.use(axios__WEBPACK_IMPORTED_MODULE_6_
                 });
                 formData = new FormData();
                 formData.append('archivo', file);
-                formData.append('idcurso', me.usuario[0].idusuario);
+                formData.append('idusuario', me.usuario[0].idusuario);
                 axios__WEBPACK_IMPORTED_MODULE_6___default.a.post('https://sistemaeducativo.edisa.ec/api/archivo', formData).then(function (response) {
-                  me.getContenido();
                   me.file = '';
                   me.$refs.dropzone.removeAllFiles();
                   me.$vs.loading.close();
