@@ -12,9 +12,9 @@ class TareaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $tarea = DB::SELECT("SELECT * FROM tarea WHERE estado = '1' ORDER BY fecha_create DESC");
+        $tarea = DB::SELECT("SELECT * FROM tarea WHERE curso_idcurso = ? AND estado = '1' ",[$request->idcurso]);
         return $tarea;
     }
 
