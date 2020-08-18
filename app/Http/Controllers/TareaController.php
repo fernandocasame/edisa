@@ -14,7 +14,8 @@ class TareaController extends Controller
      */
     public function index()
     {
-        //
+        $tarea = DB::SELECT("SELECT * FROM tarea WHERE estado = '1' ORDER BY fecha_create DESC");
+        return $tarea;
     }
 
     /**
@@ -35,7 +36,14 @@ class TareaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if(!empty($request->idarea)){
+            $tarea = Tarea::find($request->idarea)->update($request->all());
+            return $tarea;
+        }else{
+            $tarea = new Tarea($request->all());
+            $tarea->save();
+            return $tarea;
+        }
     }
 
     /**
@@ -46,7 +54,7 @@ class TareaController extends Controller
      */
     public function show(Tarea $tarea)
     {
-        //
+        return $tarea;
     }
 
     /**
@@ -80,6 +88,7 @@ class TareaController extends Controller
      */
     public function destroy(Tarea $tarea)
     {
-        //
+        $tarea = Tarea::find($tarea->idarea)->update(['estado' => '0']);
+        return $tarea;
     }
 }

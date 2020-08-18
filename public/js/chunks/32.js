@@ -299,17 +299,24 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-select/dist/vue-select.css */ "./node_modules/vue-select/dist/vue-select.css");
-/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vuejs_datepicker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuejs-datepicker */ "./node_modules/vuejs-datepicker/dist/vuejs-datepicker.esm.js");
-//
-//
+/* harmony import */ var _babel_runtime_core_js_promise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/core-js/promise */ "./node_modules/@babel/runtime/core-js/promise.js");
+/* harmony import */ var _babel_runtime_core_js_promise__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_core_js_promise__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-select/dist/vue-select.css */ "./node_modules/vue-select/dist/vue-select.css");
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var vuejs_datepicker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuejs-datepicker */ "./node_modules/vuejs-datepicker/dist/vuejs-datepicker.esm.js");
+
+
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new _babel_runtime_core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a(function (resolve, reject) { var gen = fn.apply(self, args); function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { _babel_runtime_core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a.resolve(value).then(_next, _throw); } } function _next(value) { step("next", value); } function _throw(err) { step("throw", err); } _next(); }); }; }
+
 //
 //
 //
@@ -364,11 +371,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1___default.a);
+vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(axios__WEBPACK_IMPORTED_MODULE_3___default.a);
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    'v-select': vue_select__WEBPACK_IMPORTED_MODULE_2___default.a,
-    Datepicker: vuejs_datepicker__WEBPACK_IMPORTED_MODULE_4__["default"]
+    'v-select': vue_select__WEBPACK_IMPORTED_MODULE_4___default.a,
+    Datepicker: vuejs_datepicker__WEBPACK_IMPORTED_MODULE_6__["default"]
   },
   data: function data() {
     return {
@@ -376,7 +383,11 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
       datef: null,
       activePrompt: false,
       activePrompt2: false,
-      listaTareas: []
+      listaTareas: [],
+      listaContenido: [],
+      usuario: [],
+      tarea: {},
+      idcurso: ''
     };
   },
   computed: {
@@ -384,21 +395,64 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
       return this.valMultipe.value1.length > 0 && this.valMultipe.value2.length > 0;
     }
   },
+  created: function created() {
+    this.usuario = JSON.parse(localStorage.getItem('usuario'));
+    this.idcurso = localStorage.getItem('idcurso');
+    console.log(this.usuario);
+  },
   mounted: function mounted() {
     this.getTareas();
+    this.getContenido();
   },
   methods: {
+    getContenido: function () {
+      var _getContenido = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
+        var me, url;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                me = this;
+                me.$vs.loading({
+                  color: '#046AE7'
+                });
+                url = "https://sistemaeducativo.edisa.ec/api/archivo?idusuario=" + me.usuario[0].idusuario;
+                axios__WEBPACK_IMPORTED_MODULE_3___default.a.get(url).then(function (response) {
+                  var respuesta = response.data;
+                  me.listaContenido = response.data;
+                  me.$vs.loading.close();
+                }).catch(function (error) {
+                  me.$vs.loading.close();
+                });
+
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      return function getContenido() {
+        return _getContenido.apply(this, arguments);
+      };
+    }(),
     acceptAlert: function acceptAlert() {
       var me = this;
       var formData = new FormData();
-      formData.append('idlibro', me.idlibro);
-      formData.append('idcurso', 908);
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('http://localhost:8001/api/postLibroCurso', formData).then(function (response) {
+      formData.append('detalle', me.tarea.detalle);
+      formData.append('fecha_inicio', me.tarea.fecha_inicio);
+      formData.append('fecha_fin', me.tarea.fecha_fin);
+      formData.append('archivo_idarchivo', me.tarea.archivo_idarchivo);
+      formData.append('curso_idcurso', me.idcurso);
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('https://sistemaeducativo.edisa.ec/api/tarea', formData).then(function (response) {
         me.getLibros();
         me.$vs.notify({
           color: 'success',
           title: 'Guardado',
-          text: 'Libro Agregado'
+          text: 'Tarea Agregada'
         });
       }).catch(function (error) {});
     },
@@ -418,10 +472,10 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
       me.$vs.loading({
         color: '#046AE7'
       });
-      var url = "http://localhost:8001/api/getTareasDocentes?idcurso=908";
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(url).then(function (response) {
+      var url = "https://sistemaeducativo.edisa.ec/api/tarea?idcurso=" + me.idcurso;
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.get(url).then(function (response) {
         var respuesta = response.data;
-        me.listaTareas = response.data.items;
+        me.listaTareas = response.data;
         me.$vs.loading.close();
       }).catch(function (error) {
         me.$vs.loading.close();
@@ -667,41 +721,22 @@ var render = function() {
               "div",
               { staticClass: "con-exemple-prompt" },
               [
-                _c("span", [_vm._v("Asignatura")]),
-                _vm._v(" "),
-                _c("v-select", {
-                  attrs: {
-                    options: _vm.select,
-                    reduce: function(select) {
-                      return select.idlibro
-                    },
-                    label: "nombrelibro"
-                  },
-                  model: {
-                    value: _vm.idlibro,
-                    callback: function($$v) {
-                      _vm.idlibro = $$v
-                    },
-                    expression: "idlibro"
-                  }
-                }),
-                _vm._v(" "),
                 _c("span", { staticClass: "mt-4" }, [_vm._v("Contenido")]),
                 _vm._v(" "),
                 _c("v-select", {
                   attrs: {
-                    options: _vm.select,
-                    reduce: function(select) {
-                      return select.idlibro
+                    options: _vm.listaContenido,
+                    reduce: function(listaContenido) {
+                      return listaContenido.idarchivo
                     },
-                    label: "nombrelibro"
+                    label: "nombre"
                   },
                   model: {
-                    value: _vm.idlibro,
+                    value: _vm.tarea.archivo_idarchivo,
                     callback: function($$v) {
-                      _vm.idlibro = $$v
+                      _vm.$set(_vm.tarea, "archivo_idarchivo", $$v)
                     },
-                    expression: "idlibro"
+                    expression: "tarea.archivo_idarchivo"
                   }
                 }),
                 _vm._v(" "),
@@ -709,11 +744,11 @@ var render = function() {
                   staticClass: "mt-4",
                   attrs: { placeholder: "Fecha inicial" },
                   model: {
-                    value: _vm.datei,
+                    value: _vm.tarea.fecha_inicio,
                     callback: function($$v) {
-                      _vm.datei = $$v
+                      _vm.$set(_vm.tarea, "fecha_inicio", $$v)
                     },
-                    expression: "datei"
+                    expression: "tarea.fecha_inicio"
                   }
                 }),
                 _vm._v(" "),
@@ -721,11 +756,11 @@ var render = function() {
                   staticClass: "mt-4",
                   attrs: { placeholder: "Fecha final" },
                   model: {
-                    value: _vm.datef,
+                    value: _vm.tarea.fecha_fin,
                     callback: function($$v) {
-                      _vm.datef = $$v
+                      _vm.$set(_vm.tarea, "fecha_fin", $$v)
                     },
-                    expression: "datef"
+                    expression: "tarea.fecha_fin"
                   }
                 }),
                 _vm._v(" "),
@@ -733,11 +768,11 @@ var render = function() {
                   staticClass: "mt-4",
                   attrs: { label: "Descripción" },
                   model: {
-                    value: _vm.textarea,
+                    value: _vm.tarea.detalle,
                     callback: function($$v) {
-                      _vm.textarea = $$v
+                      _vm.$set(_vm.tarea, "detalle", $$v)
                     },
-                    expression: "textarea"
+                    expression: "tarea.detalle"
                   }
                 })
               ],
