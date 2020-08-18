@@ -6,8 +6,8 @@
             <div class="con-exemple-prompt">
                 <span class="mt-4">Contenido</span>
                 <v-select :options="listaContenido" :reduce="listaContenido => listaContenido.idarchivo" label="nombre" v-model="tarea.archivo_idarchivo"></v-select>
-                <datepicker class="mt-4" placeholder="Fecha inicial" v-model="tarea.fecha_inicio"></datepicker>
-                <datepicker class="mt-4" placeholder="Fecha final" v-model="tarea.fecha_fin"></datepicker>
+                <flat-pickr class="mt-4" :config="configdateTimePicker" v-model="tarea.fecha_inicio" placeholder="Fecha Inicial" />
+                <flat-pickr class="mt-4" :config="configdateTimePicker" v-model="tarea.fecha_fin" placeholder="Fecha Final" />
                 <vs-textarea class="mt-4" label="Descripción" v-model="tarea.detalle" />
             </div>
         </vs-prompt>
@@ -53,14 +53,21 @@ import axios from 'axios'
 import vSelect from 'vue-select'
 import 'vue-select/dist/vue-select.css';
 import Datepicker from 'vuejs-datepicker';
+import flatPickr from 'vue-flatpickr-component';
+import 'flatpickr/dist/flatpickr.css';
 Vue.use(axios)
 export default {
     components: {
         'v-select': vSelect,
-        Datepicker
+        Datepicker,
+        flatPickr
     },
     data() {
         return {
+            configdateTimePicker: {
+              enableTime: true,
+              dateFormat: 'd-m-Y H:i'
+            },
             datei: null,
             datef: null,
             activePrompt: false,

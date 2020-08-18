@@ -312,6 +312,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-select/dist/vue-select.css */ "./node_modules/vue-select/dist/vue-select.css");
 /* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var vuejs_datepicker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuejs-datepicker */ "./node_modules/vuejs-datepicker/dist/vuejs-datepicker.esm.js");
+/* harmony import */ var vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-flatpickr-component */ "./node_modules/vue-flatpickr-component/dist/vue-flatpickr.min.js");
+/* harmony import */ var vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var flatpickr_dist_flatpickr_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! flatpickr/dist/flatpickr.css */ "./node_modules/flatpickr/dist/flatpickr.css");
+/* harmony import */ var flatpickr_dist_flatpickr_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(flatpickr_dist_flatpickr_css__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
@@ -371,14 +375,21 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+
+
 vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(axios__WEBPACK_IMPORTED_MODULE_3___default.a);
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     'v-select': vue_select__WEBPACK_IMPORTED_MODULE_4___default.a,
-    Datepicker: vuejs_datepicker__WEBPACK_IMPORTED_MODULE_6__["default"]
+    Datepicker: vuejs_datepicker__WEBPACK_IMPORTED_MODULE_6__["default"],
+    flatPickr: vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_7___default.a
   },
   data: function data() {
     return {
+      configdateTimePicker: {
+        enableTime: true,
+        dateFormat: 'd-m-Y H:i'
+      },
       datei: null,
       datef: null,
       activePrompt: false,
@@ -740,9 +751,12 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _c("datepicker", {
+                _c("flat-pickr", {
                   staticClass: "mt-4",
-                  attrs: { placeholder: "Fecha inicial" },
+                  attrs: {
+                    config: _vm.configdateTimePicker,
+                    placeholder: "Fecha Inicial"
+                  },
                   model: {
                     value: _vm.tarea.fecha_inicio,
                     callback: function($$v) {
@@ -752,9 +766,12 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _c("datepicker", {
+                _c("flat-pickr", {
                   staticClass: "mt-4",
-                  attrs: { placeholder: "Fecha final" },
+                  attrs: {
+                    config: _vm.configdateTimePicker,
+                    placeholder: "Fecha Final"
+                  },
                   model: {
                     value: _vm.tarea.fecha_fin,
                     callback: function($$v) {
