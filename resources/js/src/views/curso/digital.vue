@@ -8,10 +8,7 @@
             <v-tareas></v-tareas>
         </vs-tab>
         <vs-tab label="Alumnos">
-            <div>Alumnos</div>
-        </vs-tab>
-        <vs-tab label="Calificaciones">
-            <div>Calificaciones</div>
+            <v-alumnos></v-alumnos>
         </vs-tab>
     </vs-tabs>
 </div>
@@ -20,10 +17,12 @@
 <script>
 import contenido from './contenido'
 import tareas from './tareas'
+import alumnos from './alumnos'
 export default {
     components: {
         'v-contenido':contenido,
         'v-tareas':tareas,
+        'v-alumnos':alumnos,
     },
     data() {
         return {
