@@ -15,7 +15,6 @@
     <div>
         <vs-table max-items="10" search pagination :data="listaTareas">
             <template slot="thead">
-                <vs-th >Nombre</vs-th>
                 <vs-th sort-key="descripcion" >Descripción</vs-th>
                 <vs-th sort-key="fecha_inicio" >Fecha inicio</vs-th>
                 <vs-th sort-key="fecha_final" >Fecha Final</vs-th>
@@ -23,17 +22,14 @@
             </template>
             <template slot-scope="{data}">
                 <vs-tr :key="indextr" v-for="(tr, indextr) in data">
-                    <vs-td :data="data[indextr].tarea.nombre">
-                        {{data[indextr].tarea.nombre}}
+                    <vs-td :data="data[indextr].detalle">
+                        {{data[indextr].detalle}}
                     </vs-td>
-                    <vs-td :data="data[indextr].tarea.descripcion">
-                        {{data[indextr].tarea.descripcion}}
+                    <vs-td :data="data[indextr].fecha_inicio">
+                        {{data[indextr].fecha_inicio}}
                     </vs-td>
-                    <vs-td :data="data[indextr].tarea.fecha_inicio">
-                        {{data[indextr].tarea.fecha_inicio}}
-                    </vs-td>
-                    <vs-td :data="data[indextr].tarea.fecha_final">
-                        {{data[indextr].tarea.fecha_final}}
+                    <vs-td :data="data[indextr].fecha_fin">
+                        {{data[indextr].fecha_fin}}
                     </vs-td>
                     <vs-td :data="tr.idInstitucion">
                         <div class="flex">
@@ -119,7 +115,7 @@ export default {
             formData.append('curso_idcurso', me.idcurso);
             axios.post('https://sistemaeducativo.edisa.ec/api/tarea', formData)
                 .then(function (response) {
-                    me.getLibros();
+                    me.getTareas();
                     me.$vs.notify({
                         color: 'success',
                         title: 'Guardado',

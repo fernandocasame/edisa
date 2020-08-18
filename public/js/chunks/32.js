@@ -366,10 +366,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
 
 
 
@@ -459,7 +455,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(axios__WEBPACK_IMPORTED_MODULE_3_
       formData.append('archivo_idarchivo', me.tarea.archivo_idarchivo);
       formData.append('curso_idcurso', me.idcurso);
       axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('https://sistemaeducativo.edisa.ec/api/tarea', formData).then(function (response) {
-        me.getLibros();
+        me.getTareas();
         me.$vs.notify({
           color: 'success',
           title: 'Guardado',
@@ -825,11 +821,11 @@ var render = function() {
                       [
                         _c(
                           "vs-td",
-                          { attrs: { data: data[indextr].tarea.nombre } },
+                          { attrs: { data: data[indextr].detalle } },
                           [
                             _vm._v(
                               "\r\n                        " +
-                                _vm._s(data[indextr].tarea.nombre) +
+                                _vm._s(data[indextr].detalle) +
                                 "\r\n                    "
                             )
                           ]
@@ -837,11 +833,11 @@ var render = function() {
                         _vm._v(" "),
                         _c(
                           "vs-td",
-                          { attrs: { data: data[indextr].tarea.descripcion } },
+                          { attrs: { data: data[indextr].fecha_inicio } },
                           [
                             _vm._v(
                               "\r\n                        " +
-                                _vm._s(data[indextr].tarea.descripcion) +
+                                _vm._s(data[indextr].fecha_inicio) +
                                 "\r\n                    "
                             )
                           ]
@@ -849,23 +845,11 @@ var render = function() {
                         _vm._v(" "),
                         _c(
                           "vs-td",
-                          { attrs: { data: data[indextr].tarea.fecha_inicio } },
+                          { attrs: { data: data[indextr].fecha_fin } },
                           [
                             _vm._v(
                               "\r\n                        " +
-                                _vm._s(data[indextr].tarea.fecha_inicio) +
-                                "\r\n                    "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "vs-td",
-                          { attrs: { data: data[indextr].tarea.fecha_final } },
-                          [
-                            _vm._v(
-                              "\r\n                        " +
-                                _vm._s(data[indextr].tarea.fecha_final) +
+                                _vm._s(data[indextr].fecha_fin) +
                                 "\r\n                    "
                             )
                           ]
@@ -908,8 +892,6 @@ var render = function() {
               "template",
               { slot: "thead" },
               [
-                _c("vs-th", [_vm._v("Nombre")]),
-                _vm._v(" "),
                 _c("vs-th", { attrs: { "sort-key": "descripcion" } }, [
                   _vm._v("Descripción")
                 ]),
