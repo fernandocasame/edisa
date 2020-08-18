@@ -66,7 +66,7 @@ export default {
         return {
             configdateTimePicker: {
               enableTime: true,
-              dateFormat: 'd-m-Y H:i'
+              dateFormat: 'Y-m-d H:i:s'
             },
             datei: null,
             datef: null,

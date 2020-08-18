@@ -388,7 +388,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(axios__WEBPACK_IMPORTED_MODULE_3_
     return {
       configdateTimePicker: {
         enableTime: true,
-        dateFormat: 'd-m-Y H:i'
+        dateFormat: 'Y-m-d H:i:s'
       },
       datei: null,
       datef: null,

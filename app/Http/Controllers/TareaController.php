@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Tarea;
 use Illuminate\Http\Request;
-
+use DB;
 class TareaController extends Controller
 {
     /**
