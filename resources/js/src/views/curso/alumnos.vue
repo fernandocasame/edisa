@@ -47,7 +47,7 @@ export default {
         return {
             estudiantes: [],
             usuario: [],
-            idcurso:''
+            codigo:''
         }
     },
     computed: {
@@ -57,7 +57,7 @@ export default {
     },
     created() {
         this.usuario = JSON.parse(localStorage.getItem('usuario'));
-        this.idcurso = localStorage.getItem('idcurso')
+        this.codigo = localStorage.getItem('codigo')
         console.log(this.usuario);
     },
     mounted() {
@@ -69,7 +69,7 @@ export default {
             me.$vs.loading({
                 color: '#046AE7'
             })
-            var url = "https://sistemaeducativo.edisa.ec/api/cursoestudiantes?idcurso=" + me.idcurso;
+            var url = "https://sistemaeducativo.edisa.ec/api/cursoestudiantes?codigo=" + me.codigo;
             axios.get(url).then(function (response) {
                     var respuesta = response.data;
                     me.estudiantes = response.data;

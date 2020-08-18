@@ -5,91 +5,9 @@
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/curso/cursos.vue?vue&type=script&lang=js& ***!
   \**********************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1___default.a);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      cursos: [],
-      usuario: []
-    };
-  },
-  mounted: function mounted() {
-    this.getCurso();
-  },
-  created: function created() {
-    this.usuario = JSON.parse(localStorage.getItem('usuario'));
-  },
-  methods: {
-    getCurso: function getCurso() {
-      var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://sistemaeducativo.edisa.ec/api/curso?idusuario=' + me.usuario[0].idusuario, {}).then(function (response) {
-        me.cursos = response.data;
-        console.log(me.cursos);
-      }).catch(function (error) {});
-    },
-    verCurso: function verCurso(idcurso) {
-      localStorage.idcurso = idcurso;
-      this.$router.push('/curso/digital');
-    },
-    editarCurso: function editarCurso(idcurso) {
-      this.$router.push('/editar/curso/' + idcurso);
-      console.log(idcurso);
-    },
-    eliminarCurso: function eliminarCurso(idcurso) {
-      var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.delete("https://sistemaeducativo.edisa.ec/api/curso/" + idcurso).then(function (response) {
-        me.getCurso();
-      }).catch(function (error) {});
-    },
-    addactividad: function addactividad(idcurso) {
-      localStorage.idcurso = idcurso;
-      this.$router.push('/cursos');
-    }
-  }
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\Fernando\\Desktop\\edisa\\resources\\js\\src\\views\\curso\\cursos.vue: Unexpected token, expected \",\" (63:34)\n\n  61 |                 .catch(function (error) {})\n  62 |         },\n> 63 |         verCurso(idcurso,codi,item.codigogo) {\n     |                                   ^\n  64 |             localStorage.idcurso = idcurso;\n  65 |             localStorage.codigo = codigo;\n  66 |             this.$router.push('/curso/digital');\n    at Parser.raise (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:776:15)\n    at Parser.unexpected (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2079:16)\n    at Parser.expect (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2067:28)\n    at Parser.parseBindingList (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2351:14)\n    at Parser.parseFunctionParams (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:4650:24)\n    at Parser.parseMethod (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3685:10)\n    at Parser.parseObjectMethod (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3602:19)\n    at Parser.parseObjPropValue (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3644:21)\n    at Parser.parseObj (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3555:12)\n    at Parser.parseExprAtom (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3123:21)\n    at Parser.parseExprSubscripts (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2757:21)\n    at Parser.parseMaybeUnary (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2736:21)\n    at Parser.parseExprOps (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2643:21)\n    at Parser.parseMaybeConditional (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2615:21)\n    at Parser.parseMaybeAssign (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2562:21)\n    at Parser.parseObjectProperty (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3619:101)\n    at Parser.parseObjPropValue (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3644:99)\n    at Parser.parseObj (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3555:12)\n    at Parser.parseExprAtom (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3123:21)\n    at Parser.parseExprSubscripts (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2757:21)\n    at Parser.parseMaybeUnary (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2736:21)\n    at Parser.parseExprOps (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2643:21)\n    at Parser.parseMaybeConditional (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2615:21)\n    at Parser.parseMaybeAssign (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2562:21)\n    at Parser.parseExportDefaultExpression (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:5025:22)\n    at Parser.parseExport (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:4983:31)\n    at Parser.parseStatementContent (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:4049:27)\n    at Parser.parseStatement (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3962:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:4513:23)\n    at Parser.parseBlockBody (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:4500:10)\n    at Parser.parseTopLevel (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3938:10)\n    at Parser.parse (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:5304:17)\n    at parse (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:10095:38)\n    at parser (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:139:35)\n    at normalizeFile (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:87:11)\n    at runSync (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\@babel\\core\\lib\\transformation\\index.js:44:43)");
 
 /***/ }),
 
@@ -161,7 +79,7 @@ var render = function() {
                         },
                         on: {
                           click: function($event) {
-                            return _vm.verCurso(item.idcurso)
+                            return _vm.verCurso(item.idcurso, item.codigo)
                           }
                         }
                       })

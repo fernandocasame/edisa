@@ -79,7 +79,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(axios__WEBPACK_IMPORTED_MODULE_3_
     return {
       estudiantes: [],
       usuario: [],
-      idcurso: ''
+      codigo: ''
     };
   },
   computed: {
@@ -89,7 +89,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(axios__WEBPACK_IMPORTED_MODULE_3_
   },
   created: function created() {
     this.usuario = JSON.parse(localStorage.getItem('usuario'));
-    this.idcurso = localStorage.getItem('idcurso');
+    this.codigo = localStorage.getItem('codigo');
     console.log(this.usuario);
   },
   mounted: function mounted() {
@@ -109,7 +109,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(axios__WEBPACK_IMPORTED_MODULE_3_
                 me.$vs.loading({
                   color: '#046AE7'
                 });
-                url = "https://sistemaeducativo.edisa.ec/api/cursoestudiantes?idcurso=" + me.idcurso;
+                url = "https://sistemaeducativo.edisa.ec/api/cursoestudiantes?codigo=" + me.codigo;
                 axios__WEBPACK_IMPORTED_MODULE_3___default.a.get(url).then(function (response) {
                   var respuesta = response.data;
                   me.estudiantes = response.data;

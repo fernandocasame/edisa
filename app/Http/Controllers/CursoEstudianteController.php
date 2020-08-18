@@ -14,7 +14,7 @@ class CursoEstudianteController extends Controller
      */
     public function index(Request $request)
     {
-        $estudiantes = DB::SELECT("SELECT * FROM curso_estudiante JOIN usuario ON usuario.idusuario = curso_estudiante.usuario_idusuario WHERE curso_estudiante.codigo = ?",[$request->idcurso]);
+        $estudiantes = DB::SELECT("SELECT * FROM curso_estudiante JOIN usuario ON usuario.idusuario = curso_estudiante.usuario_idusuario WHERE curso_estudiante.codigo = ?",[$request->codigo]);
         return $estudiantes;
     }
 

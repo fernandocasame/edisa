@@ -16,7 +16,7 @@
                 <h5 class="mb-2 h2">{{item.codigo}}</h5>
                 <div class="flex flex-wrap mt-4">
                     <div class="w-1/4 ml-auto">
-                        <vs-button radius color="primary" type="filled" @click="verCurso(item.idcurso)" icon-pack="feather" icon="icon-eye"></vs-button>
+                        <vs-button radius color="primary" type="filled" @click="verCurso(item.idcurso,item.codigo)" icon-pack="feather" icon="icon-eye"></vs-button>
                     </div>
                     <div class="w-1/4 ml-auto">
                         <vs-button radius color="warning" type="filled" @click="editarCurso(item.idcurso)" icon-pack="feather" icon="icon-edit"></vs-button>
@@ -60,8 +60,9 @@ export default {
                 })
                 .catch(function (error) {})
         },
-        verCurso(idcurso) {
+        verCurso(idcurso,codi,item.codigogo) {
             localStorage.idcurso = idcurso;
+            localStorage.codigo = codigo;
             this.$router.push('/curso/digital');
         },
         editarCurso(idcurso) {
