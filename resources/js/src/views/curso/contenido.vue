@@ -86,6 +86,7 @@ export default {
             formData.append('idusuario', me.usuario[0].idusuario);
             axios.post('https://sistemaeducativo.edisa.ec/api/archivo', formData)
                 .then(function (response) {
+                    me.getContenido();
                     me.file = '';
                     me.$refs.dropzone.removeAllFiles();
                     me.$vs.loading.close()
