@@ -60,7 +60,7 @@ export default {
                 })
                 .catch(function (error) {})
         },
-        verCurso(idcurso,codi,item.codigogo) {
+        verCurso(idcurso,codigo) {
             localStorage.idcurso = idcurso;
             localStorage.codigo = codigo;
             this.$router.push('/curso/digital');
