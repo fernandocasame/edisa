@@ -26,7 +26,7 @@ class TareaController extends Controller
             if(!empty($verifica)){
             }else{
                 $data['items'][$key] = [
-                    'tarea' => $post,
+                    $post
                 ];
             }
         }
