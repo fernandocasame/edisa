@@ -49,7 +49,7 @@ export default {
                 codigo:me.curso.codigo
             })
                 .then(function (response) {
-                    me.$router.push('/estudiantes/cursos');
+                    me.$router.push('/estudiante/cursos');
                 })
                 .catch(function (error) {})
         }

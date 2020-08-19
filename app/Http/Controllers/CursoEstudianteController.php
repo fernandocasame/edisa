@@ -37,7 +37,9 @@ class CursoEstudianteController extends Controller
     public function store(Request $request)
     {
         $curso = DB::SELECT("SELECT * FROM curso WHERE codigo = ?",["$request->codigo"]);
-        return $curso;
+        if(!empty($curso)){
+            DB::INSERT("INSERT INTO `curso_estudiante`(`usuario_idusuario`, `codigo`) VALUES (?,?)",[$request->idusuario,"$request->codigo"]);
+        }
     }
 
     /**

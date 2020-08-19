@@ -64,7 +64,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("v-select", vue_select__WEB
         idusuario: me.usuario[0].idusuario,
         codigo: me.curso.codigo
       }).then(function (response) {
-        me.$router.push('/estudiantes/cursos');
+        me.$router.push('/estudiante/cursos');
       }).catch(function (error) {});
     }
   }
