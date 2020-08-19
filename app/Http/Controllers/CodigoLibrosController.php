@@ -12,7 +12,7 @@ class CodigoLibrosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Reques $request)
+    public function index(Request $request)
     {
         $libros = DB::SELECT("SELECT * FROM codigoLibros inner join libro on libro.idlibro = codigoLibros.libro_idlibro WHERE codigoLibros.usuario_idusuario = ?",[$request->idusuario]);
         return $libros;
