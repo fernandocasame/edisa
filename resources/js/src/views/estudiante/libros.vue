@@ -38,7 +38,7 @@ export default {
     methods: {
         getLibro() {
             let me = this;
-            axios.get('https://sistemaeducativo.edisa.ec/api/codigo?idusuario='me.usuario[0].idusuario)
+            axios.get('https://sistemaeducativo.edisa.ec/api/codigo?idusuario='+me.usuario[0].idusuario)
                 .then(function (response) {
                     me.libros = response.data;
                     console.log(me.libros);

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\CodigoLibros;
 use Illuminate\Http\Request;
-
+use DB;
 class CodigoLibrosController extends Controller
 {
     /**

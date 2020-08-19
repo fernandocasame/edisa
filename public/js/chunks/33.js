@@ -5,9 +5,65 @@
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/estudiante/libros.vue?vue&type=script&lang=js& ***!
   \***************************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\Fernando\\Desktop\\edisa\\resources\\js\\src\\views\\estudiante\\libros.vue: Unexpected token, expected \",\" (41:79)\n\n  39 |         getLibro() {\n  40 |             let me = this;\n> 41 |             axios.get('https://sistemaeducativo.edisa.ec/api/codigo?idusuario='me.usuario[0].idusuario)\n     |                                                                                ^\n  42 |                 .then(function (response) {\n  43 |                     me.libros = response.data;\n  44 |                     console.log(me.libros);\n    at Parser.raise (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:776:15)\n    at Parser.unexpected (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2079:16)\n    at Parser.expect (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2067:28)\n    at Parser.parseCallExpressionArguments (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2945:14)\n    at Parser.parseSubscript (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2862:32)\n    at Parser.parseSubscripts (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2777:19)\n    at Parser.parseExprSubscripts (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2767:17)\n    at Parser.parseMaybeUnary (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2736:21)\n    at Parser.parseExprOps (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2643:21)\n    at Parser.parseMaybeConditional (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2615:21)\n    at Parser.parseMaybeAssign (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2562:21)\n    at Parser.parseExpression (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2515:21)\n    at Parser.parseStatementContent (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:4076:21)\n    at Parser.parseStatement (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3962:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:4513:23)\n    at Parser.parseBlockBody (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:4500:10)\n    at Parser.parseBlock (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:4489:10)\n    at Parser.parseFunctionBody (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3754:24)\n    at Parser.parseFunctionBodyAndFinish (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3734:10)\n    at Parser.parseMethod (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3686:10)\n    at Parser.parseObjectMethod (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3602:19)\n    at Parser.parseObjPropValue (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3644:21)\n    at Parser.parseObj (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3555:12)\n    at Parser.parseExprAtom (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3123:21)\n    at Parser.parseExprSubscripts (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2757:21)\n    at Parser.parseMaybeUnary (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2736:21)\n    at Parser.parseExprOps (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2643:21)\n    at Parser.parseMaybeConditional (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2615:21)\n    at Parser.parseMaybeAssign (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2562:21)\n    at Parser.parseObjectProperty (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3619:101)\n    at Parser.parseObjPropValue (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3644:99)\n    at Parser.parseObj (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3555:12)\n    at Parser.parseExprAtom (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:3123:21)\n    at Parser.parseExprSubscripts (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2757:21)\n    at Parser.parseMaybeUnary (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2736:21)\n    at Parser.parseExprOps (C:\\Users\\Fernando\\Desktop\\edisa\\node_modules\\babylon\\lib\\index.js:2643:21)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1___default.a);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      libros: [],
+      usuario: []
+    };
+  },
+  mounted: function mounted() {
+    this.getLibro();
+  },
+  created: function created() {
+    this.usuario = JSON.parse(localStorage.getItem('usuario'));
+  },
+  methods: {
+    getLibro: function getLibro() {
+      var me = this;
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://sistemaeducativo.edisa.ec/api/codigo?idusuario=' + me.usuario[0].idusuario).then(function (response) {
+        me.libros = response.data;
+        console.log(me.libros);
+      }).catch(function (error) {});
+    },
+    verlibro: function verlibro(url, idlibro) {
+      localStorage.url = url;
+      localStorage.idlibro = idlibro;
+      this.$router.push('/estudiante/digital');
+    }
+  }
+});
 
 /***/ }),
 
