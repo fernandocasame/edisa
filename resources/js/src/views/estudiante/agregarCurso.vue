@@ -31,23 +31,23 @@ export default {
     data() {
         return {
             curso: {},
-            usuario:[]
+            usuario: []
         }
     },
     created() {
         this.usuario = JSON.parse(localStorage.getItem('usuario'));
     },
     mounted() {
-        
+
     },
     methods: {
         guardar(data) {
             let me = this;
             console.log(data);
             axios.post("https://sistemaeducativo.edisa.ec/api/cursoEstudiante", {
-                idusuario:me.usuario[0].idusuario,
-                codigo:me.curso.codigo
-            })
+                    idusuario: me.usuario[0].idusuario,
+                    codigo: me.curso.codigo
+                })
                 .then(function (response) {
                     me.$router.push('/estudiante/cursos');
                 })

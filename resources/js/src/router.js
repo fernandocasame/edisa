@@ -222,6 +222,12 @@ const router = new Router({
                         import ('./views/estudiante/cursos.vue')
                 },
                 {
+                    path: '/estudiante/curso/digital',
+                    name: 'CursosEstudianteDigital',
+                    component: () =>
+                        import ('./views/estudiante/digitalCurso.vue')
+                },
+                {
                     path: '/libros',
                     name: 'Libros',
                     component: () =>

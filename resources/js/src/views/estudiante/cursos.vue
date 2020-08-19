@@ -55,7 +55,7 @@ export default {
         verCurso(idcurso, codigo) {
             localStorage.idcurso = idcurso;
             localStorage.codigo = codigo;
-            this.$router.push('/curso/digital');
+            this.$router.push('/estudiante/curso/digital');
         },
     },
 }

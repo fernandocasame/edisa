@@ -65,7 +65,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
     verCurso: function verCurso(idcurso, codigo) {
       localStorage.idcurso = idcurso;
       localStorage.codigo = codigo;
-      this.$router.push('/curso/digital');
+      this.$router.push('/estudiante/curso/digital');
     }
   }
 });

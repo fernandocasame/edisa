@@ -17,6 +17,21 @@ class TareaController extends Controller
         $tarea = DB::SELECT("SELECT * FROM tarea WHERE curso_idcurso = ? AND estado = '1' ",[$request->idcurso]);
         return $tarea;
     }
+    
+    public function tareaEstudiante(Request $request){
+        $tarea = DB::SELECT("SELECT * FROM tarea WHERE curso_idcurso = ? AND estado = '1' ",[$request->idcurso]);
+        foreach ($tarea as $key) {
+            $verifica = DB::SELECT("SELECT * FROM respuesta WHERE tarea_idtarea = ? AND usuario_idusuario = ?",[$key->idtarea,$request->idusuario]);
+            if(!empty($verifica)){
+                $data['items'][$key] = [
+                    'tarea' => $tarea,
+                ];
+            }else{
+
+            }
+        }
+        return $data;
+    }
 
     /**
      * Show the form for creating a new resource.
