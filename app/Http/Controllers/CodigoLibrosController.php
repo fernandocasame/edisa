@@ -36,7 +36,8 @@ class CodigoLibrosController extends Controller
      */
     public function store(Request $request)
     {
-        echo $request->codigo;
+        $codigo = DB::UPDATE("UPDATE `codigoLibros` SET `usuario_idusuario`= ? WHERE `codigo` = ?",[$request->idusuario,$request->codigo]);
+        return $codigo;
     }
 
     /**

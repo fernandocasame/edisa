@@ -47,15 +47,20 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("v-select", vue_select__WEB
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      libro: {}
+      libro: {},
+      usuario: []
     };
+  },
+  created: function created() {
+    this.usuario = JSON.parse(localStorage.getItem('usuario'));
   },
   methods: {
     guardar: function guardar(data) {
       var me = this;
       console.log(data);
       axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("https://sistemaeducativo.edisa.ec/api/codigoLibro", {
-        codigo: me.libro.codigo
+        codigo: me.libro.codigo,
+        idusuario: me.usuario[0].idusuario
       }).then(function (response) {
         me.$router.push('/estudiante/libros');
       }).catch(function (error) {

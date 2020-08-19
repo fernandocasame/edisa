@@ -29,15 +29,20 @@ Vue.component("v-select", vSelect);
 export default {
     data() {
         return {
-            libro: {}
+            libro: {},
+            usuario:[]
         }
+    },
+    created() {
+        this.usuario = JSON.parse(localStorage.getItem('usuario'));
     },
     methods: {
         guardar(data) {
             let me = this;
             console.log(data);
             axios.post("https://sistemaeducativo.edisa.ec/api/codigoLibro", {
-                codigo:me.libro.codigo
+                codigo:me.libro.codigo,
+                idusuario:me.usuario[0].idusuario
             })
                 .then(function (response) {
                     me.$router.push('/estudiante/libros');
