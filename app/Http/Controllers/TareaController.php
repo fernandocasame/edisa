@@ -24,11 +24,10 @@ class TareaController extends Controller
         foreach ($tarea as $key => $post) {
             $verifica = DB::SELECT("SELECT * FROM respuesta WHERE tarea_idtarea = ? AND usuario_idusuario = ?",[$post->idtarea,$request->idusuario]);
             if(!empty($verifica)){
+            }else{
                 $data['items'][$key] = [
                     'tarea' => $post,
                 ];
-            }else{
-
             }
         }
         return $data;
