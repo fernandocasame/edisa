@@ -25,9 +25,7 @@ class TareaController extends Controller
             $verifica = DB::SELECT("SELECT * FROM respuesta WHERE tarea_idtarea = ? AND usuario_idusuario = ?",[$post->idtarea,$request->idusuario]);
             if(!empty($verifica)){
             }else{
-                $data[$key] = 
-                    $post
-                ;
+                array_push ($data , $post)
             }
         }
         return $data;
