@@ -102,6 +102,9 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import axios from 'axios'
+Vue.use(axios)
 import BackToTop from 'vue-backtotop'
 import HNavMenu from '@/layouts/components/horizontal-nav-menu/HorizontalNavMenu.vue'
 // import navMenuItems        from '@/layouts/components/vertical-nav-menu/navMenuItems.js'
@@ -110,7 +113,6 @@ import TheNavbarVertical from '@/layouts/components/navbar/TheNavbarVertical.vue
 import TheFooter from '@/layouts/components/TheFooter.vue'
 import themeConfig from '@/../themeConfig.js'
 import VNavMenu from '@/layouts/components/vertical-nav-menu/VerticalNavMenu.vue'
-
 export default {
     components: {
         BackToTop,
@@ -122,72 +124,13 @@ export default {
     },
     data() {
         return {
+            usuario: [],
             footerType: themeConfig.footerType || 'static',
             hideScrollToTop: themeConfig.hideScrollToTop,
             isNavbarDark: false,
             navbarColor: themeConfig.navbarColor || '#fff',
             navbarType: themeConfig.navbarType || 'floating',
-            navMenuItems: [{
-                    url: "",
-                    name: "Panel",
-                    slug: "home",
-                    icon: "HomeIcon",
-                },
-                {
-                    url: "/instituciones",
-                    name: "Instituciones",
-                    slug: "page2",
-                    icon: "SunriseIcon",
-                },
-                {
-                    url: "/grupos",
-                    name: "Grupo de Usuarios",
-                    slug: "page2",
-                    icon: "UsersIcon",
-                },
-                {
-                    url: "/docentes",
-                    name: "Docentes",
-                    slug: "page2",
-                    icon: "UsersIcon",
-                },
-                {
-                    url: "/estudiantes",
-                    name: "Estudiantes",
-                    slug: "page2",
-                    icon: "UserIcon",
-                },
-                {
-                    url: "/areas",
-                    name: "Áreas",
-                    slug: "page2",
-                    icon: "LayersIcon",
-                },
-                {
-                    url: "/asignaturas",
-                    name: "Asignaturas",
-                    slug: "page2",
-                    icon: "LayoutIcon",
-                },
-                {
-                    url: "/libros",
-                    name: "Libros",
-                    slug: "page2",
-                    icon: "BookIcon",
-                },
-                {
-                    url: "/planificaciones",
-                    name: "Planificaciones",
-                    slug: "page2",
-                    icon: "FileTextIcon",
-                },
-                {
-                    url: "/cursos",
-                    name: "Curso",
-                    slug: "page2",
-                    icon: "BookOpenIcon",
-                },
-            ],
+            navMenuItems: [],
             routerTransition: themeConfig.routerTransition || 'none',
             routeTitle: this.$route.meta.pageTitle
         }
@@ -250,14 +193,24 @@ export default {
         }
     },
     mounted() {
+        this.getMenu()
         if (!localStorage.token) {
             this.$router.push('/');
         } else {
             console.log(localStorage.token);
-            this.$router.push('');
+            this.$router.push('/home');
         }
     },
     methods: {
+        getMenu() {
+            let me = this;
+            axios.get('https://sistemaeducativo.edisa.ec/api/menu?idgrupo='+me.usuario[0].grupo_idgrupo)
+                .then(function (response) {
+                    me.navMenuItems = response.data;
+                    console.log(me.navMenuItems);
+                })
+                .catch(function (error) {})
+        },
         changeRouteTitle(title) {
             this.routeTitle = title
         },
@@ -279,6 +232,7 @@ export default {
         const color = this.navbarColor === '#fff' && this.isThemeDark ? '#10163a' : this.navbarColor
         this.updateNavbarColor(color)
         this.setNavMenuVisibility(this.$store.state.mainLayoutType)
+        this.usuario = JSON.parse(localStorage.getItem('usuario'));
     }
 }
 </script>

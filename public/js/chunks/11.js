@@ -2506,13 +2506,17 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue_backtotop__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-backtotop */ "./node_modules/vue-backtotop/src/main.js");
-/* harmony import */ var _layouts_components_horizontal_nav_menu_HorizontalNavMenu_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/layouts/components/horizontal-nav-menu/HorizontalNavMenu.vue */ "./resources/js/src/layouts/components/horizontal-nav-menu/HorizontalNavMenu.vue");
-/* harmony import */ var _layouts_components_navbar_TheNavbarHorizontal_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/layouts/components/navbar/TheNavbarHorizontal.vue */ "./resources/js/src/layouts/components/navbar/TheNavbarHorizontal.vue");
-/* harmony import */ var _layouts_components_navbar_TheNavbarVertical_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/layouts/components/navbar/TheNavbarVertical.vue */ "./resources/js/src/layouts/components/navbar/TheNavbarVertical.vue");
-/* harmony import */ var _layouts_components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/layouts/components/TheFooter.vue */ "./resources/js/src/layouts/components/TheFooter.vue");
-/* harmony import */ var _themeConfig_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/../themeConfig.js */ "./resources/js/themeConfig.js");
-/* harmony import */ var _layouts_components_vertical_nav_menu_VerticalNavMenu_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/layouts/components/vertical-nav-menu/VerticalNavMenu.vue */ "./resources/js/src/layouts/components/vertical-nav-menu/VerticalNavMenu.vue");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue_backtotop__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-backtotop */ "./node_modules/vue-backtotop/src/main.js");
+/* harmony import */ var _layouts_components_horizontal_nav_menu_HorizontalNavMenu_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/layouts/components/horizontal-nav-menu/HorizontalNavMenu.vue */ "./resources/js/src/layouts/components/horizontal-nav-menu/HorizontalNavMenu.vue");
+/* harmony import */ var _layouts_components_navbar_TheNavbarHorizontal_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/layouts/components/navbar/TheNavbarHorizontal.vue */ "./resources/js/src/layouts/components/navbar/TheNavbarHorizontal.vue");
+/* harmony import */ var _layouts_components_navbar_TheNavbarVertical_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/layouts/components/navbar/TheNavbarVertical.vue */ "./resources/js/src/layouts/components/navbar/TheNavbarVertical.vue");
+/* harmony import */ var _layouts_components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/layouts/components/TheFooter.vue */ "./resources/js/src/layouts/components/TheFooter.vue");
+/* harmony import */ var _themeConfig_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/../themeConfig.js */ "./resources/js/themeConfig.js");
+/* harmony import */ var _layouts_components_vertical_nav_menu_VerticalNavMenu_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/layouts/components/vertical-nav-menu/VerticalNavMenu.vue */ "./resources/js/src/layouts/components/vertical-nav-menu/VerticalNavMenu.vue");
 //
 //
 //
@@ -2616,6 +2620,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
+
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1___default.a);
 
  // import navMenuItems        from '@/layouts/components/vertical-nav-menu/navMenuItems.js'
 
@@ -2626,72 +2633,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BackToTop: vue_backtotop__WEBPACK_IMPORTED_MODULE_0__["default"],
-    HNavMenu: _layouts_components_horizontal_nav_menu_HorizontalNavMenu_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    TheFooter: _layouts_components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-    TheNavbarHorizontal: _layouts_components_navbar_TheNavbarHorizontal_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    TheNavbarVertical: _layouts_components_navbar_TheNavbarVertical_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-    VNavMenu: _layouts_components_vertical_nav_menu_VerticalNavMenu_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
+    BackToTop: vue_backtotop__WEBPACK_IMPORTED_MODULE_2__["default"],
+    HNavMenu: _layouts_components_horizontal_nav_menu_HorizontalNavMenu_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    TheFooter: _layouts_components_TheFooter_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    TheNavbarHorizontal: _layouts_components_navbar_TheNavbarHorizontal_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    TheNavbarVertical: _layouts_components_navbar_TheNavbarVertical_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    VNavMenu: _layouts_components_vertical_nav_menu_VerticalNavMenu_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
   },
   data: function data() {
     return {
-      footerType: _themeConfig_js__WEBPACK_IMPORTED_MODULE_5__["default"].footerType || 'static',
-      hideScrollToTop: _themeConfig_js__WEBPACK_IMPORTED_MODULE_5__["default"].hideScrollToTop,
+      usuario: [],
+      footerType: _themeConfig_js__WEBPACK_IMPORTED_MODULE_7__["default"].footerType || 'static',
+      hideScrollToTop: _themeConfig_js__WEBPACK_IMPORTED_MODULE_7__["default"].hideScrollToTop,
       isNavbarDark: false,
-      navbarColor: _themeConfig_js__WEBPACK_IMPORTED_MODULE_5__["default"].navbarColor || '#fff',
-      navbarType: _themeConfig_js__WEBPACK_IMPORTED_MODULE_5__["default"].navbarType || 'floating',
-      navMenuItems: [{
-        url: "",
-        name: "Panel",
-        slug: "home",
-        icon: "HomeIcon"
-      }, {
-        url: "/instituciones",
-        name: "Instituciones",
-        slug: "page2",
-        icon: "SunriseIcon"
-      }, {
-        url: "/grupos",
-        name: "Grupo de Usuarios",
-        slug: "page2",
-        icon: "UsersIcon"
-      }, {
-        url: "/docentes",
-        name: "Docentes",
-        slug: "page2",
-        icon: "UsersIcon"
-      }, {
-        url: "/estudiantes",
-        name: "Estudiantes",
-        slug: "page2",
-        icon: "UserIcon"
-      }, {
-        url: "/areas",
-        name: "Áreas",
-        slug: "page2",
-        icon: "LayersIcon"
-      }, {
-        url: "/asignaturas",
-        name: "Asignaturas",
-        slug: "page2",
-        icon: "LayoutIcon"
-      }, {
-        url: "/libros",
-        name: "Libros",
-        slug: "page2",
-        icon: "BookIcon"
-      }, {
-        url: "/planificaciones",
-        name: "Planificaciones",
-        slug: "page2",
-        icon: "FileTextIcon"
-      }, {
-        url: "/cursos",
-        name: "Curso",
-        slug: "page2",
-        icon: "BookOpenIcon"
-      }],
-      routerTransition: _themeConfig_js__WEBPACK_IMPORTED_MODULE_5__["default"].routerTransition || 'none',
+      navbarColor: _themeConfig_js__WEBPACK_IMPORTED_MODULE_7__["default"].navbarColor || '#fff',
+      navbarType: _themeConfig_js__WEBPACK_IMPORTED_MODULE_7__["default"].navbarType || 'floating',
+      navMenuItems: [],
+      routerTransition: _themeConfig_js__WEBPACK_IMPORTED_MODULE_7__["default"].routerTransition || 'none',
       routeTitle: this.$route.meta.pageTitle
     };
   },
@@ -2751,14 +2709,23 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
+    this.getMenu();
+
     if (!localStorage.token) {
       this.$router.push('/');
     } else {
       console.log(localStorage.token);
-      this.$router.push('');
+      this.$router.push('/home');
     }
   },
   methods: {
+    getMenu: function getMenu() {
+      var me = this;
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://sistemaeducativo.edisa.ec/api/menu?idgrupo=' + me.usuario[0].grupo_idgrupo).then(function (response) {
+        me.navMenuItems = response.data;
+        console.log(me.navMenuItems);
+      }).catch(function (error) {});
+    },
     changeRouteTitle: function changeRouteTitle(title) {
       this.routeTitle = title;
     },
@@ -2779,6 +2746,7 @@ __webpack_require__.r(__webpack_exports__);
     var color = this.navbarColor === '#fff' && this.isThemeDark ? '#10163a' : this.navbarColor;
     this.updateNavbarColor(color);
     this.setNavMenuVisibility(this.$store.state.mainLayoutType);
+    this.usuario = JSON.parse(localStorage.getItem('usuario'));
   }
 });
 

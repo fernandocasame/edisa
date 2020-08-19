@@ -34,6 +34,7 @@ Route::group(['middleware' => 'cors'],function(){
     Route::apiResource('archivo','ArchivoController');
     Route::apiResource('tarea','TareaController');
     Route::apiResource('cursoestudiantes','CursoEstudianteController');
+    Route::apiResource('menu','MenuController');
     Route::get('password','UsuarioController@password');
     Route::get('codigo','CursoController@codigo');
 });

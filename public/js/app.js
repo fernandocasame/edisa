@@ -58157,7 +58157,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: [{
     path: '',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 28).then(__webpack_require__.bind(null, /*! @/layouts/full-page/FullPage.vue */ "./resources/js/src/layouts/full-page/FullPage.vue"));
+      return __webpack_require__.e(/*! import() */ 30).then(__webpack_require__.bind(null, /*! @/layouts/full-page/FullPage.vue */ "./resources/js/src/layouts/full-page/FullPage.vue"));
     },
     children: [// =============================================================================
     // PAGES
@@ -58166,25 +58166,25 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/',
       name: 'page-login',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 13).then(__webpack_require__.bind(null, /*! @/views/pages/Login.vue */ "./resources/js/src/views/pages/Login.vue"));
+        return __webpack_require__.e(/*! import() */ 14).then(__webpack_require__.bind(null, /*! @/views/pages/Login.vue */ "./resources/js/src/views/pages/Login.vue"));
       }
     }, {
       path: '/pages/error-404',
       name: 'page-error-404',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 27).then(__webpack_require__.bind(null, /*! @/views/pages/Error404.vue */ "./resources/js/src/views/pages/Error404.vue"));
+        return __webpack_require__.e(/*! import() */ 29).then(__webpack_require__.bind(null, /*! @/views/pages/Error404.vue */ "./resources/js/src/views/pages/Error404.vue"));
       }
     }, {
       path: '/libro/digital',
       name: 'digital',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 24).then(__webpack_require__.bind(null, /*! ./views/libro/digital.vue */ "./resources/js/src/views/libro/digital.vue"));
+        return __webpack_require__.e(/*! import() */ 26).then(__webpack_require__.bind(null, /*! ./views/libro/digital.vue */ "./resources/js/src/views/libro/digital.vue"));
       }
     }, {
       path: '/actividad/digital',
       name: 'digital',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 15).then(__webpack_require__.bind(null, /*! ./views/actividad/digital.vue */ "./resources/js/src/views/actividad/digital.vue"));
+        return __webpack_require__.e(/*! import() */ 17).then(__webpack_require__.bind(null, /*! ./views/actividad/digital.vue */ "./resources/js/src/views/actividad/digital.vue"));
       }
     }]
   }, {
@@ -58202,13 +58202,13 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/home',
       name: 'home',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 29).then(__webpack_require__.bind(null, /*! ./views/Home.vue */ "./resources/js/src/views/Home.vue"));
+        return __webpack_require__.e(/*! import() */ 31).then(__webpack_require__.bind(null, /*! ./views/Home.vue */ "./resources/js/src/views/Home.vue"));
       }
     }, {
       path: '/areas',
       name: 'Areas',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 16).then(__webpack_require__.bind(null, /*! ./views/area/areas.vue */ "./resources/js/src/views/area/areas.vue"));
+        return __webpack_require__.e(/*! import() */ 18).then(__webpack_require__.bind(null, /*! ./views/area/areas.vue */ "./resources/js/src/views/area/areas.vue"));
       }
     }, {
       path: '/areas/nueva',
@@ -58226,7 +58226,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/asignaturas',
       name: 'Asignatura',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 17).then(__webpack_require__.bind(null, /*! ./views/asignatura/asignaturas.vue */ "./resources/js/src/views/asignatura/asignaturas.vue"));
+        return __webpack_require__.e(/*! import() */ 19).then(__webpack_require__.bind(null, /*! ./views/asignatura/asignaturas.vue */ "./resources/js/src/views/asignatura/asignaturas.vue"));
       }
     }, {
       path: '/asignaturas/nueva',
@@ -58244,7 +58244,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/tipo_contenido',
       name: 'tipocontenido',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 25).then(__webpack_require__.bind(null, /*! ./views/tipo_contenido/tipocontenido.vue */ "./resources/js/src/views/tipo_contenido/tipocontenido.vue"));
+        return __webpack_require__.e(/*! import() */ 27).then(__webpack_require__.bind(null, /*! ./views/tipo_contenido/tipocontenido.vue */ "./resources/js/src/views/tipo_contenido/tipocontenido.vue"));
       }
     }, {
       path: '/tipo_contenido/nuevo',
@@ -58274,7 +58274,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/instituciones',
       name: 'Instituciones',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 22).then(__webpack_require__.bind(null, /*! ./views/institucion/Instituciones.vue */ "./resources/js/src/views/institucion/Instituciones.vue"));
+        return __webpack_require__.e(/*! import() */ 24).then(__webpack_require__.bind(null, /*! ./views/institucion/Instituciones.vue */ "./resources/js/src/views/institucion/Instituciones.vue"));
       }
     }, {
       path: '/institucion/nueva',
@@ -58292,7 +58292,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/docentes',
       name: 'Docentes',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 19).then(__webpack_require__.bind(null, /*! ./views/docente/Docentes.vue */ "./resources/js/src/views/docente/Docentes.vue"));
+        return __webpack_require__.e(/*! import() */ 21).then(__webpack_require__.bind(null, /*! ./views/docente/Docentes.vue */ "./resources/js/src/views/docente/Docentes.vue"));
       }
     }, {
       path: '/docente/nuevo',
@@ -58310,7 +58310,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/estudiantes',
       name: 'Estudiantes',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 20).then(__webpack_require__.bind(null, /*! ./views/estudiante/Estudiantes.vue */ "./resources/js/src/views/estudiante/Estudiantes.vue"));
+        return __webpack_require__.e(/*! import() */ 22).then(__webpack_require__.bind(null, /*! ./views/estudiante/Estudiantes.vue */ "./resources/js/src/views/estudiante/Estudiantes.vue"));
       }
     }, {
       path: '/estudiante/nuevo',
@@ -58328,7 +58328,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/libros',
       name: 'Libros',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 23).then(__webpack_require__.bind(null, /*! ./views/libro/Libros.vue */ "./resources/js/src/views/libro/Libros.vue"));
+        return __webpack_require__.e(/*! import() */ 25).then(__webpack_require__.bind(null, /*! ./views/libro/Libros.vue */ "./resources/js/src/views/libro/Libros.vue"));
       }
     }, {
       path: '/nuevo/libro',
@@ -58346,13 +58346,13 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/planificaciones',
       name: 'Planificaciones',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 30).then(__webpack_require__.bind(null, /*! ./views/Planificaciones.vue */ "./resources/js/src/views/Planificaciones.vue"));
+        return __webpack_require__.e(/*! import() */ 32).then(__webpack_require__.bind(null, /*! ./views/Planificaciones.vue */ "./resources/js/src/views/Planificaciones.vue"));
       }
     }, {
       path: '/actividades',
       name: 'Actividades',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 14).then(__webpack_require__.bind(null, /*! ./views/actividad/Actividades.vue */ "./resources/js/src/views/actividad/Actividades.vue"));
+        return __webpack_require__.e(/*! import() */ 16).then(__webpack_require__.bind(null, /*! ./views/actividad/Actividades.vue */ "./resources/js/src/views/actividad/Actividades.vue"));
       }
     }, {
       path: '/actividad/nueva',
@@ -58370,7 +58370,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/grupos',
       name: 'Grupos',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 21).then(__webpack_require__.bind(null, /*! ./views/grupo/Grupos.vue */ "./resources/js/src/views/grupo/Grupos.vue"));
+        return __webpack_require__.e(/*! import() */ 23).then(__webpack_require__.bind(null, /*! ./views/grupo/Grupos.vue */ "./resources/js/src/views/grupo/Grupos.vue"));
       }
     }, {
       path: '/grupos/nuevo',
@@ -58388,7 +58388,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/cursos',
       name: 'Curso',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 18).then(__webpack_require__.bind(null, /*! ./views/curso/cursos.vue */ "./resources/js/src/views/curso/cursos.vue"));
+        return __webpack_require__.e(/*! import() */ 20).then(__webpack_require__.bind(null, /*! ./views/curso/cursos.vue */ "./resources/js/src/views/curso/cursos.vue"));
       }
     }, {
       path: '/nuevo/curso',
@@ -58406,13 +58406,13 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/curso/digital',
       name: 'DigitalCurso',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(31), __webpack_require__.e(32)]).then(__webpack_require__.bind(null, /*! ./views/curso/digital.vue */ "./resources/js/src/views/curso/digital.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(15), __webpack_require__.e(13)]).then(__webpack_require__.bind(null, /*! ./views/curso/digital.vue */ "./resources/js/src/views/curso/digital.vue"));
       }
     }, {
       path: '/virtual/:url',
       name: 'virutal',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 26).then(__webpack_require__.bind(null, /*! ./views/virtual.vue */ "./resources/js/src/views/virtual.vue"));
+        return __webpack_require__.e(/*! import() */ 28).then(__webpack_require__.bind(null, /*! ./views/virtual.vue */ "./resources/js/src/views/virtual.vue"));
       }
     }]
   }, // =============================================================================
