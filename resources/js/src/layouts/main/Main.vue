@@ -198,7 +198,7 @@ export default {
             this.$router.push('/');
         } else {
             console.log(localStorage.token);
-            this.$router.push('/home');
+            this.$router.push('');
         }
     },
     methods: {

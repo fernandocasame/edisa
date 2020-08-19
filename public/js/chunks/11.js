@@ -2715,7 +2715,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
       this.$router.push('/');
     } else {
       console.log(localStorage.token);
-      this.$router.push('/home');
+      this.$router.push('');
     }
   },
   methods: {

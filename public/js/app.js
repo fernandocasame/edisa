@@ -58186,6 +58186,12 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       component: function component() {
         return __webpack_require__.e(/*! import() */ 17).then(__webpack_require__.bind(null, /*! ./views/actividad/digital.vue */ "./resources/js/src/views/actividad/digital.vue"));
       }
+    }, {
+      path: '/estudiante/digital',
+      name: 'digitalEstudiante',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 34).then(__webpack_require__.bind(null, /*! ./views/estudiante/digital.vue */ "./resources/js/src/views/estudiante/digital.vue"));
+      }
     }]
   }, {
     // =============================================================================
@@ -58323,6 +58329,18 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       name: 'editarEstudiante',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./views/estudiante/nuevo.vue */ "./resources/js/src/views/estudiante/nuevo.vue"));
+      }
+    }, {
+      path: '/estudiante/libros',
+      name: 'librosEstudiante',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 33).then(__webpack_require__.bind(null, /*! ./views/estudiante/libros.vue */ "./resources/js/src/views/estudiante/libros.vue"));
+      }
+    }, {
+      path: '/estudiante/libro/agregar',
+      name: 'libroAgregar',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 35).then(__webpack_require__.bind(null, /*! ./views/estudiante/agregarLibro.vue */ "./resources/js/src/views/estudiante/agregarLibro.vue"));
       }
     }, {
       path: '/libros',

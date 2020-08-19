@@ -51,6 +51,12 @@ const router = new Router({
                     component: () =>
                         import ('./views/actividad/digital.vue')
                 },
+                {
+                    path: '/estudiante/digital',
+                    name: 'digitalEstudiante',
+                    component: () =>
+                        import ('./views/estudiante/digital.vue')
+                },
             ]
         },
 
@@ -190,6 +196,18 @@ const router = new Router({
                     name: 'editarEstudiante',
                     component: () =>
                         import ('./views/estudiante/nuevo.vue')
+                },
+                {
+                    path: '/estudiante/libros',
+                    name: 'librosEstudiante',
+                    component: () =>
+                        import ('./views/estudiante/libros.vue')
+                },
+                {
+                    path: '/estudiante/libro/agregar',
+                    name: 'libroAgregar',
+                    component: () =>
+                        import ('./views/estudiante/agregarLibro.vue')
                 },
                 {
                     path: '/libros',
