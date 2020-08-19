@@ -54,7 +54,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("v-select", vue_select__WEB
     guardar: function guardar(data) {
       var me = this;
       console.log(data);
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("https://sistemaeducativo.edisa.ec/api/codigo", data).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("https://sistemaeducativo.edisa.ec/api/codigoLibro", data).then(function (response) {
         me.$router.push('/estudiante/libros');
       }).catch(function (error) {
         me.$vs.dialog({

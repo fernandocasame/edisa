@@ -36,7 +36,7 @@ export default {
         guardar(data) {
             let me = this;
             console.log(data);
-            axios.post("https://sistemaeducativo.edisa.ec/api/codigo", data)
+            axios.post("https://sistemaeducativo.edisa.ec/api/codigoLibro", data)
                 .then(function (response) {
                     me.$router.push('/estudiante/libros');
                 })

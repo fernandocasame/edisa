@@ -52,7 +52,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
   methods: {
     getLibro: function getLibro() {
       var me = this;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://sistemaeducativo.edisa.ec/api/codigo?idusuario=' + me.usuario[0].idusuario).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://sistemaeducativo.edisa.ec/api/codigoLibro?idusuario=' + me.usuario[0].idusuario).then(function (response) {
         me.libros = response.data;
         console.log(me.libros);
       }).catch(function (error) {});
