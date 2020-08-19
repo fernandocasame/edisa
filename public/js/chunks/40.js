@@ -162,8 +162,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
       });
       var url = "https://sistemaeducativo.edisa.ec/api/tareaEstudiante?idcurso=" + me.idcurso + "&idusuario=" + me.usuario[0].idusuario;
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(url).then(function (response) {
-        var respuesta = response.data.items;
-        me.listaTareas = response.data.items;
+        var respuesta = response.data;
+        me.listaTareas = response.data;
         me.$vs.loading.close();
       }).catch(function (error) {
         me.$vs.loading.close();

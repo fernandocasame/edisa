@@ -95,8 +95,8 @@ export default {
             })
             var url = "https://sistemaeducativo.edisa.ec/api/tareaEstudiante?idcurso="+me.idcurso+"&idusuario="+me.usuario[0].idusuario;
             axios.get(url).then(function (response) {
-                    var respuesta = response.data.items;
-                    me.listaTareas = response.data.items;
+                    var respuesta = response.data;
+                    me.listaTareas = response.data;
                     me.$vs.loading.close()
                 })
                 .catch(function (error) {
