@@ -58190,7 +58190,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/estudiante/digital',
       name: 'digitalEstudiante',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 34).then(__webpack_require__.bind(null, /*! ./views/estudiante/digital.vue */ "./resources/js/src/views/estudiante/digital.vue"));
+        return __webpack_require__.e(/*! import() */ 37).then(__webpack_require__.bind(null, /*! ./views/estudiante/digitalLibro.vue */ "./resources/js/src/views/estudiante/digitalLibro.vue"));
       }
     }]
   }, {
@@ -58331,16 +58331,28 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
         return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./views/estudiante/nuevo.vue */ "./resources/js/src/views/estudiante/nuevo.vue"));
       }
     }, {
+      path: '/estudiante/libro/agregar',
+      name: 'libroAgregar',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 35).then(__webpack_require__.bind(null, /*! ./views/estudiante/agregarLibro.vue */ "./resources/js/src/views/estudiante/agregarLibro.vue"));
+      }
+    }, {
       path: '/estudiante/libros',
       name: 'librosEstudiante',
       component: function component() {
         return __webpack_require__.e(/*! import() */ 33).then(__webpack_require__.bind(null, /*! ./views/estudiante/libros.vue */ "./resources/js/src/views/estudiante/libros.vue"));
       }
     }, {
-      path: '/estudiante/libro/agregar',
-      name: 'libroAgregar',
+      path: '/estudiante/curso/agregar',
+      name: 'CursosEstudiante',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 35).then(__webpack_require__.bind(null, /*! ./views/estudiante/agregarLibro.vue */ "./resources/js/src/views/estudiante/agregarLibro.vue"));
+        return __webpack_require__.e(/*! import() */ 34).then(__webpack_require__.bind(null, /*! ./views/estudiante/agregarCurso.vue */ "./resources/js/src/views/estudiante/agregarCurso.vue"));
+      }
+    }, {
+      path: '/estudiante/cursos',
+      name: 'CursosEstudiante',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 36).then(__webpack_require__.bind(null, /*! ./views/estudiante/cursos.vue */ "./resources/js/src/views/estudiante/cursos.vue"));
       }
     }, {
       path: '/libros',

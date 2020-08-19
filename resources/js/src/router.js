@@ -55,7 +55,7 @@ const router = new Router({
                     path: '/estudiante/digital',
                     name: 'digitalEstudiante',
                     component: () =>
-                        import ('./views/estudiante/digital.vue')
+                        import ('./views/estudiante/digitalLibro.vue')
                 },
             ]
         },
@@ -198,16 +198,28 @@ const router = new Router({
                         import ('./views/estudiante/nuevo.vue')
                 },
                 {
+                    path: '/estudiante/libro/agregar',
+                    name: 'libroAgregar',
+                    component: () =>
+                        import ('./views/estudiante/agregarLibro.vue')
+                },
+                {
                     path: '/estudiante/libros',
                     name: 'librosEstudiante',
                     component: () =>
                         import ('./views/estudiante/libros.vue')
                 },
                 {
-                    path: '/estudiante/libro/agregar',
-                    name: 'libroAgregar',
+                    path: '/estudiante/curso/agregar',
+                    name: 'CursosEstudiante',
                     component: () =>
-                        import ('./views/estudiante/agregarLibro.vue')
+                        import ('./views/estudiante/agregarCurso.vue')
+                },
+                {
+                    path: '/estudiante/cursos',
+                    name: 'CursosEstudiante',
+                    component: () =>
+                        import ('./views/estudiante/cursos.vue')
                 },
                 {
                     path: '/libros',
