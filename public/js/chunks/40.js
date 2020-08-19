@@ -97,19 +97,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -149,7 +136,6 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
   created: function created() {
     this.usuario = JSON.parse(localStorage.getItem('usuario'));
     this.idcurso = localStorage.getItem('idcurso');
-    console.log(this.usuario);
   },
   mounted: function mounted() {
     this.getTareas();
@@ -223,21 +209,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -277,7 +248,6 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
   created: function created() {
     this.usuario = JSON.parse(localStorage.getItem('usuario'));
     this.idcurso = localStorage.getItem('idcurso');
-    console.log(this.usuario);
   },
   mounted: function mounted() {
     this.getTareas();
@@ -367,217 +337,116 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      { staticClass: "demo-alignment" },
-      [
-        _c(
-          "vs-prompt",
-          {
-            attrs: { title: "Tarea Nueva", active: _vm.activePrompt },
-            on: {
-              cancel: function($event) {
-                _vm.idlibro = ""
-              },
-              accept: _vm.acceptAlert,
-              close: _vm.close,
-              "update:active": function($event) {
-                _vm.activePrompt = $event
+  return _c(
+    "div",
+    [
+      _c(
+        "vs-table",
+        {
+          attrs: {
+            "max-items": "10",
+            search: "",
+            pagination: "",
+            data: _vm.listaTareas
+          },
+          scopedSlots: _vm._u([
+            {
+              key: "default",
+              fn: function(ref) {
+                var data = ref.data
+                return _vm._l(data, function(tr, indextr) {
+                  return _c(
+                    "vs-tr",
+                    { key: indextr },
+                    [
+                      _c("vs-td", { attrs: { data: data[indextr].detalle } }, [
+                        _vm._v(
+                          "\r\n                    " +
+                            _vm._s(data[indextr].detalle) +
+                            "\r\n                "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "vs-td",
+                        { attrs: { data: data[indextr].fecha_inicio } },
+                        [
+                          _vm._v(
+                            "\r\n                    " +
+                              _vm._s(data[indextr].fecha_inicio) +
+                              "\r\n                "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "vs-td",
+                        { attrs: { data: data[indextr].fecha_fin } },
+                        [
+                          _vm._v(
+                            "\r\n                    " +
+                              _vm._s(data[indextr].fecha_fin) +
+                              "\r\n                "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("vs-td", { attrs: { data: tr.idInstitucion } }, [
+                        _c(
+                          "div",
+                          { staticClass: "flex" },
+                          [
+                            _c(
+                              "vs-button",
+                              {
+                                attrs: { color: "success", type: "relief" },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.getInformacion(tr.idInstitucion)
+                                  }
+                                }
+                              },
+                              [_vm._v("Realizar")]
+                            )
+                          ],
+                          1
+                        )
+                      ])
+                    ],
+                    1
+                  )
+                })
               }
             }
-          },
-          [
-            _c(
-              "div",
-              { staticClass: "con-exemple-prompt" },
-              [
-                _c("span", { staticClass: "mt-4" }, [_vm._v("Contenido")]),
-                _vm._v(" "),
-                _c("v-select", {
-                  attrs: {
-                    options: _vm.listaContenido,
-                    reduce: function(listaContenido) {
-                      return listaContenido.idarchivo
-                    },
-                    label: "nombre"
-                  },
-                  model: {
-                    value: _vm.tarea.archivo_idarchivo,
-                    callback: function($$v) {
-                      _vm.$set(_vm.tarea, "archivo_idarchivo", $$v)
-                    },
-                    expression: "tarea.archivo_idarchivo"
-                  }
-                }),
-                _vm._v(" "),
-                _c("flat-pickr", {
-                  staticClass: "mt-4",
-                  attrs: {
-                    config: _vm.configdateTimePicker,
-                    placeholder: "Fecha Inicial"
-                  },
-                  model: {
-                    value: _vm.tarea.fecha_inicio,
-                    callback: function($$v) {
-                      _vm.$set(_vm.tarea, "fecha_inicio", $$v)
-                    },
-                    expression: "tarea.fecha_inicio"
-                  }
-                }),
-                _vm._v(" "),
-                _c("flat-pickr", {
-                  staticClass: "mt-4",
-                  attrs: {
-                    config: _vm.configdateTimePicker,
-                    placeholder: "Fecha Final"
-                  },
-                  model: {
-                    value: _vm.tarea.fecha_fin,
-                    callback: function($$v) {
-                      _vm.$set(_vm.tarea, "fecha_fin", $$v)
-                    },
-                    expression: "tarea.fecha_fin"
-                  }
-                }),
-                _vm._v(" "),
-                _c("vs-textarea", {
-                  staticClass: "mt-4",
-                  attrs: { label: "Descripción" },
-                  model: {
-                    value: _vm.tarea.detalle,
-                    callback: function($$v) {
-                      _vm.$set(_vm.tarea, "detalle", $$v)
-                    },
-                    expression: "tarea.detalle"
-                  }
-                })
-              ],
-              1
-            )
-          ]
-        )
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      [
-        _c(
-          "vs-table",
-          {
-            attrs: {
-              "max-items": "10",
-              search: "",
-              pagination: "",
-              data: _vm.listaTareas
-            },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function(ref) {
-                  var data = ref.data
-                  return _vm._l(data, function(tr, indextr) {
-                    return _c(
-                      "vs-tr",
-                      { key: indextr },
-                      [
-                        _c(
-                          "vs-td",
-                          { attrs: { data: data[indextr].detalle } },
-                          [
-                            _vm._v(
-                              "\r\n                        " +
-                                _vm._s(data[indextr].detalle) +
-                                "\r\n                    "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "vs-td",
-                          { attrs: { data: data[indextr].fecha_inicio } },
-                          [
-                            _vm._v(
-                              "\r\n                        " +
-                                _vm._s(data[indextr].fecha_inicio) +
-                                "\r\n                    "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "vs-td",
-                          { attrs: { data: data[indextr].fecha_fin } },
-                          [
-                            _vm._v(
-                              "\r\n                        " +
-                                _vm._s(data[indextr].fecha_fin) +
-                                "\r\n                    "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("vs-td", { attrs: { data: tr.idInstitucion } }, [
-                          _c(
-                            "div",
-                            { staticClass: "flex" },
-                            [
-                              _c(
-                                "vs-button",
-                                {
-                                  attrs: { color: "success", type: "relief" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.getInformacion(
-                                        tr.idInstitucion
-                                      )
-                                    }
-                                  }
-                                },
-                                [_vm._v("Realizar")]
-                              )
-                            ],
-                            1
-                          )
-                        ])
-                      ],
-                      1
-                    )
-                  })
-                }
-              }
-            ])
-          },
-          [
-            _c(
-              "template",
-              { slot: "thead" },
-              [
-                _c("vs-th", { attrs: { "sort-key": "descripcion" } }, [
-                  _vm._v("Descripción")
-                ]),
-                _vm._v(" "),
-                _c("vs-th", { attrs: { "sort-key": "fecha_inicio" } }, [
-                  _vm._v("Fecha inicio")
-                ]),
-                _vm._v(" "),
-                _c("vs-th", { attrs: { "sort-key": "fecha_final" } }, [
-                  _vm._v("Fecha Final")
-                ]),
-                _vm._v(" "),
-                _c("vs-th", [_vm._v("Acciones")])
-              ],
-              1
-            )
-          ],
-          2
-        )
-      ],
-      1
-    )
-  ])
+          ])
+        },
+        [
+          _c(
+            "template",
+            { slot: "thead" },
+            [
+              _c("vs-th", { attrs: { "sort-key": "descripcion" } }, [
+                _vm._v("Descripción")
+              ]),
+              _vm._v(" "),
+              _c("vs-th", { attrs: { "sort-key": "fecha_inicio" } }, [
+                _vm._v("Fecha inicio")
+              ]),
+              _vm._v(" "),
+              _c("vs-th", { attrs: { "sort-key": "fecha_final" } }, [
+                _vm._v("Fecha Final")
+              ]),
+              _vm._v(" "),
+              _c("vs-th", [_vm._v("Acciones")])
+            ],
+            1
+          )
+        ],
+        2
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -601,203 +470,96 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      { staticClass: "demo-alignment" },
-      [
-        _c(
-          "vs-prompt",
-          {
-            attrs: { title: "Tarea Nueva", active: _vm.activePrompt },
-            on: {
-              cancel: function($event) {
-                _vm.idlibro = ""
-              },
-              accept: _vm.acceptAlert,
-              close: _vm.close,
-              "update:active": function($event) {
-                _vm.activePrompt = $event
+  return _c(
+    "div",
+    [
+      _c(
+        "vs-table",
+        {
+          attrs: {
+            "max-items": "10",
+            search: "",
+            pagination: "",
+            data: _vm.listaTareas
+          },
+          scopedSlots: _vm._u([
+            {
+              key: "default",
+              fn: function(ref) {
+                var data = ref.data
+                return _vm._l(data, function(tr, indextr) {
+                  return _c(
+                    "vs-tr",
+                    { key: indextr },
+                    [
+                      _c("vs-td", { attrs: { data: data[indextr].detalle } }, [
+                        _vm._v(
+                          "\r\n                    " +
+                            _vm._s(data[indextr].detalle) +
+                            "\r\n                "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "vs-td",
+                        { attrs: { data: data[indextr].fecha_inicio } },
+                        [
+                          _vm._v(
+                            "\r\n                    " +
+                              _vm._s(data[indextr].fecha_inicio) +
+                              "\r\n                "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "vs-td",
+                        { attrs: { data: data[indextr].fecha_fin } },
+                        [
+                          _vm._v(
+                            "\r\n                    " +
+                              _vm._s(data[indextr].fecha_fin) +
+                              "\r\n                "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                })
               }
             }
-          },
-          [
-            _c(
-              "div",
-              { staticClass: "con-exemple-prompt" },
-              [
-                _c("span", { staticClass: "mt-4" }, [_vm._v("Contenido")]),
-                _vm._v(" "),
-                _c("v-select", {
-                  attrs: {
-                    options: _vm.listaContenido,
-                    reduce: function(listaContenido) {
-                      return listaContenido.idarchivo
-                    },
-                    label: "nombre"
-                  },
-                  model: {
-                    value: _vm.tarea.archivo_idarchivo,
-                    callback: function($$v) {
-                      _vm.$set(_vm.tarea, "archivo_idarchivo", $$v)
-                    },
-                    expression: "tarea.archivo_idarchivo"
-                  }
-                }),
-                _vm._v(" "),
-                _c("flat-pickr", {
-                  staticClass: "mt-4",
-                  attrs: {
-                    config: _vm.configdateTimePicker,
-                    placeholder: "Fecha Inicial"
-                  },
-                  model: {
-                    value: _vm.tarea.fecha_inicio,
-                    callback: function($$v) {
-                      _vm.$set(_vm.tarea, "fecha_inicio", $$v)
-                    },
-                    expression: "tarea.fecha_inicio"
-                  }
-                }),
-                _vm._v(" "),
-                _c("flat-pickr", {
-                  staticClass: "mt-4",
-                  attrs: {
-                    config: _vm.configdateTimePicker,
-                    placeholder: "Fecha Final"
-                  },
-                  model: {
-                    value: _vm.tarea.fecha_fin,
-                    callback: function($$v) {
-                      _vm.$set(_vm.tarea, "fecha_fin", $$v)
-                    },
-                    expression: "tarea.fecha_fin"
-                  }
-                }),
-                _vm._v(" "),
-                _c("vs-textarea", {
-                  staticClass: "mt-4",
-                  attrs: { label: "Descripción" },
-                  model: {
-                    value: _vm.tarea.detalle,
-                    callback: function($$v) {
-                      _vm.$set(_vm.tarea, "detalle", $$v)
-                    },
-                    expression: "tarea.detalle"
-                  }
-                })
-              ],
-              1
-            )
-          ]
-        )
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      [
-        _c(
-          "vs-table",
-          {
-            attrs: {
-              "max-items": "10",
-              search: "",
-              pagination: "",
-              data: _vm.listaTareas
-            },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function(ref) {
-                  var data = ref.data
-                  return _vm._l(data, function(tr, indextr) {
-                    return _c(
-                      "vs-tr",
-                      { key: indextr },
-                      [
-                        _c(
-                          "vs-td",
-                          { attrs: { data: data[indextr].detalle } },
-                          [
-                            _vm._v(
-                              "\r\n                        " +
-                                _vm._s(data[indextr].detalle) +
-                                "\r\n                    "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "vs-td",
-                          { attrs: { data: data[indextr].fecha_inicio } },
-                          [
-                            _vm._v(
-                              "\r\n                        " +
-                                _vm._s(data[indextr].fecha_inicio) +
-                                "\r\n                    "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "vs-td",
-                          { attrs: { data: data[indextr].fecha_fin } },
-                          [
-                            _vm._v(
-                              "\r\n                        " +
-                                _vm._s(data[indextr].fecha_fin) +
-                                "\r\n                    "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("vs-td", { attrs: { data: data[indextr].nota } }, [
-                          _vm._v(
-                            "\r\n                        " +
-                              _vm._s(data[indextr].nota) +
-                              "\r\n                    "
-                          )
-                        ])
-                      ],
-                      1
-                    )
-                  })
-                }
-              }
-            ])
-          },
-          [
-            _c(
-              "template",
-              { slot: "thead" },
-              [
-                _c("vs-th", { attrs: { "sort-key": "descripcion" } }, [
-                  _vm._v("Descripción")
-                ]),
-                _vm._v(" "),
-                _c("vs-th", { attrs: { "sort-key": "fecha_inicio" } }, [
-                  _vm._v("Fecha inicio")
-                ]),
-                _vm._v(" "),
-                _c("vs-th", { attrs: { "sort-key": "fecha_final" } }, [
-                  _vm._v("Fecha Final")
-                ]),
-                _vm._v(" "),
-                _c("vs-th", { attrs: { "sort-key": "fecha_final" } }, [
-                  _vm._v("Nota")
-                ])
-              ],
-              1
-            )
-          ],
-          2
-        )
-      ],
-      1
-    )
-  ])
+          ])
+        },
+        [
+          _c(
+            "template",
+            { slot: "thead" },
+            [
+              _c("vs-th", { attrs: { "sort-key": "descripcion" } }, [
+                _vm._v("Descripción")
+              ]),
+              _vm._v(" "),
+              _c("vs-th", { attrs: { "sort-key": "fecha_inicio" } }, [
+                _vm._v("Fecha inicio")
+              ]),
+              _vm._v(" "),
+              _c("vs-th", { attrs: { "sort-key": "fecha_final" } }, [
+                _vm._v("Fecha Final")
+              ]),
+              _vm._v(" "),
+              _c("vs-th", { attrs: { "sort-key": "fecha_final" } }, [
+                _vm._v("Nota")
+              ])
+            ],
+            1
+          )
+        ],
+        2
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

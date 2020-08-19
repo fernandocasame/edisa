@@ -31,16 +31,8 @@ class TareaController extends Controller
         return $data;
     }
     public function tareaEstudianteRealizada(Request $request){
-        $data=array();
-        $tarea = DB::SELECT("SELECT * FROM tarea WHERE curso_idcurso = ? AND estado = '1' ",[$request->idcurso]);
-        foreach ($tarea as $key => $post) {
-            $verifica = DB::SELECT("SELECT * FROM respuesta join tarea on tarea.idtarea = respuesta.tarea_idtarea  WHERE tarea_idtarea = ? AND usuario_idusuario = ?",[$post->idtarea,$request->idusuario]);
-            if(!empty($verifica)){
-                array_push ($data , $verifica);
-            }else{
-            }
-        }
-        return $data;
+        $verifica = DB::SELECT("SELECT * FROM respuesta join tarea on tarea.idtarea = respuesta.tarea_idtarea  WHERE tarea_idtarea = ? AND usuario_idusuario = ?",[$post->idtarea,$request->idusuario]);
+        return $verifica;
     }
 
     /**
