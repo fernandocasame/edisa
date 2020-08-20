@@ -20,7 +20,7 @@ class CursoEstudianteController extends Controller
 
     public function alumnos(Request $request)
     {
-        $estudiantes = DB::SELECT("SELECT * FROM curso_estudiante JOIN curso on curso.codigo = curso_estudiante.codigo  WHERE curso_estudiante.codigo = ? AND curso.estado = '1'",[$request->codigo]);
+        $estudiantes = DB::SELECT("SELECT usuario.* FROM usuario join curso_estudiante on curso_estudiante.usuario.idusuario = usuario.idusuario   WHERE curso_estudiante.codigo = ? AND curso.estado = '1'",[$request->codigo]);
         return $estudiantes;
     }
 
