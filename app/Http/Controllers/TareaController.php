@@ -20,7 +20,7 @@ class TareaController extends Controller
     
     public function tareaEstudiantePendiente(Request $request){
         $data=array();
-        $tarea = DB::SELECT("SELECT * FROM tarea WHERE curso_idcurso = ? AND estado = '1' ",[$request->idcurso]);
+        $tarea = DB::SELECT("SELECT * FROM tarea join archivo on archivo.idarchivo = tarea.idarchivo WHERE curso_idcurso = ? AND estado = '1' ",[$request->idcurso]);
         foreach ($tarea as $key => $post) {
             $verifica = DB::SELECT("SELECT * FROM respuesta WHERE tarea_idtarea = ? AND usuario_idusuario = ?",[$post->idtarea,$request->idusuario]);
             if(!empty($verifica)){

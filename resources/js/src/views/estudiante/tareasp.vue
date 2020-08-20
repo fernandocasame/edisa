@@ -2,6 +2,7 @@
 <div>
     <vs-table max-items="10" search pagination :data="listaTareas">
         <template slot="thead">
+            <vs-th sort-key="descripcion">Tarea</vs-th>
             <vs-th sort-key="descripcion">Descripción</vs-th>
             <vs-th sort-key="fecha_inicio">Fecha inicio</vs-th>
             <vs-th sort-key="fecha_final">Fecha Final</vs-th>
@@ -18,9 +19,9 @@
                 <vs-td :data="data[indextr].fecha_fin">
                     {{data[indextr].fecha_fin}}
                 </vs-td>
-                <vs-td :data="tr.idInstitucion">
+                <vs-td :data="tr.idtarea">
                     <div class="flex">
-                        <vs-button color="success" type="relief" @click="getInformacion(tr.idInstitucion)">Realizar</vs-button>
+                        <vs-button color="success" type="relief" @click="realizar(tr)">Realizar</vs-button>
                     </div>
                 </vs-td>
             </vs-tr>
@@ -90,6 +91,9 @@ export default {
                 });
 
         },
+        realizar(item){
+            console.log(item);
+        }
     },
 }
 </script>

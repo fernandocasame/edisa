@@ -13,7 +13,7 @@
         <div class="vx-row">
             <div class="vx-col sm:w-2/3 w-full ml-auto">
                 <vs-button color="success" type="border" @click="guardar(curso)" class="mb-2">Enviar</vs-button>
-                <vs-button color="danger" type="border" class="mb-2" to="/cursos">Cancelar</vs-button>
+                <vs-button color="danger" type="border" class="mb-2" to="/estudiante/cursos">Cancelar</vs-button>
             </div>
         </div>
     </div>

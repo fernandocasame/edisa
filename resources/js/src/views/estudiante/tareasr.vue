@@ -18,7 +18,9 @@
                 <vs-td :data="data[indextr].fecha_fin">
                     {{data[indextr].fecha_fin}}
                 </vs-td>
-                
+                <vs-td :data="data[indextr].nota">
+                    {{data[indextr].nota}}
+                </vs-td>
             </vs-tr>
         </template>
     </vs-table>

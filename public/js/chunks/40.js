@@ -97,6 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -154,6 +155,9 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(axios__WEBPACK_IMPORTED_MODULE_1_
       }).catch(function (error) {
         me.$vs.loading.close();
       });
+    },
+    realizar: function realizar(item) {
+      console.log(item);
     }
   }
 });
@@ -182,6 +186,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var flatpickr_dist_flatpickr_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! flatpickr/dist/flatpickr.css */ "./node_modules/flatpickr/dist/flatpickr.css");
 /* harmony import */ var flatpickr_dist_flatpickr_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(flatpickr_dist_flatpickr_css__WEBPACK_IMPORTED_MODULE_6__);
+//
+//
 //
 //
 //
@@ -391,7 +397,7 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _c("vs-td", { attrs: { data: tr.idInstitucion } }, [
+                      _c("vs-td", { attrs: { data: tr.idtarea } }, [
                         _c(
                           "div",
                           { staticClass: "flex" },
@@ -402,7 +408,7 @@ var render = function() {
                                 attrs: { color: "success", type: "relief" },
                                 on: {
                                   click: function($event) {
-                                    return _vm.getInformacion(tr.idInstitucion)
+                                    return _vm.realizar(tr)
                                   }
                                 }
                               },
@@ -425,6 +431,10 @@ var render = function() {
             "template",
             { slot: "thead" },
             [
+              _c("vs-th", { attrs: { "sort-key": "descripcion" } }, [
+                _vm._v("Tarea")
+              ]),
+              _vm._v(" "),
               _c("vs-th", { attrs: { "sort-key": "descripcion" } }, [
                 _vm._v("Descripción")
               ]),
@@ -522,7 +532,15 @@ var render = function() {
                               "\r\n                "
                           )
                         ]
-                      )
+                      ),
+                      _vm._v(" "),
+                      _c("vs-td", { attrs: { data: data[indextr].nota } }, [
+                        _vm._v(
+                          "\r\n                    " +
+                            _vm._s(data[indextr].nota) +
+                            "\r\n                "
+                        )
+                      ])
                     ],
                     1
                   )
