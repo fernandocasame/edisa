@@ -109,7 +109,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(axios__WEBPACK_IMPORTED_MODULE_3_
                 me.$vs.loading({
                   color: '#046AE7'
                 });
-                url = "https://sistemaeducativo.edisa.ec/api/cursoestudiantes?codigo=" + me.codigo;
+                url = "https://sistemaeducativo.edisa.ec/api/cursoEstudiantes?codigo=" + me.codigo;
                 axios__WEBPACK_IMPORTED_MODULE_3___default.a.get(url).then(function (response) {
                   var respuesta = response.data;
                   me.estudiantes = response.data;
