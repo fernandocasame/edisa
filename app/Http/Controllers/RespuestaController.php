@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Respuesta;
 use Illuminate\Http\Request;
-
+use DB;
 class RespuestaController extends Controller
 {
     /**
@@ -37,12 +37,13 @@ class RespuestaController extends Controller
     {
         $idusuario = $request->idusuario;
         $idtarea = $request->idtarea;
+        $descripcion = $request->descripcion;
         $file = $request->file('archivo');
         $extension = $request->file('archivo')->extension();
         $ruta = public_path('./archivos');
         $codigo = uniqid().'.'.$extension;
         $file->move($ruta,$codigo);
-        DB::INSERT("INSERT INTO `respuesta`(`tarea_idtarea`, `nombre`, `url`, `usuario_idusuario`) VALUES (?,?,?,?)",[$idtarea,$file->getClientOriginalName(),$codigo,$idusuario]);
+        DB::INSERT("INSERT INTO `respuesta`(`tarea_idtarea`, `nombre`, `url`, `usuario_idusuario`, `descripcion`) VALUES (?,?,?,?,?)",[$idtarea,$file->getClientOriginalName(),$codigo,$idusuario]);
     }
 
     /**
