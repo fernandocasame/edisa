@@ -228,6 +228,12 @@ const router = new Router({
                         import ('./views/estudiante/digitalCurso.vue')
                 },
                 {
+                    path: '/estudiante/tarea',
+                    name: 'EstudianteTarea',
+                    component: () =>
+                        import ('./views/estudiante/agregarTarea.vue')
+                },
+                {
                     path: '/libros',
                     name: 'Libros',
                     component: () =>

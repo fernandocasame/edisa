@@ -2,6 +2,7 @@
 <div>
     <vs-table max-items="10" search pagination :data="listaTareas">
         <template slot="thead">
+            <vs-th sort-key="nombre">Tarea</vs-th>
             <vs-th sort-key="descripcion">Descripción</vs-th>
             <vs-th sort-key="fecha_inicio">Fecha inicio</vs-th>
             <vs-th sort-key="fecha_final">Fecha Final</vs-th>
@@ -9,6 +10,11 @@
         </template>
         <template slot-scope="{data}">
             <vs-tr :key="indextr" v-for="(tr, indextr) in data">
+                <vs-td :data="data[indextr].nombre">
+                    <a :href="'https://sistemaeducativo.edisa.ec/archivos/'+data[indextr].url" target="_blank">
+                        {{data[indextr].nombre}}
+                    </a>
+                </vs-td>
                 <vs-td :data="data[indextr].detalle">
                     {{data[indextr].detalle}}
                 </vs-td>

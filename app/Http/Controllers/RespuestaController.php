@@ -35,7 +35,14 @@ class RespuestaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $idusuario = $request->idusuario;
+        $idtarea = $request->idtarea;
+        $file = $request->file('archivo');
+        $extension = $request->file('archivo')->extension();
+        $ruta = public_path('./archivos');
+        $codigo = uniqid().'.'.$extension;
+        $file->move($ruta,$codigo);
+        DB::INSERT("INSERT INTO `respuesta`(`tarea_idtarea`, `nombre`, `url`, `usuario_idusuario`) VALUES (?,?,?,?)",[$idtarea,$file->getClientOriginalName(),$codigo,$idusuario]);
     }
 
     /**

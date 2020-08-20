@@ -10,6 +10,11 @@
         </template>
         <template slot-scope="{data}">
             <vs-tr :key="indextr" v-for="(tr, indextr) in data">
+                <vs-td :data="data[indextr].nombre">
+                    <a :href="'https://sistemaeducativo.edisa.ec/archivos/'+data[indextr].url" target="_blank">
+                        {{data[indextr].nombre}}
+                    </a>
+                </vs-td>
                 <vs-td :data="data[indextr].detalle">
                     {{data[indextr].detalle}}
                 </vs-td>
@@ -92,7 +97,8 @@ export default {
 
         },
         realizar(item){
-            console.log(item);
+            localStorage.idtarea = item.idtarea;
+            this.$router.push('/estudiante/tarea');
         }
     },
 }

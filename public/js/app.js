@@ -58361,6 +58361,12 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
         return Promise.all(/*! import() */[__webpack_require__.e(38), __webpack_require__.e(40)]).then(__webpack_require__.bind(null, /*! ./views/estudiante/digitalCurso.vue */ "./resources/js/src/views/estudiante/digitalCurso.vue"));
       }
     }, {
+      path: '/estudiante/tarea',
+      name: 'EstudianteTarea',
+      component: function component() {
+        return Promise.all(/*! import() */[__webpack_require__.e(15), __webpack_require__.e(41)]).then(__webpack_require__.bind(null, /*! ./views/estudiante/agregarTarea.vue */ "./resources/js/src/views/estudiante/agregarTarea.vue"));
+      }
+    }, {
       path: '/libros',
       name: 'Libros',
       component: function component() {
@@ -58442,7 +58448,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/curso/digital',
       name: 'DigitalCurso',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(38), __webpack_require__.e(13), __webpack_require__.e(39)]).then(__webpack_require__.bind(null, /*! ./views/curso/digital.vue */ "./resources/js/src/views/curso/digital.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(38), __webpack_require__.e(15), __webpack_require__.e(39)]).then(__webpack_require__.bind(null, /*! ./views/curso/digital.vue */ "./resources/js/src/views/curso/digital.vue"));
       }
     }, {
       path: '/virtual/:url',
