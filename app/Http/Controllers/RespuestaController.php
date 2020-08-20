@@ -43,7 +43,7 @@ class RespuestaController extends Controller
         $ruta = public_path('./archivos');
         $codigo = uniqid().'.'.$extension;
         $file->move($ruta,$codigo);
-        DB::INSERT("INSERT INTO `respuesta`(`tarea_idtarea`, `nombre`, `url`, `usuario_idusuario`, `descripcion`) VALUES (?,?,?,?,?)",[$idtarea,$file->getClientOriginalName(),$codigo,$idusuario]);
+        DB::INSERT("INSERT INTO `respuesta`(`tarea_idtarea`, `nombre`, `url`, `usuario_idusuario`, `descripcion`) VALUES (?,?,?,?,?)",[$idtarea,$file->getClientOriginalName(),$codigo,$idusuario,$descripcion]);
     }
 
     /**
