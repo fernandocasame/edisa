@@ -1,19 +1,7 @@
 <template>
 <div>
     <iframe id="t0_iframe" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" style="color:white; display: block; width: 100%; height: 100%; margin-left: auto; margin-right: auto; padding: 0px; top: 0px; position: absolute; left: 0px;" v-bind:src="'https://sistemaeducativo.edisa.ec/carpeta_libros/'+url"></iframe>
-    <vs-navbar v-model="activeItem" class="p-2">
-
-        <div slot="title">
-            <vs-navbar-title>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:white">Edisa</span>
-            </vs-navbar-title>
-        </div>
-        <vs-navbar-item index="1">
-        </vs-navbar-item>
-        <vs-navbar-item index="2">
-            <a href="./libros" to="/libros" style="color:white">Salir</a>
-        </vs-navbar-item>
-    </vs-navbar>
+    <vs-button radius color="danger" to="/estudiante/libros" class="mt-2 mb-2 p-2 float-right" type="gradient" icon-pack="feather" icon="icon-x"></vs-button>
     <vs-popup classContent="popup-example" title="Compartir Activdad" :active.sync="popupActive2">
         <div class="vx-row mb-6">
             <div class="vx-col sm:w-1/3 w-full">

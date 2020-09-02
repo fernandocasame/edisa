@@ -1,20 +1,18 @@
 <template>
 <div>
     <iframe id="t0_iframe" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" style="color:white; display: block; width: 100%; height: 100%; margin-left: auto; margin-right: auto; padding: 0px; top: 0px; position: absolute; left: 0px;" v-bind:src="'https://sistemaeducativo.edisa.ec/carpeta_libros/'+url"></iframe>
-    <vs-navbar v-model="activeItem" class="p-2">
-
-        <div slot="title">
-            <vs-navbar-title>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:white">Edisa</span>
-            </vs-navbar-title>
+    <div class="px-2">
+        <div class="flex -mx-2">
+            <div class="w-3/5 px-2">
+            </div>
+            <div class="w-1/5 px-2">
+                <vs-button type="relief" class="mt-2 float-right" @click="popupActive=true">Actividades</vs-button>
+            </div>
+            <div class="w-1/5 px-2">
+                <vs-button radius color="danger" to="/libros" class="mt-2 mb-2 float-right" type="gradient" icon-pack="feather" icon="icon-x"></vs-button>
+            </div>
         </div>
-        <vs-navbar-item index="1">
-            <a href="#" @click="popupActive=true" style="color:white">Actividades</a>
-        </vs-navbar-item>
-        <vs-navbar-item index="2">
-            <a href="../libros" to="/libros" style="color:white">Salir</a>
-        </vs-navbar-item>
-    </vs-navbar>
+    </div>
     <vs-popup classContent="popup-example" title="Compartir Activdad" :active.sync="popupActive2">
         <div class="vx-row mb-6">
             <div class="vx-col sm:w-1/3 w-full">
