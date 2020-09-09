@@ -105,7 +105,7 @@ export default {
         getProvincia() {
             let me = this;
             axios
-                .get("http://50.30.36.168:8000/api/provincias")
+                .get("https://sistemaeducativo.edisa.ec/api/provincias")
                 .then(function (response) {
                     me.pro = response.data;
                     console.log(response.data);

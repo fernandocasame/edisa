@@ -42,6 +42,7 @@ Route::group(['middleware' => 'cors'],function(){
     Route::get('tareaEstudianteRealizada','TareaController@tareaEstudianteRealizada');
     Route::get('password','UsuarioController@password');
     Route::get('codigo','CursoController@codigo');
+    Route::get('provincias','ProvinciasController@provincias');
 });
 Route::group(['middleware' => 'auth.jwt'], function () {
     Route::post('/logout', 'AuthController@logout');

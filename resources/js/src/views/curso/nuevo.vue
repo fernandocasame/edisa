@@ -59,9 +59,9 @@ export default {
     mounted() {
         if (!this.$route.params.id) {
             this.codigo();
-            this.titulo = "Nuevo Libro";
+            this.titulo = "Nuevo Curso";
         } else {
-            this.titulo = "Editar Libro";
+            this.titulo = "Editar Curso";
             this.getCurso(this.$route.params.id);
         }
     },

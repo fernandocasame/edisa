@@ -40,6 +40,18 @@ const router = new Router({
                         import ('@/views/pages/Error404.vue')
                 },
                 {
+                    path: '/registro/docentes',
+                    name: 'registroDocentes',
+                    component: () =>
+                        import ('@/views/pages/docentes.vue')
+                },
+                {
+                    path: '/registro/estudiantes',
+                    name: 'registroEstudiantes',
+                    component: () =>
+                        import ('@/views/pages/estudiantes.vue')
+                },
+                {
                     path: '/libro/digital',
                     name: 'digital',
                     component: () =>
@@ -154,6 +166,12 @@ const router = new Router({
                     name: 'nuevaInstituciones',
                     component: () =>
                         import ('./views/institucion/nueva.vue')
+                },
+                {
+                    path: '/codigoslibros',
+                    name: 'codigoslibros',
+                    component: () =>
+                        import('./views/codigos/CodigosLibrosComponent.vue'),
                 },
                 {
                     path: '/institucion/editar/:id',

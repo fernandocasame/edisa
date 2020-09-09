@@ -58157,7 +58157,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: [{
     path: '',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 38).then(__webpack_require__.bind(null, /*! @/layouts/full-page/FullPage.vue */ "./resources/js/src/layouts/full-page/FullPage.vue"));
+      return __webpack_require__.e(/*! import() */ 41).then(__webpack_require__.bind(null, /*! @/layouts/full-page/FullPage.vue */ "./resources/js/src/layouts/full-page/FullPage.vue"));
     },
     children: [// =============================================================================
     // PAGES
@@ -58166,31 +58166,43 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/',
       name: 'page-login',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 17).then(__webpack_require__.bind(null, /*! @/views/pages/Login.vue */ "./resources/js/src/views/pages/Login.vue"));
+        return __webpack_require__.e(/*! import() */ 20).then(__webpack_require__.bind(null, /*! @/views/pages/Login.vue */ "./resources/js/src/views/pages/Login.vue"));
       }
     }, {
       path: '/pages/error-404',
       name: 'page-error-404',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 37).then(__webpack_require__.bind(null, /*! @/views/pages/Error404.vue */ "./resources/js/src/views/pages/Error404.vue"));
+        return __webpack_require__.e(/*! import() */ 40).then(__webpack_require__.bind(null, /*! @/views/pages/Error404.vue */ "./resources/js/src/views/pages/Error404.vue"));
+      }
+    }, {
+      path: '/registro/docentes',
+      name: 'registroDocentes',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 46).then(__webpack_require__.bind(null, /*! @/views/pages/docentes.vue */ "./resources/js/src/views/pages/docentes.vue"));
+      }
+    }, {
+      path: '/registro/estudiantes',
+      name: 'registroEstudiantes',
+      component: function component() {
+        return __webpack_require__.e(/*! import() */ 47).then(__webpack_require__.bind(null, /*! @/views/pages/estudiantes.vue */ "./resources/js/src/views/pages/estudiantes.vue"));
       }
     }, {
       path: '/libro/digital',
       name: 'digital',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 34).then(__webpack_require__.bind(null, /*! ./views/libro/digital.vue */ "./resources/js/src/views/libro/digital.vue"));
+        return __webpack_require__.e(/*! import() */ 37).then(__webpack_require__.bind(null, /*! ./views/libro/digital.vue */ "./resources/js/src/views/libro/digital.vue"));
       }
     }, {
       path: '/actividad/digital',
       name: 'digital',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 22).then(__webpack_require__.bind(null, /*! ./views/actividad/digital.vue */ "./resources/js/src/views/actividad/digital.vue"));
+        return __webpack_require__.e(/*! import() */ 24).then(__webpack_require__.bind(null, /*! ./views/actividad/digital.vue */ "./resources/js/src/views/actividad/digital.vue"));
       }
     }, {
       path: '/estudiante/digital',
       name: 'digitalEstudiante',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 29).then(__webpack_require__.bind(null, /*! ./views/estudiante/digitalLibro.vue */ "./resources/js/src/views/estudiante/digitalLibro.vue"));
+        return __webpack_require__.e(/*! import() */ 32).then(__webpack_require__.bind(null, /*! ./views/estudiante/digitalLibro.vue */ "./resources/js/src/views/estudiante/digitalLibro.vue"));
       }
     }]
   }, {
@@ -58199,7 +58211,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     // =============================================================================
     path: '/home',
     component: function component() {
-      return Promise.all(/*! import() */[__webpack_require__.e(14), __webpack_require__.e(13)]).then(__webpack_require__.bind(null, /*! ./layouts/main/Main.vue */ "./resources/js/src/layouts/main/Main.vue"));
+      return Promise.all(/*! import() */[__webpack_require__.e(16), __webpack_require__.e(15)]).then(__webpack_require__.bind(null, /*! ./layouts/main/Main.vue */ "./resources/js/src/layouts/main/Main.vue"));
     },
     children: [// =============================================================================
     // Theme Routes
@@ -58208,61 +58220,61 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/home',
       name: 'home',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 39).then(__webpack_require__.bind(null, /*! ./views/Home.vue */ "./resources/js/src/views/Home.vue"));
+        return __webpack_require__.e(/*! import() */ 42).then(__webpack_require__.bind(null, /*! ./views/Home.vue */ "./resources/js/src/views/Home.vue"));
       }
     }, {
       path: '/areas',
       name: 'Areas',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 23).then(__webpack_require__.bind(null, /*! ./views/area/areas.vue */ "./resources/js/src/views/area/areas.vue"));
+        return __webpack_require__.e(/*! import() */ 25).then(__webpack_require__.bind(null, /*! ./views/area/areas.vue */ "./resources/js/src/views/area/areas.vue"));
       }
     }, {
       path: '/areas/nueva',
       name: 'nuevaAreas',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 9).then(__webpack_require__.bind(null, /*! ./views/area/nuevaArea.vue */ "./resources/js/src/views/area/nuevaArea.vue"));
+        return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ./views/area/nuevaArea.vue */ "./resources/js/src/views/area/nuevaArea.vue"));
       }
     }, {
       path: '/areas/editar/:id',
       name: 'editarAreas',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 9).then(__webpack_require__.bind(null, /*! ./views/area/nuevaArea.vue */ "./resources/js/src/views/area/nuevaArea.vue"));
+        return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ./views/area/nuevaArea.vue */ "./resources/js/src/views/area/nuevaArea.vue"));
       }
     }, {
       path: '/asignaturas',
       name: 'Asignatura',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 24).then(__webpack_require__.bind(null, /*! ./views/asignatura/asignaturas.vue */ "./resources/js/src/views/asignatura/asignaturas.vue"));
+        return __webpack_require__.e(/*! import() */ 26).then(__webpack_require__.bind(null, /*! ./views/asignatura/asignaturas.vue */ "./resources/js/src/views/asignatura/asignaturas.vue"));
       }
     }, {
       path: '/asignaturas/nueva',
       name: 'nuevaAsignatura',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./views/asignatura/nuevaAsignatura.vue */ "./resources/js/src/views/asignatura/nuevaAsignatura.vue"));
+        return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./views/asignatura/nuevaAsignatura.vue */ "./resources/js/src/views/asignatura/nuevaAsignatura.vue"));
       }
     }, {
       path: '/asignaturas/editar/:id',
       name: 'editarAsignatura',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./views/asignatura/nuevaAsignatura.vue */ "./resources/js/src/views/asignatura/nuevaAsignatura.vue"));
+        return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./views/asignatura/nuevaAsignatura.vue */ "./resources/js/src/views/asignatura/nuevaAsignatura.vue"));
       }
     }, {
       path: '/tipo_contenido',
       name: 'tipocontenido',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 35).then(__webpack_require__.bind(null, /*! ./views/tipo_contenido/tipocontenido.vue */ "./resources/js/src/views/tipo_contenido/tipocontenido.vue"));
+        return __webpack_require__.e(/*! import() */ 38).then(__webpack_require__.bind(null, /*! ./views/tipo_contenido/tipocontenido.vue */ "./resources/js/src/views/tipo_contenido/tipocontenido.vue"));
       }
     }, {
       path: '/tipo_contenido/nuevo',
       name: 'tipocontenidoNuevo',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ./views/tipo_contenido/nuevoTipocontenido.vue */ "./resources/js/src/views/tipo_contenido/nuevoTipocontenido.vue"));
+        return __webpack_require__.e(/*! import() */ 8).then(__webpack_require__.bind(null, /*! ./views/tipo_contenido/nuevoTipocontenido.vue */ "./resources/js/src/views/tipo_contenido/nuevoTipocontenido.vue"));
       }
     }, {
       path: '/tipo_contenido/editar/:id',
       name: 'tipocontenidoEditar',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ./views/tipo_contenido/nuevoTipocontenido.vue */ "./resources/js/src/views/tipo_contenido/nuevoTipocontenido.vue"));
+        return __webpack_require__.e(/*! import() */ 8).then(__webpack_require__.bind(null, /*! ./views/tipo_contenido/nuevoTipocontenido.vue */ "./resources/js/src/views/tipo_contenido/nuevoTipocontenido.vue"));
       }
     }, {
       path: '/contenido',
@@ -58280,181 +58292,187 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
       path: '/instituciones',
       name: 'Instituciones',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 32).then(__webpack_require__.bind(null, /*! ./views/institucion/Instituciones.vue */ "./resources/js/src/views/institucion/Instituciones.vue"));
+        return __webpack_require__.e(/*! import() */ 35).then(__webpack_require__.bind(null, /*! ./views/institucion/Instituciones.vue */ "./resources/js/src/views/institucion/Instituciones.vue"));
       }
     }, {
       path: '/institucion/nueva',
       name: 'nuevaInstituciones',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./views/institucion/nueva.vue */ "./resources/js/src/views/institucion/nueva.vue"));
+        return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ./views/institucion/nueva.vue */ "./resources/js/src/views/institucion/nueva.vue"));
+      }
+    }, {
+      path: '/codigoslibros',
+      name: 'codigoslibros',
+      component: function component() {
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(14), __webpack_require__.e(19)]).then(__webpack_require__.bind(null, /*! ./views/codigos/CodigosLibrosComponent.vue */ "./resources/js/src/views/codigos/CodigosLibrosComponent.vue"));
       }
     }, {
       path: '/institucion/editar/:id',
       name: 'editarInstituciones',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./views/institucion/nueva.vue */ "./resources/js/src/views/institucion/nueva.vue"));
+        return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ./views/institucion/nueva.vue */ "./resources/js/src/views/institucion/nueva.vue"));
       }
     }, {
       path: '/docentes',
       name: 'Docentes',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 26).then(__webpack_require__.bind(null, /*! ./views/docente/Docentes.vue */ "./resources/js/src/views/docente/Docentes.vue"));
+        return __webpack_require__.e(/*! import() */ 28).then(__webpack_require__.bind(null, /*! ./views/docente/Docentes.vue */ "./resources/js/src/views/docente/Docentes.vue"));
       }
     }, {
       path: '/docente/nuevo',
       name: 'nuevaDocente',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ./views/docente/nuevo.vue */ "./resources/js/src/views/docente/nuevo.vue"));
+        return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./views/docente/nuevo.vue */ "./resources/js/src/views/docente/nuevo.vue"));
       }
     }, {
       path: '/docente/editar/:id',
       name: 'editarDocente',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ./views/docente/nuevo.vue */ "./resources/js/src/views/docente/nuevo.vue"));
+        return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./views/docente/nuevo.vue */ "./resources/js/src/views/docente/nuevo.vue"));
       }
     }, {
       path: '/estudiantes',
       name: 'Estudiantes',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 27).then(__webpack_require__.bind(null, /*! ./views/estudiante/Estudiantes.vue */ "./resources/js/src/views/estudiante/Estudiantes.vue"));
+        return __webpack_require__.e(/*! import() */ 29).then(__webpack_require__.bind(null, /*! ./views/estudiante/Estudiantes.vue */ "./resources/js/src/views/estudiante/Estudiantes.vue"));
       }
     }, {
       path: '/estudiante/nuevo',
       name: 'nuevaEstudiante',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./views/estudiante/nuevo.vue */ "./resources/js/src/views/estudiante/nuevo.vue"));
+        return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./views/estudiante/nuevo.vue */ "./resources/js/src/views/estudiante/nuevo.vue"));
       }
     }, {
       path: '/estudiante/editar/:id',
       name: 'editarEstudiante',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./views/estudiante/nuevo.vue */ "./resources/js/src/views/estudiante/nuevo.vue"));
+        return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./views/estudiante/nuevo.vue */ "./resources/js/src/views/estudiante/nuevo.vue"));
       }
     }, {
       path: '/estudiante/libro/agregar',
       name: 'libroAgregar',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 19).then(__webpack_require__.bind(null, /*! ./views/estudiante/agregarLibro.vue */ "./resources/js/src/views/estudiante/agregarLibro.vue"));
+        return __webpack_require__.e(/*! import() */ 22).then(__webpack_require__.bind(null, /*! ./views/estudiante/agregarLibro.vue */ "./resources/js/src/views/estudiante/agregarLibro.vue"));
       }
     }, {
       path: '/estudiante/libros',
       name: 'librosEstudiante',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 30).then(__webpack_require__.bind(null, /*! ./views/estudiante/libros.vue */ "./resources/js/src/views/estudiante/libros.vue"));
+        return __webpack_require__.e(/*! import() */ 33).then(__webpack_require__.bind(null, /*! ./views/estudiante/libros.vue */ "./resources/js/src/views/estudiante/libros.vue"));
       }
     }, {
       path: '/estudiante/curso/agregar',
       name: 'CursosEstudiante',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 18).then(__webpack_require__.bind(null, /*! ./views/estudiante/agregarCurso.vue */ "./resources/js/src/views/estudiante/agregarCurso.vue"));
+        return __webpack_require__.e(/*! import() */ 21).then(__webpack_require__.bind(null, /*! ./views/estudiante/agregarCurso.vue */ "./resources/js/src/views/estudiante/agregarCurso.vue"));
       }
     }, {
       path: '/estudiante/cursos',
       name: 'CursosEstudiante',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 28).then(__webpack_require__.bind(null, /*! ./views/estudiante/cursos.vue */ "./resources/js/src/views/estudiante/cursos.vue"));
+        return __webpack_require__.e(/*! import() */ 31).then(__webpack_require__.bind(null, /*! ./views/estudiante/cursos.vue */ "./resources/js/src/views/estudiante/cursos.vue"));
       }
     }, {
       path: '/estudiante/curso/digital',
       name: 'CursosEstudianteDigital',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(8), __webpack_require__.e(16)]).then(__webpack_require__.bind(null, /*! ./views/estudiante/digitalCurso.vue */ "./resources/js/src/views/estudiante/digitalCurso.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(13), __webpack_require__.e(18)]).then(__webpack_require__.bind(null, /*! ./views/estudiante/digitalCurso.vue */ "./resources/js/src/views/estudiante/digitalCurso.vue"));
       }
     }, {
       path: '/estudiante/tarea',
       name: 'EstudianteTarea',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(11), __webpack_require__.e(20)]).then(__webpack_require__.bind(null, /*! ./views/estudiante/agregarTarea.vue */ "./resources/js/src/views/estudiante/agregarTarea.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(9), __webpack_require__.e(30)]).then(__webpack_require__.bind(null, /*! ./views/estudiante/agregarTarea.vue */ "./resources/js/src/views/estudiante/agregarTarea.vue"));
       }
     }, {
       path: '/libros',
       name: 'Libros',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 33).then(__webpack_require__.bind(null, /*! ./views/libro/Libros.vue */ "./resources/js/src/views/libro/Libros.vue"));
+        return __webpack_require__.e(/*! import() */ 36).then(__webpack_require__.bind(null, /*! ./views/libro/Libros.vue */ "./resources/js/src/views/libro/Libros.vue"));
       }
     }, {
       path: '/nuevo/libro',
       name: 'NuevoLibro',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ./views/libro/nuevo.vue */ "./resources/js/src/views/libro/nuevo.vue"));
+        return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ./views/libro/nuevo.vue */ "./resources/js/src/views/libro/nuevo.vue"));
       }
     }, {
       path: '/editar/libro/:id',
       name: 'EditarLibro',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ./views/libro/nuevo.vue */ "./resources/js/src/views/libro/nuevo.vue"));
+        return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ./views/libro/nuevo.vue */ "./resources/js/src/views/libro/nuevo.vue"));
       }
     }, {
       path: '/planificaciones',
       name: 'Planificaciones',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 40).then(__webpack_require__.bind(null, /*! ./views/Planificaciones.vue */ "./resources/js/src/views/Planificaciones.vue"));
+        return __webpack_require__.e(/*! import() */ 43).then(__webpack_require__.bind(null, /*! ./views/Planificaciones.vue */ "./resources/js/src/views/Planificaciones.vue"));
       }
     }, {
       path: '/actividades',
       name: 'Actividades',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 21).then(__webpack_require__.bind(null, /*! ./views/actividad/Actividades.vue */ "./resources/js/src/views/actividad/Actividades.vue"));
+        return __webpack_require__.e(/*! import() */ 23).then(__webpack_require__.bind(null, /*! ./views/actividad/Actividades.vue */ "./resources/js/src/views/actividad/Actividades.vue"));
       }
     }, {
       path: '/actividad/nueva',
       name: 'ActividadNuevo',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./views/actividad/nuevo.vue */ "./resources/js/src/views/actividad/nuevo.vue"));
+        return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./views/actividad/nuevo.vue */ "./resources/js/src/views/actividad/nuevo.vue"));
       }
     }, {
       path: '/actividad/editar/:id',
       name: 'ActividadEditar',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./views/actividad/nuevo.vue */ "./resources/js/src/views/actividad/nuevo.vue"));
+        return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./views/actividad/nuevo.vue */ "./resources/js/src/views/actividad/nuevo.vue"));
       }
     }, {
       path: '/grupos',
       name: 'Grupos',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 31).then(__webpack_require__.bind(null, /*! ./views/grupo/Grupos.vue */ "./resources/js/src/views/grupo/Grupos.vue"));
+        return __webpack_require__.e(/*! import() */ 34).then(__webpack_require__.bind(null, /*! ./views/grupo/Grupos.vue */ "./resources/js/src/views/grupo/Grupos.vue"));
       }
     }, {
       path: '/grupos/nuevo',
       name: 'nuevaGrupos',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ./views/grupo/nuevo.vue */ "./resources/js/src/views/grupo/nuevo.vue"));
+        return __webpack_require__.e(/*! import() */ 11).then(__webpack_require__.bind(null, /*! ./views/grupo/nuevo.vue */ "./resources/js/src/views/grupo/nuevo.vue"));
       }
     }, {
       path: '/grupos/editar/:id',
       name: 'editarGrupos',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ./views/grupo/nuevo.vue */ "./resources/js/src/views/grupo/nuevo.vue"));
+        return __webpack_require__.e(/*! import() */ 11).then(__webpack_require__.bind(null, /*! ./views/grupo/nuevo.vue */ "./resources/js/src/views/grupo/nuevo.vue"));
       }
     }, {
       path: '/cursos',
       name: 'Curso',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 25).then(__webpack_require__.bind(null, /*! ./views/curso/cursos.vue */ "./resources/js/src/views/curso/cursos.vue"));
+        return __webpack_require__.e(/*! import() */ 27).then(__webpack_require__.bind(null, /*! ./views/curso/cursos.vue */ "./resources/js/src/views/curso/cursos.vue"));
       }
     }, {
       path: '/nuevo/curso',
       name: 'nuevaoCurso',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./views/curso/nuevo.vue */ "./resources/js/src/views/curso/nuevo.vue"));
+        return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ./views/curso/nuevo.vue */ "./resources/js/src/views/curso/nuevo.vue"));
       }
     }, {
       path: '/editar/curso/:id',
       name: 'editarCurso',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./views/curso/nuevo.vue */ "./resources/js/src/views/curso/nuevo.vue"));
+        return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ./views/curso/nuevo.vue */ "./resources/js/src/views/curso/nuevo.vue"));
       }
     }, {
       path: '/curso/digital',
       name: 'DigitalCurso',
       component: function component() {
-        return Promise.all(/*! import() */[__webpack_require__.e(8), __webpack_require__.e(11), __webpack_require__.e(15)]).then(__webpack_require__.bind(null, /*! ./views/curso/digital.vue */ "./resources/js/src/views/curso/digital.vue"));
+        return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(9), __webpack_require__.e(13), __webpack_require__.e(17)]).then(__webpack_require__.bind(null, /*! ./views/curso/digital.vue */ "./resources/js/src/views/curso/digital.vue"));
       }
     }, {
       path: '/virtual/:url',
       name: 'virutal',
       component: function component() {
-        return __webpack_require__.e(/*! import() */ 36).then(__webpack_require__.bind(null, /*! ./views/virtual.vue */ "./resources/js/src/views/virtual.vue"));
+        return __webpack_require__.e(/*! import() */ 39).then(__webpack_require__.bind(null, /*! ./views/virtual.vue */ "./resources/js/src/views/virtual.vue"));
       }
     }]
   }, // =============================================================================
