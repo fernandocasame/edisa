@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Provincias;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use DB;
+use File;
 
 class ProvinciasController extends Controller
 {
@@ -17,7 +19,7 @@ class ProvinciasController extends Controller
     {
         //
     }
-    
+
     public function provincias(){
         $json = File::get("provincias.json");
         return $json;
